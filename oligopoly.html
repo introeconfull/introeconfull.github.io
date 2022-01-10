@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 10 Oligopoly | An Introductory Course in Economics</title>
+<meta name="author" content="Gerhard Glomm, Joseph Westenberg">
+<meta name="description" content="In this chapter we will learn: Understand the basic application of game theory to markets with large firms Understand how the Cournot equilibrium is constructed Describe the properties of the...">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="Chapter 10 Oligopoly | An Introductory Course in Economics">
+<meta property="og:type" content="book">
+<meta property="og:description" content="In this chapter we will learn: Understand the basic application of game theory to markets with large firms Understand how the Cournot equilibrium is constructed Describe the properties of the...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 10 Oligopoly | An Introductory Course in Economics">
+<meta name="twitter:description" content="In this chapter we will learn: Understand the basic application of game theory to markets with large firms Understand how the Cournot equilibrium is constructed Describe the properties of the...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">An Introductory Course in Economics</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Disclaimer!!</a></li>
+<li><a class="" href="intro.html"><span class="header-section-number">2</span> Introduction</a></li>
+<li><a class="" href="growth.html"><span class="header-section-number">3</span> Economic Growth</a></li>
+<li><a class="" href="rational-choice.html"><span class="header-section-number">4</span> Rational Choice</a></li>
+<li><a class="" href="demand.html"><span class="header-section-number">5</span> Demand</a></li>
+<li><a class="" href="supply.html"><span class="header-section-number">6</span> Supply</a></li>
+<li><a class="" href="competitive-markets.html"><span class="header-section-number">7</span> Competitive Markets</a></li>
+<li><a class="" href="monopoly.html"><span class="header-section-number">8</span> Monopoly</a></li>
+<li><a class="" href="game-theory.html"><span class="header-section-number">9</span> Game Theory</a></li>
+<li><a class="active" href="oligopoly.html"><span class="header-section-number">10</span> Oligopoly</a></li>
+<li><a class="" href="appendix.html"><span class="header-section-number">11</span> Appendix</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/introeconfull/book/">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="oligopoly" class="section level1" number="10">
+<h1>
+<span class="header-section-number">10</span> Oligopoly<a class="anchor" aria-label="anchor" href="#oligopoly"><i class="fas fa-link"></i></a>
+</h1>
+<p>In this chapter we will learn:</p>
+<ul>
+<li>Understand the basic application of game theory to markets with large firms</li>
+<li>Understand how the Cournot equilibrium is constructed</li>
+<li>Describe the properties of the Cournot equilibrium</li>
+<li>Describe the properties of the Bertrand equilibrium</li>
+<li>Understand simple game theoretic models of product differentiation</li>
+</ul>
+<div id="motivation-1" class="section level2" number="10.1">
+<h2>
+<span class="header-section-number">10.1</span> Motivation<a class="anchor" aria-label="anchor" href="#motivation-1"><i class="fas fa-link"></i></a>
+</h2>
+<div class="addition">
+<p><strong>Define oligopoly somewhere</strong></p>
+</div>
+<p>American industry is highly concentrated, now more than 50 years ago. You might get the impression by walking into your favorite store that there is lots and lots of choice and tons and tons of competition. It does not matter what store you walk into to get that impression: a grocery store, a clothing store, liquor store, a home improvement store, etc. You will be blown away by the plethora of choices. The number of breakfast cereals, the varieties of cat food, the number of different kinds of bedsheet and window blinds is staggering.</p>
+<p>But this does not spell competition.</p>
+<p>The table below (Eeckhout 2021) shows some illustrative examples of how highly concentrated many markets are.</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="center">Industry</th>
+<th align="center">Market Share in %</th>
+<th align="center">Number of Firms</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="center">Pacemakers</td>
+<td align="center">89</td>
+<td align="center">3</td>
+</tr>
+<tr class="even">
+<td align="center">Baby Formula</td>
+<td align="center">69</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">Dry Cat Food</td>
+<td align="center">57</td>
+<td align="center">1</td>
+</tr>
+<tr class="even">
+<td align="center">Mayonnaise</td>
+<td align="center">87</td>
+<td align="center">2</td>
+</tr>
+<tr class="odd">
+<td align="center">Home Improvements</td>
+<td align="center">81</td>
+<td align="center">2</td>
+</tr>
+<tr class="even">
+<td align="center">Coffins</td>
+<td align="center">82</td>
+<td align="center">2</td>
+</tr>
+</tbody>
+</table></div>
+<div class="addition">
+<p><strong>WHAT EECKHOUT PAPER?</strong></p>
+</div>
+<p>We have to understand how markets with such large concentrations work.</p>
+<ul>
+<li>How do individual firms in such markets behave?</li>
+<li>What are the equilibria in such markets like?</li>
+<li>What are other economic repercussions of such behavior/equilibria?</li>
+</ul>
+</div>
+<div id="cournot-equilibrium" class="section level2" number="10.2">
+<h2>
+<span class="header-section-number">10.2</span> Cournot Equilibrium<a class="anchor" aria-label="anchor" href="#cournot-equilibrium"><i class="fas fa-link"></i></a>
+</h2>
+<p>In this section we study the simplest case of an oligopoly, a duopoly, that is an oligopoly with two firms. These two firms produce an identical product. The cases of heterogeneous products will be considered later.</p>
+<p>As a reference point, we start with monopoly pricing, so this is a bit of a review.</p>
+<p>Assume the demand is given by (Recall, <span class="math inline">\(Q\)</span> denotes market quantity, but we are in the case of monopoly, ie one firm, so <span class="math inline">\(Q=q_1\)</span>, or in words, firm quantity is market quantity.)</p>
+<p><span class="math display">\[P = 20 – Q\]</span></p>
+<p>and that marginal cost is given by <span class="math inline">\(MC = 9\)</span>. The profit maximizing calculation is illustrated in Table 2 below (recall <span class="math inline">\(MB=MC\)</span>)</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:oligopoly02"></span>
+<img src="img/oligopoly/fig2.png" alt="Monopoly pricing calculation" width="50%"><p class="caption">
+Figure 10.1: Monopoly pricing calculation
+</p>
+</div>
+<p>The upshot from table 2 is the profit maximizing quantity is <span class="math inline">\(Q = 6\)</span> with corresponding price: <span class="math inline">\(P=14\)</span> and profit <span class="math inline">\(\pi=30\)</span></p>
+<p>Let’s keep these numbers in mind when we think about the duopoly. We assume exactly the same demand and the same marginal cost. Now, the decisions of one firm will depend upon the decisions of the other firm. That is since <span class="math inline">\(Q\)</span> is market quantity and we now have more than one firm: <span class="math inline">\(Q=q_1+q_2\)</span>.</p>
+<p>So, let’s assume that firm 1 produces 3 units. That leaves a residual demand for firm two of</p>
+<p><span class="math display">\[P = 17 – Q\]</span></p>
+<p>Given that residual demand we can do Firm 2’s profit maximization calculations. These are contained in Table 3.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:oligopoly03"></span>
+<img src="img/oligopoly/fig3.png" alt="Firm 2s profit maximizing calculation if firm 1 sells 3 units" width="50%"><p class="caption">
+Figure 10.2: Firm 2s profit maximizing calculation if firm 1 sells 3 units
+</p>
+</div>
+<p>Given these numbers, it is best for firm 2 to produce somewhere between 4 and 5 units.</p>
+<p>But now something is wrong, does not add up. Firm 1 produces 3 units and firm 2 produces over 4? Why would there be a difference in the output of these two firms, when they are equal? They produce the same good and they have the same cost. They are equal. If they are equal, should they not produce the same amount?</p>
+<p>And, besides: If firm produces between 4 and 5 units, how do we know that producing 3 units is in the best interest of firm 1? That is the Nash condition of best response. We certainly cannot take that for granted.</p>
+<div class="center">
+<p>We need to check that firm 2s output is a best response to firm 1s output.</p>
+<p>AND</p>
+<p>We need to check that firm 1s output is a best response to firm 2s output.</p>
+</div>
+<p>We need both actions to be best responses to each other. So onward we go.</p>
+<p>In Table 4 we illustrate firm 2s profit maximization when firm 1 is assumed to produce 5 units. Then firm 2s residual demand is
+<span class="math display">\[P  =  15  -  Q\]</span></p>
+<p>How firm 2 responds to firm 1 producing 5 units is illustrated in Table 4 below.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:oligopoly04"></span>
+<img src="img/oligopoly/fig4.png" alt="Firm 2s profit maximization calculation when firm 1 sells 5 units" width="50%"><p class="caption">
+Figure 10.3: Firm 2s profit maximization calculation when firm 1 sells 5 units
+</p>
+</div>
+<p>It is apparent from table 4 that firm 2 will produce between 3 and 4 units if firm 1 produces 5 units. That means as firm 1 produces more, firm 2 responds by producing less. But we still have not found the Nash equilibrium?</p>
+<p>But we are close!</p>
+<p>What happens to firm 2 if firm 1 produces 4 units. See table 5. If firm 1 produces 4 units, it is profit maximizing to also produce 4 units. Since the situation is totally symmetrical, we can just exchange the names of the firms. If firm 2 produces 4 units, it is profit maximizing for firm 1 to also produce 4 units.</p>
+<p>Bingo!
+Shangri La!
+We have arrived at Nash equilibrium! Each firm’s action is a best response to the other firm’s actions. That is the definition of Nash equilibrium.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:oligopoly05"></span>
+<img src="img/oligopoly/fig5.png" alt="Nash Equilibrium" width="50%"><p class="caption">
+Figure 10.4: Nash Equilibrium
+</p>
+</div>
+<p>When each firm produces 4 units, total industry output is 8.
+Then the price is 12.
+Total industry profit is 24.</p>
+<p>While this example is quite specific, the general conclusion from this example is:</p>
+<ol style="list-style-type: decimal">
+<li>As the number of firms increases from 1, a monopoly, to two, a duopoly, each individual firm produces less.</li>
+<li>As the number of firms increases from 1, a monopoly, to two, a duopoly, total industry output increases.<br>
+</li>
+<li>As the number of firms increases from 1, a monopoly to two, a duopoly, the price decreases.</li>
+<li>As the number of firms increases from 1, a monopoly, to two, a duopoly, the profit for each single firm decreases.</li>
+<li>As the number of firms increases from 1, a monopoly, to two, a duopoly, the overall industry profit decreases.</li>
+</ol>
+<p>We can actually calculate similar equilibria for any number of firms. This just takes a little math. The results that emerge from such an exercise are:</p>
+<ol style="list-style-type: decimal">
+<li>An increase in the number of firms implies a decrease in output by each firm.</li>
+<li>An increase in the number of firms implies an increase in total industry output.</li>
+<li>An increase in the number of firms implies a decrease in the price. Given 2. This is just the Law of Demand</li>
+<li>An increase in the number of firms decreases the profit for each firm</li>
+<li>An increase in the number of firms decreases the total industry profit.</li>
+</ol>
+<p>One can actually show that as the number of firms increases and gets very large, the equilibrium gets closer and closer to the competitive equilibrium. This is true in the following sense:</p>
+<ul>
+<li>The quantity converges to the competitive equilibrium quantity, which is the efficient quantity.</li>
+<li>The price converges to the competitive equilibrium price.</li>
+<li>The profit converges to the competitive equilibrium profit, which, in the long run, is zero.</li>
+</ul>
+<p>This kind of Nash equilibrium is named after Antoine Augustin Cournot and is commonly referred to as Cournot Nash equilibrium or just Cournot equilibrium. See <a href="https://en.wikipedia.org/wiki/Antoine_Augustin_Cournot" class="uri">https://en.wikipedia.org/wiki/Antoine_Augustin_Cournot</a></p>
+<p>Monsieur Cournot!</p>
+</div>
+<div id="bertrand-equilibrium" class="section level2" number="10.3">
+<h2>
+<span class="header-section-number">10.3</span> Bertrand Equilibrium<a class="anchor" aria-label="anchor" href="#bertrand-equilibrium"><i class="fas fa-link"></i></a>
+</h2>
+<p>In the Cournot equilibrium each firm chooses the quantity to maximize its profit, assuming that the other firms do the same. We say that</p>
+<div class="center">
+<p>Quantity is the strategic variable.</p>
+</div>
+<p>This kind of equilibrium is not the only way to think about strategic interactions between oligopolists. There is another theory that holds that</p>
+<div class="center">
+<p>Price is the strategic variable.</p>
+</div>
+<p>When price is the strategic variable, the nature of the equilibrium changes fundamentally. We can illustrate this easily with two firms that sell an identical product. The figure below shows profit for one of the two firms, as a function of the price charged by the other firm. That figure shows that</p>
+<ol style="list-style-type: decimal">
+<li>If my price is lower than yours, I will get the entire market and my profit is rising in the price.</li>
+<li>If my price is equal to yours, we will split the market and my profit will be about half of what it would be if I just slightly undercut you.</li>
+<li>If my price is higher than yours, my market will be zero.</li>
+</ol>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:oligopoly06"></span>
+<img src="img/oligopoly/fig6.jpg" alt="oligopoly06" width="50%"><p class="caption">
+Figure 10.5: oligopoly06
+</p>
+</div>
+<p>That picture makes the incentive to undercut each other very clear. If my price is just a tad higher than yours, I get nothing. But if I just slightly undercut you, I get the entire pie.</p>
+<p>So why would I not undercut you??</p>
+<p>But the same is true for you as well.</p>
+<p>If you charge 10 bucks, I will charge 9.95.</p>
+<p>Then you will charge 9.90 and I will undercut you by charging 9.85.</p>
+<p>Where will this undercutting stop?</p>
+<p>It will go all the way down to marginal cost. Profit is eroded.</p>
+<p>In game theory speak:</p>
+<ul>
+<li>My best response to you, whatever price you charge, is to undercut you.</li>
+<li>Your best response to me, whatever price I charge, is to undercut me.</li>
+</ul>
+<p>This kind of an equilibrium is called a Bertrand equilibrium, after Joseph Louis Francois Bertrand.</p>
+<p><a href="https://en.wikipedia.org/wiki/Joseph_Bertrand" class="uri">https://en.wikipedia.org/wiki/Joseph_Bertrand</a></p>
+<p>The above analysis has assumed that the product sold is homogeneous and the strong undercutting incentive is certainly due to that assumption. The figure below will show how that strong undercutting incentive will change when there is product differentiation, when the products are different.</p>
+<p>When my product is different from yours, my cereal may have more fiber than yours, my beer may be hoppier to make the customers happier than yours, etc. etc., then I can charge a higher price that you without losing all my customers, because some of my customers will by my product because if the fiber or the hoppiness. In the figure below, my profit shrinks as my price inches above yours, but certainly not as precipitously as in the homogeneous product case.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:oligopoly07"></span>
+<img src="img/oligopoly/fig7.png" alt="oligopoly07" width="50%"><p class="caption">
+Figure 10.6: oligopoly07
+</p>
+</div>
+<p>One of the lessons that might emerge from the above analysis is that it pays to be different. Offering a differentiated product will give your customers another reason, besides price, to purchase your product.</p>
+</div>
+<div id="mergers-and-acquisitions" class="section level2" number="10.4">
+<h2>
+<span class="header-section-number">10.4</span> Mergers and Acquisitions<a class="anchor" aria-label="anchor" href="#mergers-and-acquisitions"><i class="fas fa-link"></i></a>
+</h2>
+<div class="addition">
+<p><strong>To be added later</strong></p>
+</div>
+</div>
+<div id="product-differentiation" class="section level2" number="10.5">
+<h2>
+<span class="header-section-number">10.5</span> Product Differentiation<a class="anchor" aria-label="anchor" href="#product-differentiation"><i class="fas fa-link"></i></a>
+</h2>
+<p>In this section we will focus on product differentiation. We will completely abstract from price considerations. This does of course not mean that price considerations do not matter. We will abstract from these considerations in order to get a better understanding of strategic product differentiation aspects.</p>
+<p>So here is our model. Let us be mindful that this is an abstraction.</p>
+<p>There are two vendors selling hotdogs on a one mile stretch of Main Street, USA. The hotdogs sold by the two firms are identical. They are purchased from a common franchise, HotDoggityDog. The city requires that the hotdogs are sold at 3 bucks a piece. Customers are uniformly distributed along that one mile stretch of street. All customers will purchase from the closest vendor.</p>
+<p>The only choice variable or strategic variable is:</p>
+<p>Where to locate the cart?</p>
+<p>This is illustrated in Figure 5 below. In that figure there are two firms, one located at 1/4, the other one located at 3/4. Since each customer purchases from the nearest vendor, firm 1 will get the half of the market that is located to the left and firm 2 will get the other half of the market. The customer that is located at 1/2 is the marginal customer. That customer is indifferent between purchasing from firm 1 and from firm 2.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:oligopoly08"></span>
+<img src="img/oligopoly/fig8.png" alt="oligopoly08" width="50%"><p class="caption">
+Figure 10.7: oligopoly08
+</p>
+</div>
+<p>Just because each firm gets half of the market does not imply that this is an equilibrium!</p>
+<p>Suppose you are firm 2 and I am firm 1. If I am located at 1/4, what would be your best response to that?</p>
+<p>Certainly not, 3/4! You can do better than 3/4, where you get 1/2 of the market.</p>
+<p>If you move slightly to the left from 3/4, the marginal consumer will also move to the left and you get more than 1/2.</p>
+<p>How far to the left should you go? If you go just to the right of 1/4, you will get almost 3/4th of the market.</p>
+<p>That is certainly better than 1/2, don’t you think!</p>
+<p>This sharp drop-off or increase in profit as one move just a bit away from the other player is illustrated in Figure 6 below.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:oligopoly09"></span>
+<img src="img/oligopoly/fig9.png" alt="oligopoly09" width="50%"><p class="caption">
+Figure 10.8: oligopoly09
+</p>
+</div>
+<p>But the story does not end there.</p>
+<p>If you locate just to the right of 1/4, then it will be in my best interest to locate just to the right of you. In that case, I get almost 3/4th of the market.</p>
+<div class="center">
+<p>But then you will move also.</p>
+</div>
+<p>We are not at equilibrium yet.
+Where is the Nash equilibrium in this game?
+If both players are located at 1/2, each player gets 1/2 and no player has any incentive to move away. As soon as player 1, say moves away from 1/2, player 1s profit drops.</p>
+<p>This is to say:</p>
+<div class="center">
+<p>Player 1’s best response to player 2 choosing 1/2 is 1/2
+And
+Player 2’s best response to player 1 choosing 1/2 is 1/2</p>
+</div>
+<p>Bingo!
+Shangri La!
+Nash equilibrium!</p>
+<div id="political-interpretation" class="section level3" number="10.5.1">
+<h3>
+<span class="header-section-number">10.5.1</span> Political Interpretation<a class="anchor" aria-label="anchor" href="#political-interpretation"><i class="fas fa-link"></i></a>
+</h3>
+<p>Consider now two political parties or candidates that are running for elected office in the US. The election system in the US is a first past the post system; you got to get 50% plus one vote to be elected. The objective of the candidates might be to maximize the probability of getting elected or it might be to maximize the vote share. In either case the candidate chooses a position on the left-right political spectrum. What is the equilibrium in this political game?</p>
+<p>If all voters participate in the election, the Nash equilibrium location of the two parties is indeed in the middle, where the median voter is located. Each candidate gets half of the vote. The best any candidate can do is ensure a tie.</p>
+<p>What can we say about the kinds of candidates we get? Well, such candidates have been described as
+Tweedledee
+and
+Tweedledum.</p>
+<p>Such candidates are the same, at least in the policy dimension. These candidates may differ in other dimensions, their charisma, their looks, their ability to lie with a straight face, their fund-raising ability, etc.</p>
+<p>But on the policy dimension, they are the same. So, if a voter cares mostly about the policy, and some voters might, that raises the issue.</p>
+<p>Why participate in the election at all?</p>
+<p>How could this decision to vote or not be impacted by the political stance of the candidates/parties?
+Consider Figure 7.</p>
+<p>In Figure 7, we have two political candidates who have stated out positions at ¼ and at ¾. Who might cast their ballot and who might not?</p>
+<p>Voters at the very left end might not cast their ballot. They are too fat to the left, or another way of saying the same thing, the candidates, both candidates are too fat to the right. These voters on the far left may be “alienated” from the political process and, therefore, decide not to cast their ballots.</p>
+<p>The same hold for voters on the far right. For them the candidates are to far to the left, and they may feel “alienated” from the political process as well and not cast their ballots.</p>
+<p>There is one more group of voters who might not cast their ballots. These are the voters who are in the middle of the spectrum, the moderates, the independents. For a voter in the middle, the policies from candidate 1 are as far away from their preferred points as the policies from candidate 2. Both policies are equally good or bad. So why bother incurring the cost of casting a ballot.</p>
+<p>These voters in the middle, while not alienated like the voters at the ends of the spectrum, refuse to cast their ballot because they are “indifferent.”</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:oligopoly10"></span>
+<img src="img/oligopoly/fig10.png" alt="oligopoly10" width="50%"><p class="caption">
+Figure 10.9: oligopoly10
+</p>
+</div>
+<p>These patterns of not voting will induce candidates to move away from the center. The candidate who moves away from the center can capture some of the left or right alienated voters and this hope to get over the 50% needed for election.</p>
+<p>There is another reason for candidates not to turn into Tweedledee and Tweedledum. In the US, general elections are typically preceded by primaries. The primaries are typically closed to party members. There is a Republican primary and there is a Democratic primary.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:oligopoly11"></span>
+<img src="img/oligopoly/fig11.png" alt="oligopoly11" width="50%"><p class="caption">
+Figure 10.10: oligopoly11
+</p>
+</div>
+<p>Each primary will, somehow, select a candidate from that political part of the political spectrum. Once these candidates then run in the general election, they are not centrists. They have been selected from/by their party base.</p>
+<p>In the general election, they have to appeal to the centrists. There are, at least, two ways of doing this.
+1. The candidate can move more toward the center. Thereby running the risk of alienating the (radical) party base. That is of course risky. And such moves might not be credible.
+2. Each candidate may accuse the other candidate of being</p>
+<div class="center">
+<p>Radical
+Out of the Mainstream
+Un-American
+Socialist
+Fascist</p>
+</div>
+<p>If those labels stick, bingo I have won.</p>
+<p>(But, parenthetically, and my personal opinion, the country has lost.)</p>
+</div>
+</div>
+<div id="more-firms" class="section level2" number="10.6">
+<h2>
+<span class="header-section-number">10.6</span> More Firms!<a class="anchor" aria-label="anchor" href="#more-firms"><i class="fas fa-link"></i></a>
+</h2>
+<p>Back from Political Science, to Economics, same game, but now with three firms. We see, in Figure 9 below, that things get just a tad more complicated. In the figure below, the three firms are located apart, roughly equally spread out.</p>
+<p>Claim 1: That is not a Nash equilibrium location. To see this, just realize that firm 3 could increase their pay-off if it moved to the left. How far? Of course, as close to firm 2 as possible. Something like this is true for firm 1 as well: Move to the right as close as possible to firm 2. So, the location pattern indicated in Figure 9 cannot be an equilibrium.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:oligopoly12"></span>
+<img src="img/oligopoly/fig12.png" alt="oligopoly12" width="50%"><p class="caption">
+Figure 10.11: oligopoly12
+</p>
+</div>
+<p>Claim 2: All three firms located at ½ smack dab in the middle cannot be a Nash equilibrium either. If all firms are in the middle, each firm gets 1/3 of the market. One firm can move just a little to the right (or the left, it does not matter) to get almost ½. So, this concentration cannot be an equilibrium either.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:oligopoly13"></span>
+<img src="img/oligopoly/fig13.png" alt="oligopoly13" width="50%"><p class="caption">
+Figure 10.12: oligopoly13
+</p>
+</div>
+<p>Claim 3: The Nash equilibrium here involves what we call “mixed strategies.” A mixed strategy is not a fixed location, not one fixed number. It is a probability distribution. This concept should be familiar from the PKs in soccer. If you shoot a PK in soccer, you want to mix it up. If you always pick lower right corner of the goal, the goalie will know, and you will not be very successful. Hence you mix it up, you pick a mixed strategy.</p>
+<p>How about 4 firms? This is illustrated in Figure 11 and left for an exercise.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:oligopoly14"></span>
+<img src="img/oligopoly/fig14.png" alt="oligopoly14" width="50%"><p class="caption">
+Figure 10.13: oligopoly14
+</p>
+</div>
+<p>Finally, let us consider a different entry and timing assumption. In the previous examples the number of firms was fixed. There was no (free) entry. Also, all firms made their location decisions simultaneously.</p>
+<p>Now, let us assume:</p>
+<ul>
+<li>there are many potential entrants into a market</li>
+<li>entry decisions are made sequentially</li>
+<li>each firm has a fixed cost of entering/operating</li>
+</ul>
+<p>These are the fundamental assumptions. There is one more assumption that has to be made: When firms enter sequentially, some firms will enter early, and some firms will enter later. When some firms enter early, they must have or form some expectations about what other firms who enter later will do, where they will locate.</p>
+<p>If the early entrants don’t form such expectations, it is easy to see that they run a high risk of being cooked. Who wants to be cooked?</p>
+<p>So, what shall we assume about this expectation formation?</p>
+<p>We shall assume that firms will form rational expectations. Rational expectation here means that all early entrants, will forecast what locations all future entrants will pick. So, without any uncertainty this is really perfect foresight.</p>
+<p>Is that a reasonable assumption? In that model: YES!</p>
+<p>Why?</p>
+<p>Any firm who is potential entrant j can forecast what any future entrant (j + s) will do, just by putting oneself in the shoes of entrant (j+s). This is nothing but the power and insight of Nash equilibrium. Since there is a fixed cost, and since the market is finite, there will be a finite number of firms.</p>
+<p>Since there is a finite number of firms, there will be a last entrant and there will be a penultimate entrant. So put yourself in the shoes (boots, heels, flipflops, sandals) of the penultimate entrant. You don’t have to be a genius to figure out where the last entrant goes. Given that information you, as the penultimate entrant, will choose the nest location for you.</p>
+<p>So given the location decision of the last two entrants, the third to last entrant, who takes as given the locations of all the previous entrant, will make rational forecast of what the last two entrants will do, when making its location decision.</p>
+<p>So, we work our way backwards to the very first entrant.</p>
+<p>You are right, this is just a form of backward induction.</p>
+<p>So, what does the Nash equilibrium location in this game look like?</p>
+<p>Firms will be spread out evenly along the entire spectrum. The space between each pair of firms is determined by the fixed cost. You must have enough of the market to cover your fixed cost. How the location choices are happening in this sequential game is illustrated in Figure 12 below. The first firm to enter will never pick a location “in the middle.” If it were to do so, it would run the risk of being squeezed on the right and the left and hence not being able to cover its fixed cost. In fact, it will be in the interest of the follower firms to do exactly that.</p>
+<p>In order to avoid being squeezed the first firm will enter at one of the two ends of the spectrum just far enough away to cover its fixed cost. The next firm to enter will in a sense follow a similar strategy: Locate near the edge of the remaining spectrum, on either end, so it can cover its fixed cost. Two possible location patterns are illustrated in Figure 12.</p>
+<p>Ultimately, where exactly each individual firm is located is immaterial. What matters is that all firms are roughly equally spread out and that the entire spectrum is covered.</p>
+<p>Wandering down the ready to eat breakfast cereal aisle in your favorite grocery store might remind you of the Nash equilibrium locations in the figure below. The “space” is filled out it seems, completely, with ready to eat cereal of all flavors, fiber content, sugar content. It seems impossible for any entrepreneur to enter that thicket profitably.</p>
+<p>Breakfast cereal is not the only example of a market that looks like Figure 12 below.</p>
+<p>How about:
+- Sweetened Iced Tea
+- Gas stations in Bloomington or in Fort Wayne for that matter.
+- Cat/dog food
+- Others</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:oligopoly15"></span>
+<img src="img/oligopoly/fig15.png" alt="oligopoly15" width="50%"><p class="caption">
+Figure 10.14: oligopoly15
+</p>
+</div>
+</div>
+<div id="glossary-of-terms-8" class="section level2" number="10.7">
+<h2>
+<span class="header-section-number">10.7</span> Glossary of Terms<a class="anchor" aria-label="anchor" href="#glossary-of-terms-8"><i class="fas fa-link"></i></a>
+</h2>
+<p><strong>Bertrand equilibrium:</strong> The equilibrium in an oligopoly when all firms have price as the strategic variable.</p>
+<p><strong>Cournot equilibrium:</strong> The equilibrium in an oligopoly when all firms have quantity as the strategic variable.</p>
+<p><strong>Heterogeneous goods:</strong> These are goods that are different in some way by taste, color, location, durability or any other characteristics. Or at least they are at purchase perceived to be different.</p>
+<p><strong>Homogeneous goods:</strong> These are goods that are the same by taste, color, location, strength, and any other relevant characteristic. Or at least they are at purchase perceived to be the same.</p>
+<p><strong>Horizontal differentiation:</strong> This refers to different types of goods such as different degrees of sweetness of the iced teas. There is no sense that one variant is better than the other; they are just different and different consumers prefer different variants.</p>
+<p><strong>Location game:</strong> A game where a relatively small number of firms strategically choose a location. This could be in geographic space or in “product space.”</p>
+<p><strong>Market concentration:</strong> This is a measure of how many or how few firms are in a particular market.</p>
+<p><strong>Rational expectations:</strong> Expectations formed by agents in a model that turn out to be true, in the model, at least in an expected value sense.</p>
+<p><strong>Vertical differentiation:</strong> This refers to different levels of quality, where most consumers agree that some goods are better than others, such a durability of a pair of jeans, or the gas mileage of a car, internet speed,etc.</p>
+</div>
+<div id="practice-questions-8" class="section level2" number="10.8">
+<h2>
+<span class="header-section-number">10.8</span> Practice Questions<a class="anchor" aria-label="anchor" href="#practice-questions-8"><i class="fas fa-link"></i></a>
+</h2>
+<div id="discussion-8" class="section level3" number="10.8.1">
+<h3>
+<span class="header-section-number">10.8.1</span> Discussion<a class="anchor" aria-label="anchor" href="#discussion-8"><i class="fas fa-link"></i></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>Is the location for both firms at ½ in the two-player game efficient? Think of “transportation costs.”</li>
+<li>In the location problem of the two firm location game, where is the efficient location of the two firms?</li>
+<li>In the location game described above, suppose there are 4 firms. What is the Nash equilibrium location? Explain.</li>
+<li>In the 4 firm location game, what is the efficient location? Explain.</li>
+</ol>
+</div>
+<div id="multiple-choice-8" class="section level3" number="10.8.2">
+<h3>
+<span class="header-section-number">10.8.2</span> Multiple Choice<a class="anchor" aria-label="anchor" href="#multiple-choice-8"><i class="fas fa-link"></i></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>
+<p>Imagine a duopoly where two firms sell an identical product and play a one shot Cournot Nash Game. If form 1 increases its output, then</p>
+<p>A. It is rational for firm 2 to produce more<br>
+B. It is rational for firm 2 to produce less<br>
+C. It is rational for firm 2 to leave its output constant.<br>
+D. It is rational for firm 2 buy up firm 1</p>
+</li>
+<li>
+<p>Imagine an oligopoly where three firms sell an identical product and play a one shot Cournot-Nash game. If firm 1 increases its output and firm 2 keeps its output constant, it is rational for firm 3</p>
+<p>A. To produce more<br>
+B. To produce less<br>
+C. To leave its output constant<br>
+D. To buy up one of the two other firms.</p>
+</li>
+<li>
+<p>Imagine an oligopoly where three firms sell an identical product and play a one shot Cournot-Nash game. If firm 1 increases its output and firm 2 decreases its output by the same amount, it is rational for firm 3</p>
+<p>A. To produce more<br>
+B. To produce less<br>
+C. To leave its output constant<br>
+D. To buy up one of the other two firms.</p>
+</li>
+<li>
+<p>Imagine a duopoly where two firms sell and identical product and play a one-shot Bertrand-Nash game. If firm 1 increases its price, it is rational for firm 2</p>
+<p>A. To increase its price<br>
+B. To decrease its price<br>
+C. To keep its price constant<br>
+D. To buy up the other firm</p>
+</li>
+<li>
+<p>Imagine an oligopoly with 3 firms that sell an identical product and play a one-shot Bertrand-Nash game. If firm 2 raises its price,</p>
+<p>A. It is rational for firm 1 to raise its price<br>
+B. It is rational for firm 1 to lower its price<br>
+C. It is rational for firm 1 to keep its price constant<br>
+D. We don’t have enough information to decide what is rational for firm 1.</p>
+</li>
+<li>
+<p>Imagine three firms playing a Bertrand-Nash price game for 20 rounds. The demand function in each round is given by P = 10 – Q, where Q is total industry output. All three firms are very rational. We can expect</p>
+<p>A. The price to be 10 in each round<br>
+B. The price to be 5 in each round<br>
+C. The price to be equal to marginal cost in each round<br>
+D. The price to be equal to zero in each round</p>
+</li>
+<li>
+<p>Imagine that 2 firms play a location game on a circle, not the disk, the circle. The circle has circumference length 1. Prices are fixed. The firms choose location simultaneously.</p>
+<p>A. There is exactly one Nash equilibrium location, and the firms have unequal market share<br>
+B. There are many Nash equilibrium locations and both firms have unequal market share<br>
+C. There is exactly one Nash equilibrium location, and the firms have equal market share<br>
+D. There are many Nash equilibrium locations and both firms have equal market share.</p>
+</li>
+<li>
+<p>Consider an oligopoly with 10 firms playing a Cournot-Nash game for one period. The firms are selling a homogeneous product. If 4 of the 10 firms merge, we can expect</p>
+<p>A. The price to increase<br>
+B. The quantity to decrease<br>
+C. Overall industry profit to increase<br>
+D. All of the above</p>
+</li>
+<li>
+<p>In problem 8 above, assume instead that the firms are selling differentiated product. All other aspects of the industry are the same. Then after the merger we would expect</p>
+<p>A. Prices to increase<br>
+B. Overall quantity sold to decrease<br>
+C. Overall industry profit to increase<br>
+D. All of the above</p>
+</li>
+<li>
+<p>Imagine two vendors of a consumer product to be located at ¼ and at ¾ of a one-mile-long street in Littlecity. The city passes a zoning law that forces the two firms to relocate more toward the center of the street. After this law is passed, we would expect</p>
+<p>A. Price competition to decrease<br>
+B. Price competition to increase<br>
+C. Price competition to stay the same<br>
+D. Profits to rise</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="game-theory.html"><span class="header-section-number">9</span> Game Theory</a></div>
+<div class="next"><a href="appendix.html"><span class="header-section-number">11</span> Appendix</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#oligopoly"><span class="header-section-number">10</span> Oligopoly</a></li>
+<li><a class="nav-link" href="#motivation-1"><span class="header-section-number">10.1</span> Motivation</a></li>
+<li><a class="nav-link" href="#cournot-equilibrium"><span class="header-section-number">10.2</span> Cournot Equilibrium</a></li>
+<li><a class="nav-link" href="#bertrand-equilibrium"><span class="header-section-number">10.3</span> Bertrand Equilibrium</a></li>
+<li><a class="nav-link" href="#mergers-and-acquisitions"><span class="header-section-number">10.4</span> Mergers and Acquisitions</a></li>
+<li>
+<a class="nav-link" href="#product-differentiation"><span class="header-section-number">10.5</span> Product Differentiation</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#political-interpretation"><span class="header-section-number">10.5.1</span> Political Interpretation</a></li></ul>
+</li>
+<li><a class="nav-link" href="#more-firms"><span class="header-section-number">10.6</span> More Firms!</a></li>
+<li><a class="nav-link" href="#glossary-of-terms-8"><span class="header-section-number">10.7</span> Glossary of Terms</a></li>
+<li>
+<a class="nav-link" href="#practice-questions-8"><span class="header-section-number">10.8</span> Practice Questions</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#discussion-8"><span class="header-section-number">10.8.1</span> Discussion</a></li>
+<li><a class="nav-link" href="#multiple-choice-8"><span class="header-section-number">10.8.2</span> Multiple Choice</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/introeconfull/book//blob/master/oligopoly.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/introeconfull/book//edit/master/oligopoly.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>An Introductory Course in Economics</strong>" was written by Gerhard Glomm, Joseph Westenberg. It was last built on 2022-01-10.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

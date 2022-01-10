@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 4 Rational Choice | An Introductory Course in Economics</title>
+<meta name="author" content="Gerhard Glomm, Joseph Westenberg">
+<meta name="description" content="In this chapter you will learn: The basics of a simple model of rational choice The concepts of marginal costs and marginal benefits The concept and applications of opportunity cost The concept of...">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="Chapter 4 Rational Choice | An Introductory Course in Economics">
+<meta property="og:type" content="book">
+<meta property="og:description" content="In this chapter you will learn: The basics of a simple model of rational choice The concepts of marginal costs and marginal benefits The concept and applications of opportunity cost The concept of...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 4 Rational Choice | An Introductory Course in Economics">
+<meta name="twitter:description" content="In this chapter you will learn: The basics of a simple model of rational choice The concepts of marginal costs and marginal benefits The concept and applications of opportunity cost The concept of...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><link rel="stylesheet" href="style.css">
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">An Introductory Course in Economics</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Disclaimer!!</a></li>
+<li><a class="" href="intro.html"><span class="header-section-number">2</span> Introduction</a></li>
+<li><a class="" href="growth.html"><span class="header-section-number">3</span> Economic Growth</a></li>
+<li><a class="active" href="rational-choice.html"><span class="header-section-number">4</span> Rational Choice</a></li>
+<li><a class="" href="demand.html"><span class="header-section-number">5</span> Demand</a></li>
+<li><a class="" href="supply.html"><span class="header-section-number">6</span> Supply</a></li>
+<li><a class="" href="competitive-markets.html"><span class="header-section-number">7</span> Competitive Markets</a></li>
+<li><a class="" href="monopoly.html"><span class="header-section-number">8</span> Monopoly</a></li>
+<li><a class="" href="game-theory.html"><span class="header-section-number">9</span> Game Theory</a></li>
+<li><a class="" href="oligopoly.html"><span class="header-section-number">10</span> Oligopoly</a></li>
+<li><a class="" href="appendix.html"><span class="header-section-number">11</span> Appendix</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/introeconfull/book/">View book source <i class="fab fa-github"></i></a></p>
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="rational-choice" class="section level1" number="4">
+<h1>
+<span class="header-section-number">4</span> Rational Choice<a class="anchor" aria-label="anchor" href="#rational-choice"><i class="fas fa-link"></i></a>
+</h1>
+<p>In this chapter you will learn:</p>
+<ul>
+<li>The basics of a simple model of rational choice</li>
+<li>The concepts of marginal costs and marginal benefits</li>
+<li>The concept and applications of opportunity cost</li>
+<li>The concept of diminishing returns</li>
+<li>The concept of increasing returns.</li>
+</ul>
+<div id="goals-and-constraints" class="section level2" number="4.1">
+<h2>
+<span class="header-section-number">4.1</span> Goals and Constraints<a class="anchor" aria-label="anchor" href="#goals-and-constraints"><i class="fas fa-link"></i></a>
+</h2>
+<p>In this section we will construct our workhorse model/theory that we will use in the rest of the term. We will learn about the notion of rationality that is commonly used in economics. We will learn what rationality means and we will learn what choices are like if they are governed by rationality.</p>
+<p>Rationality always begins with the assumption of a goal or of an objective. We assume that all of our behavior is guided by goal, that all of our behavior is purposeful or goal oriented. Our goals will vary from person to person. There is no reason to believe that your goals should be the same as my goals. We simply accept whatever goals individuals might have. And we do not judge them. We recognize that our individual goals may vary from time to time.</p>
+<p>Leslie’s goal is to get elected to Congress. Jack’s goal is to graduate from IU with at least a 3.7 grade point average with a major in economics and a minor in computer science. George’s goal is to slay the dragon. Georgina’s goal is to be able to retire at age 49 with a retirement portfolio valued at least at 4 million dollars.</p>
+<p>Our goals can change overtime. As Georgina realizes at age 40 that she is far away from her goal she might adjust her goal of retiring to age 55. Sometimes we set aside some goals completely and work on other goals almost exclusively.</p>
+<p>Joanne wants to be valedictorian in her high school. She is a varsity soccer player. During the soccer match on Saturday afternoon, she does not even think about her English project or her chemistry lab; she only thinks about the soccer match. During those 90 minutes her goal of being valedictorian does not enter her mind at all; the only thing that matters to her in those 90 minutes is winning the game.</p>
+<p>In pursuit of our goals, we are typically limited by a variety of constraints:</p>
+<ul>
+<li><p>First: There is a budget or financial constraint. That 10 million dollar mansion in Malibu overlooking the Pacific is not in my budget. Nor is the luxurious trip around the world in 180 days. Most of us are facing this type of budget constraint. Perhaps if you are Elon Musk you don’t feel it as much as the average IU student.</p></li>
+<li><p>Second: Most of us face time constraints. There are only 24 hours in a day. Sometimes these time constraints are more binding, or at least they feel more binding than at other times. If we go on a nice vacation with our family, hanging out at the beach, watching the waves gently lap on the sandy beach, time seems to stand still, there is no rush and we might well ask: A time constraint? What is that? But our life is not like that all of the time. Just think of the parents who are rushing to fill out their tax forms late on April 14th. That is crunch time. Or think of your own situation as you are preparing for four difficult final exams while two projects are due and while the university is asking you to move out of your dorm room within 36 hours of your last exam. That is also crunch time. Then the time constraint to bites, it really bites.</p></li>
+<li><p>Third: Most of us are facing constraints that have to do with our intellectual bandwidth. How much can we compute or calculate? How many hundreds of pages can we read over the weekend for a project in our history class and fully comprehend what we read? Evidently, in chess one secret to success is to be able to figure 8, 10, 12, or 15 moves ahead including how the adversary will respond to eat one of our moves. Some of us have that gift, that large bandwidth. I certainly don’t.</p></li>
+<li><p>Fourth: Many of us in some points in our lives will face emotional constraints. people experiencing poverty often live in the tyranny of the moment, going from one crisis to another. The mom with two young children who has struggled all her life to make ends meet and who just found out that her husband has abandoned her might well be at the end of her rope in ask: how much more can I take? She is facing severe emotional constraints.</p></li>
+</ul>
+<p>Some constraints are technological. They just say that certain things are physically impossible. One of my dreams has been the climb Kilimanjaro, but I think I have to face the fact that at my age and in my physical condition that is impossible. There are many such a technological constraint.</p>
+<p>A nice example such a technological constraint is Illustrated in Figure 1 below. It is recognized that between 1960 and 2010 computing power has doubled every two years. That sounds like a fantastic achievement. That is just Moore’s Law. It turns out that for some purposes the doubling of computing power every two years is not enough. In order to train systems of artificial intelligence, AI, well, a doubling of computing power every 3 to 4 months seems to be required. Good luck with speeding up the growth of computing power by a factor of 6!</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:rationalchoice1"></span>
+<img src="img/rationalchoice/moore.png" alt="Moores Law" width="100%"><p class="caption">
+Figure 4.1: Moores Law
+</p>
+</div>
+</div>
+<div id="marginal-costs-and-benefits" class="section level2" number="4.2">
+<h2>
+<span class="header-section-number">4.2</span> Marginal Costs and Benefits<a class="anchor" aria-label="anchor" href="#marginal-costs-and-benefits"><i class="fas fa-link"></i></a>
+</h2>
+<p>We will now illustrate the foundations for a model of rational choice. Whenever we make a choice we weigh, if we are rational, the costs of the action and the benefits of the action. We will start with an action that can be chosen in small increments.</p>
+<p>Examples of such actions are:</p>
+<ul>
+<li>How many miles do I want to hike this coming weekend?</li>
+<li>How much money do I want to contribute to a charity?</li>
+<li>How much time do I want to spend texting my parents while I’m getting ready for my exam in college?</li>
+<li>How much time do I want to study for the final in my introductory economics course?</li>
+<li>How much chocolate do I want to eat this week?</li>
+</ul>
+<p>In all of these cases, the choice is a continuous variable, the choice is not a discrete, all or nothing kind of choice.</p>
+<p>Of course, there are many choices that are of the all-or-nothing variety:</p>
+<ul>
+<li>Getting on an airplane to fly to San Diego during covid-19: yes or no?</li>
+<li>Attending IU: yes or no?</li>
+<li>Marrying my high-school sweetheart: yes or no?</li>
+</ul>
+<p>In a sense the all or nothing choices are relatively easy to model and understand. If you think you are better off marrying your high-school sweetheart than not, in econ speak, if the benefit of marrying your high-school sweetheart exceeds the cost, whatever you think that might be, and we have to come back to that, then by all means the decision should be: marry your high school sweetheart. (Of course, it takes two to tango.)</p>
+<p>The decisions where continuous choices are involved might be somewhat harder to model. This is what we are embarking on now. We need some terminology.</p>
+<p>The marginal benefit of an action, MB, is the extra benefit obtained by carrying out the action one more unit.</p>
+<p>The marginal benefit of hiking one extra mile is the enjoyment I get out of being in nature for another 20 to 30 minutes or so. And, of course, it is the extra calories I burn by hiking one extra mile so I can eat more cookies when I get home.</p>
+<p>The marginal benefit of studying for the exam in my economics class is the extra understanding of the material I gain, and it includes the increased probability that I ace the exam.</p>
+<p>The marginal benefit of talking to my mom on the phone for an extra half-hour is simply the enjoyment of communicating with my mom and it could include some extra probability of getting my allowance increased.</p>
+<p>The marginal cost of an action, MC, is the extra cost incurred by carrying out the action one more unit.</p>
+<p>The marginal cost of hiking one extra mile includes a bunch of things. In that extra time, 20 or 30 minutes, I could be doing all kinds of other things, like sitting on my back porch and eating cookies. If I hiked an extra mile, I might get so tired that I lose concentration, stumble over a rock or a root, fall and break an ankle. If I hiked an extra mile, I run an extra risk of getting lost and I might not be able to get back home on time for an important appointment.</p>
+<p>The marginal cost of studying an extra hour for the exam in my economics class includes not studying for the exam in my chemistry class and it includes things like watching TV or hanging out with my friends.</p>
+<p>The marginal cost of communicating with my mom on the phone includes not studying for my economics exam.</p>
+<p>You get the idea. If I commit sometime to one particular action, there are a whole bunch of other things I cannot do at the same time. If I donate $100 to one charity, I cannot donate it to another charity. If Jose works in industry 1, he cannot work in industry 2.</p>
+<p>This brings us to the notion of opportunity cost.</p>
+<p>Opportunity cost is one of the most important concepts in economics, if not the single most important one and it is crucial that we have a firm grasp off this concept.</p>
+<p>The definition of opportunity cost is simply: the value of the next best alternative forgone by making a particular choice.</p>
+<p>Let’s consider the following possibilities ranked in order pleasure or utility I derive from them:</p>
+<ol style="list-style-type: decimal">
+<li>reading a good book</li>
+<li>reading the New York Times</li>
+<li>reading a letter from my son</li>
+<li>going for a walk</li>
+<li>talking to my brother on the phone</li>
+<li>cleaning the gutters on my roof</li>
+</ol>
+<p>And there are many others. If these are really listed in order of priority and importance for me, I will choose reading a good book.</p>
+<p>What is the opportunity cost of reading a good book? It is not the pleasure I get out of talking to my brother on the phone. That is the fifth best thing I could be doing at that moment. The opportunity cost of reading a good book is reading the New York Times. Reading the New York Times is my next best alternative after reading a good book. So, the opportunity cost of reading a book is the value I would have derived from reading the New York Times, my second-best alternative forgone.</p>
+</div>
+<div id="choice" class="section level2" number="4.3">
+<h2>
+<span class="header-section-number">4.3</span> Choice<a class="anchor" aria-label="anchor" href="#choice"><i class="fas fa-link"></i></a>
+</h2>
+<p>We will now present our basic and simple model/theory of rational choice. We make two assumptions.</p>
+<div class="center">
+<p><strong>Assumption 1: The marginal benefit of an action, MB, is declining as the action is increased.</strong></p>
+</div>
+<p>When we graph the marginal benefit of an action it will be downward sloping. In Economics this assumption is known as</p>
+<div class="center">
+<p>Diminishing returns (or diminishing utility)</p>
+</div>
+<p>This is an assumption, not a universal law, that makes sense in many situations, not in all. We will address some exception later on. But in many situations, this makes sense.</p>
+<p>After cutting grass in my backyard on hot Saturday in July, the first sip or glass of sweetened iced tea just tastes great and quenches my thirst. The second glass a little bit less, the fourth glass not so much.</p>
+<p>That first hour of a hike on a mild fall day feels wonderful. By the third hour I feel tired and my back hurts from carrying a backpack.</p>
+<p>Seeing a boyfriend/girlfriend for the first time after a long separation can feel like heaven. After a few days/weeks, the routine has set in, the elation and excitement are gone.</p>
+<p>A few years ago, there was a solar eclipse that could be seen mid-afternoon, with the proper protective glasses of course. I remember feeling very excited about stepping out of my building on the way to class with my protective gear. Seeing the eclipse was stunning, truly stunning. I just kept looking and looking. But after three or so minutes, the excitement had warm off. Diminishing returns had set in in my case. Evidently, something very similar had happened to most of the IU students I saw along the way. The administration had made allowances for the students to be out of class so they could watch the eclipse. Huge numbers of students were outside. They were outside, but were they enthralled by the eclipse? Evidently not. Most of them were just chatting with each other, ignoring the eclipse. Their diminishing returns had set in even before mine.</p>
+<p>Pricing for Disney theme parks in Florida also displays an example of diminishing returns; in this case the diminishing returns refer to the pleasure Mickey Mouse fans may experience from visiting the Magic Kingdom. On the Disney website you can purchase tickets for visits between 1 and 10 days. Wow, 10 days in the Magic Kingdom! What magic!</p>
+<p>Here are the total prices for tickets for 1 to 10 days, at least as of 08/18/21.</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="center"># of Days</th>
+<th align="center">Total Price</th>
+<th align="center">Difference per Day</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">109</td>
+<td align="center">105</td>
+</tr>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">214</td>
+<td align="center">101</td>
+</tr>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">315</td>
+<td align="center">97</td>
+</tr>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">412</td>
+<td align="center">28</td>
+</tr>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">440</td>
+<td align="center">10</td>
+</tr>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">450</td>
+<td align="center">19</td>
+</tr>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">469</td>
+<td align="center">19</td>
+</tr>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">488</td>
+<td align="center">16</td>
+</tr>
+<tr class="odd">
+<td align="center">9</td>
+<td align="center">504</td>
+<td align="center">16</td>
+</tr>
+<tr class="even">
+<td align="center">10</td>
+<td align="center">520</td>
+<td align="center">16</td>
+</tr>
+</tbody>
+</table></div>
+<p>Evidently there is a large drop after day 4. Why? If the marginal benefit of the ninth day were as high as the marginal benefit of the second day, surely Disney would change its pricing scheme.</p>
+<div class="center">
+<p><strong>Assumption 2: The marginal cost of an action, MC, is increasing as the action is increased.</strong></p>
+</div>
+<p>The graph of marginal cost is upward sloping.</p>
+<p>This also goes by the name of diminishing returns.</p>
+<p>This is also an assumption, not a universal law. In many cases this assumption rings true.</p>
+<p>Imagine studying for a chemistry exam the night before the exam. You have not really kept up well with the material in that class and you know you will have to study way past midnight to have a shot at doing well. You start studying right after dinner at 7 pm. The mental effort required to learn is higher at midnight than at 10 pm and at 10 pm it is higher than at 8 pm. Your consumption of coffee or power drinks goes up as time goes on.</p>
+<p>Studying each chapter gets harder and harder the longer you study. The effort required to understand a given chunk of material goes up over time. The marginal cost of acquiring knowledge rises. That is diminishing returns.</p>
+<p>We can now put together the marginal benefit of an action and the marginal cost of the action. This is done in Figure 2. Let a, on the horizontal axis, denote the extent of the action. MB and MC of that action are graphed on the vertical axis. For the sake of concreteness, assume we are talking about how long Leslie should study for her chemistry exam.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:rationalchoice02"></span>
+<img src="img/rationalchoice/fig2.jpg" alt="Rational Choice," width="75%"><p class="caption">
+Figure 4.2: Rational Choice,
+</p>
+</div>
+<p>In Figure <a href="rational-choice.html#fig:rationalchoice02">4.2</a>, the marginal benefit of the action, MB, is downward sloping in accordance with assumption 1. The marginal cost of the action, MC, is upward sloping in accordance with assumption 2.</p>
+<p>Claim: The optimal amount of time Leslie should study for the chemistry exam, IF Leslie is rational, is given by a*.</p>
+<p>Why? Imagine that Leslie did anything else. Imagine she studied less, only a1. At that point, the marginal benefit of studying an extra half hour exceeds the marginal cost. So, Leslie should study an extra half hour. She should study more. She should move from a1 to the right closer to a* as indicated by the arrow pointing right. If Leslie is rational, she will do just that.</p>
+<p>Imagine Leslie studies more, say a2. At that point, the marginal cost of studying that last half hour exceeds the marginal benefit. Sleep deprivation does not usually translate in high exam scores. At a2 Leslie should decide to study less. She should move to the left, as indicated by the arrow pointing left. Rational Leslie will do just that.</p>
+<p>We have established in the case of Leslie studying for her exam, but much more generally:</p>
+<div class="iucolor">
+<p><strong>Rational action requires that the marginal benefit of an action is equated to the marginal cost of an action.</strong></p>
+</div>
+<p>This conclusion which is illustrated in Figure <a href="rational-choice.html#fig:rationalchoice02">4.2</a> above will provide the basis for about 80% of the material in this class. Figure 2 will show up in this class, again and again, just in different contexts.</p>
+<p>In Figure <a href="rational-choice.html#fig:rationalchoice02">4.2</a>, the marginal benefit curve is downward sloping, and the marginal cost is upward sloping. We will encounter three versions of Figure <a href="rational-choice.html#fig:rationalchoice02">4.2</a> in this course. They are just very slight variations of Figure <a href="rational-choice.html#fig:rationalchoice02">4.2</a>. These are depicted in Figure <a href="rational-choice.html#fig:rationalchoice03">4.3</a>. Panel a is just a reproduction of Figure <a href="rational-choice.html#fig:rationalchoice02">4.2</a>. In panel b, the marginal benefit curve is a horizontal line, and the marginal cost is upward sloping. In panel c, the marginal benefit is downward sloping, and the marginal cost is a horizontal line.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:rationalchoice03"></span>
+<img src="img/rationalchoice/panels.jpg" alt="This photo will reappear many times!" width="100%"><p class="caption">
+Figure 4.3: This photo will reappear many times!
+</p>
+</div>
+<p>We can get from panel a to panel b by rotating the marginal benefit curve downward, so it becomes horizontal. We can get from panel a to panel c by rotating the marginal cost downward, so it becomes horizontal.</p>
+<p>While these panels look slightly differently, they are just slightly different versions of the same thing:</p>
+<p>At low levels of the activity, marginal benefit is above marginal cost. At high levels of the activity, marginal cost is above the marginal benefit. Somewhere in between there is a sweet spot, where marginal benefit equals marginal cost.</p>
+</div>
+<div id="shifting-curves" class="section level2" number="4.4">
+<h2>
+<span class="header-section-number">4.4</span> Shifting Curves<a class="anchor" aria-label="anchor" href="#shifting-curves"><i class="fas fa-link"></i></a>
+</h2>
+<p>What if some event occurs in which the marginal benefit or cost of an action changes?</p>
+<p>The environment in which we live is not static. Our circumstances change all the time. In the framework laid out above there will be frequent changes in the marginal benefits and the marginal costs for our actions. How do these shifts influence rational action?</p>
+<p>In Figure <a href="rational-choice.html#fig:rationalchoice04">4.4</a> we show how an increase in the marginal benefit of the action changes our rational choice.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:rationalchoice04"></span>
+<img src="img/rationalchoice/fig4.jpg" alt="Increase of Marginal Benefit" width="75%"><p class="caption">
+Figure 4.4: Increase of Marginal Benefit
+</p>
+</div>
+<p>Imagine that you are planning on a 3-hour hike by yourself this coming Saturday. Saturday morning your best friend calls you up and tells you he has nothing to do that day. You are overjoyed and invite him on the hike. Hiking with your best friend is much more enjoyable than a solitary hike. Because your friend accompanies you on your hike, the marginal benefit curve shifts out (Figure <a href="rational-choice.html#fig:rationalchoice04">4.4</a>) to the right. As a consequence, your 3-hour hike turns into a 4-hour hike. That is the rational response.</p>
+<p>In Figure <a href="rational-choice.html#fig:rationalchoice05">4.5</a> we show how an increase in marginal cost of the action changes your rational choice.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:rationalchoice05"></span>
+<img src="img/rationalchoice/fig5.jpg" alt="Increase of Marginal Cost" width="75%"><p class="caption">
+Figure 4.5: Increase of Marginal Cost
+</p>
+</div>
+<p>Imagine you are planning a 3-hour hike for this coming Saturday. Saturday morning your wake up and you realize that overnight there was torrential rain that turned the hiking trails in your area into mud. Each step is a muddy slog. Each step now is drudgery. The rain has increased the marginal cost of hiking (Figure <a href="rational-choice.html#fig:rationalchoice05">4.5</a>). Your 3-hour hike turns into a 2-hour hike. That is the rational response.</p>
+</div>
+<div id="examples-of-rational-choice" class="section level2" number="4.5">
+<h2>
+<span class="header-section-number">4.5</span> Examples of Rational Choice<a class="anchor" aria-label="anchor" href="#examples-of-rational-choice"><i class="fas fa-link"></i></a>
+</h2>
+<p><strong>(Refreshing Lemonade)</strong> You just cut the grass on a hot July afternoon. You are hot, sweaty, parched. Figure <a href="rational-choice.html#fig:rationalchoice06">4.6</a> captures the marginal benefit and the marginal cost of drinking lemonade. Assume the units of measurement are small glasses. The marginal cost of drinking lemonade is just the cost of each glass of lemonade. It is the same for each small glass. It is a horizontal line. The marginal benefit declines with each glass. The first glass is a great thirst quencher and so is, perhaps the second glass. Glasses three and four less so. By the sixth glass the marginal benefit is tiny, below marginal cost. It is rational for you to drink 4 glasses.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:rationalchoice06"></span>
+<img src="img/rationalchoice/fig6.jpg" alt="Drinking lemonade on a hot Saturday afternoon after you cut the grass." width="50%"><p class="caption">
+Figure 4.6: Drinking lemonade on a hot Saturday afternoon after you cut the grass.
+</p>
+</div>
+<hr>
+<p><strong>(Optimal Retirement)</strong> Joe is dedicated high school math teacher. He has been teaching for 38 years and he has been planning to teach until his 70th birthday. That was his optimal choice, after careful consideration of the joys of teaching, the marginal benefit in econ speak and the costs. He has noticed that in the last few years it has become harder to get up with a spring in his step every morning, it has become harder to concentrate while grading papers. Yet, he still likes his job, with the joys outweighing any negative considerations. Then Covid-19 hit. Online teaching, lack of resources, concern for his health, administrative back and forth, administrative indecision, opinionated parents who seem to stand in the way of effective teaching. His marginal benefit has shifted way down. Now, retirement at age 65 instead of age 70 looks very appealing, and rational. <a href="https://www.npr.org/2020/11/18/936096303/nurses-are-under-pressure-as-hospitals-strain-to-meet-pandemic-demands">It appears, nurses are in the same storm.</a></p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:rationalchoice07"></span>
+<img src="img/rationalchoice/fig7.jpg" alt="Optimal retiring age." width="75%"><p class="caption">
+Figure 4.7: Optimal retiring age.
+</p>
+</div>
+<hr>
+<p><strong>(Optimal Family Size)</strong> What is our optimal number of kids? I know the number of children is not a continuous variable like how long to hike or how long to study for an exam. We still can imagine that there is a marginal benefit from having children and a marginal cost. Let’s assume for the sake of simplicity that the marginal cost of a child is constant. I know that things like hand me down clothes might make the second child cheaper than the first, but this will not matter for the argument here. I also know that some parents look forward to having several children, rather than just one to see their children play with each other and grow up with each other. One could make therefore an argument that the marginal benefit of the second child might be higher than the marginal benefit from child number 1. Again, this would not influence the argument here. The point is that eventually the marginal cost of an extra child is higher than the marginal benefit of that child.
+One interesting fact about desired fertility in the US seems to be: Whatever the number of children, if there is no boy among these children, the probability of having another child goes up. Suppose that for child 3, the marginal benefit is just above the marginal cost. Then the optimal rational number of children is 3. But things don’t stop here. The sex composition of children seems to matter for the decision to have another child. If all three previous children are girls, indicated by the string (G, G, G), then the marginal benefit of having a fourth child is high, above marginal cost and the family has a fourth child. If there is at least one boy among the first three, indicated by the potential strings (B, G, G), (G, B, G), (G, G, B), (B,B, G), (G, B, B), then the marginal benefit of a fourth child is low. The family will only have three children.
+That’s the theory. That is also in the data. <a href="https://econweb.ucsd.edu/~gdahl/papers/demand-for-sons.pdf" class="uri">https://econweb.ucsd.edu/~gdahl/papers/demand-for-sons.pdf</a><br>
+American families tend to have a preference for sons over daughters.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:rationalchoice08"></span>
+<img src="img/rationalchoice/fig8.jpg" alt="Optimal fertility" width="50%"><p class="caption">
+Figure 4.8: Optimal fertility
+</p>
+</div>
+</div>
+<div id="increasing-returns" class="section level2" number="4.6">
+<h2>
+<span class="header-section-number">4.6</span> Increasing Returns<a class="anchor" aria-label="anchor" href="#increasing-returns"><i class="fas fa-link"></i></a>
+</h2>
+<p>We said earlier that diminishing returns is not an iron law. It is an assumption that is helpful in many cases. We have seen some examples above. There are cases where there are not diminishing but increasing returns.</p>
+<p>Suppose you want to build a bridge over the Mississippi just north of St. Louis. It will require a ton of concrete. The point of the bridge is to get more transportation services from IL to MO and back. The marginal cost of the concrete can be assumed to be constant as seen in Figure <a href="rational-choice.html#fig:rationalchoice09">4.9</a>.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:rationalchoice09"></span>
+<img src="img/rationalchoice/fig9.jpg" alt="Concrete for bridge" width="75%"><p class="caption">
+Figure 4.9: Concrete for bridge
+</p>
+</div>
+<p>The marginal benefit derived from the concrete is the shape of an inverted L. It is basically zero for practically every ton of concrete. There will be no transportation services at all until the very last ton of concrete is used to complete the bridge. Only when the last ton of concrete is laid, will there be any transportation services. Hence the inverted L shape.</p>
+<hr>
+<p>Suppose a widow, mother of two young children is <span class="math inline">\(\$750\)</span> behind on utilities. If she cannot pay the utility bill by next week, the power company will disconnect her service. Apart from not being able to heat the apartment and cook, disconnect from the power company means loss of her Section 8 housing and she and her two children will be homeless. Joe is a generous soul and gives her <span class="math inline">\(\$200\)</span>. That helps just a little bit, but her utility will still be shut off and she still faces the prospect of homelessness with her kids. Generous Jill pitches in another <span class="math inline">\(\$200\)</span>, and so does generous Jacqui. The marginal benefit of each one of these contributions is relatively small, since even with <span class="math inline">\(\$600\)</span> she still faces the prospect of homelessness. Generous Jack finally pitches in another <span class="math inline">\(\$200\)</span>. This helps her over the top. It might be reasonable to assume that the marginal benefit to the widow of these contributions is as indicated in Figure <a href="rational-choice.html#fig:rationalchoice10">4.10</a>, convex at first, below the $750 threshold and concave on the other side.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:rationalchoice10"></span>
+<img src="img/rationalchoice/fig10.jpg" alt="Benefit to widow of charitable contributions" width="75%"><p class="caption">
+Figure 4.10: Benefit to widow of charitable contributions
+</p>
+</div>
+<hr>
+<p>Why do you go to school? When I ask students that question the answer is invariably: To get a better job. And when I ask: What is a better job? the answer very often is something like: More money. The connection between schooling, years of schooling, and wages or earnings is one of the age-old central topics in labor economics.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;&lt;a href="https://en.wikipedia.org/wiki/Mincer_earnings_function" class="uri"&gt;https://en.wikipedia.org/wiki/Mincer_earnings_function&lt;/a&gt;&lt;/p&gt;'><sup>23</sup></a></p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:rationalchoice11"></span>
+<img src="img/rationalchoice/fig11.PNG" alt="Source: Cecilia Elena Rouse, 2017, The economics of education and policy: Ideas for a principles course, The Journal of Economic education, 48:3, 229-237" width="100%"><p class="caption">
+Figure 4.11: Source: Cecilia Elena Rouse, 2017, The economics of education and policy: Ideas for a principles course, The Journal of Economic education, 48:3, 229-237
+</p>
+</div>
+<p>The return to an extra year of schooling is basically zero between 1 and 11 years of schooling. If you are in high school and contemplating whether you want to drop out after 9th grade or whether you want to stick it out for one more year, the data seem to indicate that the monetary return to the 10th year is zero. If you are in it for the money, better to finish high school.</p>
+<p>After high school, earning rise linearly with each extra year of schooling. Even past 16 years of schooling. So, you may want to make the effort to really finish college and perhaps even get a graduate degree. Good luck with that!</p>
+</div>
+<div id="glossary-of-terms-2" class="section level2" number="4.7">
+<h2>
+<span class="header-section-number">4.7</span> Glossary of Terms<a class="anchor" aria-label="anchor" href="#glossary-of-terms-2"><i class="fas fa-link"></i></a>
+</h2>
+<p><strong>Diminishing returns:</strong> In production, the amount of extra output produced by an extra unit of an input declines as more of the input is used. Or, alternatively, as the amount of an input used is increasing, it requires more and more of that input to produce one extra unit of output.</p>
+<p><strong>Diminishing utility:</strong> In consumption, the amount of extra utility/satisfaction/pleasure generated by an extra unit of the consumption good declines as more and more of that good is consumed.</p>
+<p><strong>Increasing returns:</strong> In production, the amount of extra output produced by an extra unit of input increases as more of the input is used. Or, alternatively, as the amount of an input used in production is increasing, it requires less and less of the input to produce one extra unit of the output.</p>
+<p><strong>Increasing utility:</strong> In consumption, the amount of extra utility/satisfaction/pleasure generated by an extra unit of the consumption good increases as more and more of the good is consumed.</p>
+<p><strong>Marginal benefit:</strong> The marginal benefit of any action is the extra benefit derived from one additional unit of the action.</p>
+<p><strong>Marginal cost:</strong> The marginal cost of any action is the extra cost incurred to carry out that action by one more unit.</p>
+<p><strong>Opportunity cost:</strong> The opportunity cost of any action is the value that could have been obtained from the second-best available option, had the second-best option been chosen.</p>
+<p><strong>Rationality/rational choice:</strong> Rationality means choosing an option within the constraints or limits that gets the decision maker closest to their goal, where the decision maker is using all the available information.</p>
+</div>
+<div id="practice-questions-2" class="section level2" number="4.8">
+<h2>
+<span class="header-section-number">4.8</span> Practice Questions<a class="anchor" aria-label="anchor" href="#practice-questions-2"><i class="fas fa-link"></i></a>
+</h2>
+<div id="discussion-2" class="section level3" number="4.8.1">
+<h3>
+<span class="header-section-number">4.8.1</span> Discussion<a class="anchor" aria-label="anchor" href="#discussion-2"><i class="fas fa-link"></i></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li><p>In your own words describe how economists use the term “rationality.”</p></li>
+<li><p>Provide two examples of activities where the marginal benefits are rising as the activity is increased.</p></li>
+<li><p>Provide two examples of activities where the marginal costs are falling as the activity is increased.</p></li>
+<li>
+<p>Suppose you care only about two goods, food and clothing. We denote the amounts of food and clothing by f and c, respectively. We denote your income, monthly, while on campus in the fall semester by m. The two prices are <span class="math inline">\(p_f\)</span> and <span class="math inline">\(p_c\)</span>, respectively.</p>
+<p>A. Write down an equation that captures your budget constraint.<br>
+B. Your parents call you up in August right after you arrived on campus and tell you that your monthly income for the rest of the semester has increased by 15%. How, in percentage terms, would your monthly expenditures on food and clothing change?<br>
+C. What if your monthly income changed only for the month of September.</p>
+</li>
+<li><p>Before you arrive on campus you have heard all kind of horror stories about “Finite Math.” Against all odds, you discover in the first two weeks of class that you actually really, really like it. Illustrate with an appropriate graph how this discovery might influence how much time you might allocate to study “Finite.”</p></li>
+<li><p>Describe three examples of increasing returns in consumption. Why do the increasing returns arise?</p></li>
+<li><p>Describe three examples of increasing returns in production. Why do the increasing returns arise?</p></li>
+</ol>
+</div>
+<div id="multiple-choice-2" class="section level3" number="4.8.2">
+<h3>
+<span class="header-section-number">4.8.2</span> Multiple Choice<a class="anchor" aria-label="anchor" href="#multiple-choice-2"><i class="fas fa-link"></i></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>
+<p>Jack likes to go out and have pizza with his buddies. He always looks forward to that first slice. The second slice usually is a tad less enjoyable than the first. By the fourth slice, most of the thrill of eating pizza is gone. This is an example of</p>
+<p>A. Opportunity cost<br>
+B. Rational choice<br>
+C. Increasing returns<br>
+D. Decreasing returns</p>
+</li>
+<li>
+<p>Jill purchases her eggs for breakfast directly from Farmer Brown. Farmer Brown sells free roam, no pesticide, organic eggs. Starting October 1, Farmer brown changed this and as a consequence the eggs no longer taste like eggs Jill used to love. As a consequence of this change, Jill’s</p>
+<p>A. Marginal cost of eating eggs shifts up<br>
+B. Marginal cost of eating eggs shifts down<br>
+C. Marginal benefit from eating eggs shifts up<br>
+D. Marginal benefit from eating eggs shifts down</p>
+</li>
+<li>
+<p>Your favorite breakfast cereal gets improved, and you find it tastes much better. This change will</p>
+<p>A. Make your marginal benefit from cereal flatter<br>
+B. Make your marginal benefit from cereal steeper<br>
+C. Shift your marginal benefit from cereal up<br>
+D. Shift your marginal benefit from cereal down</p>
+</li>
+<li>
+<p>You discover a better charcoal that makes the burgers you grill taste better. As a consequence of having discovered the better charcoal, your</p>
+<p>A. Marginal cost of burgers has increased<br>
+B. Marginal cost of burgers has decreased<br>
+C. Marginal benefit from burgers has decreased<br>
+D. Marginal benefit from burgers has increased</p>
+</li>
+<li>
+<p>“Diminishing marginal returns” is</p>
+<p>A. A fact<br>
+B. An assumption<br>
+C. True<br>
+D. False</p>
+</li>
+<li>
+<p>“Increasing returns” is a situation where</p>
+<p>A. Marginal costs are upward sloping<br>
+B. Marginal costs are downward sloping<br>
+C. Marginal costs are above marginal benefit<br>
+D. Marginal costs are below marginal benefit.</p>
+</li>
+<li>
+<p>Suppose Jack owns 8 pairs of shoes. At 8 pairs of shoes her marginal benefit from one extra pair of shoes is <span class="math inline">\(\$300\)</span>. The marginal cost of an extra pair of shoes is <span class="math inline">\(\$200\)</span>. Then rational</p>
+<p>A. Jack should buy more shoes<br>
+B. Jack should buy fewer shoes<br>
+C. Jack has purchased the optimal (for Jack) number of shoes<br>
+D. Jack should go barefoot.</p>
+</li>
+<li>
+<p>Gerhard wants to be a rockstar and play the electric guitar. His marginal benefit of practicing the guitar is always/everywhere above the marginal cost of practicing, whatever that may be. Then, if Gerhard is rational,</p>
+<p>A. He should practice more<br>
+B. He should practice less<br>
+C. He should abandon his dream of becoming a rock star<br>
+D. He should pick up jazz dance</p>
+</li>
+<li>
+<p>The marginal benefit of saving is the extra consumption you can afford in the future. The marginal cost of saving is the consumption foregone today. Currently tax rates are at historic lows, and you are confident that tax rates will have to increase in the future. If taxes will indeed increase in the future, then</p>
+<p>A. The marginal benefit of saving decreases<br>
+B. The marginal benefit of saving increases<br>
+C. The marginal cost of saving increases<br>
+D. The marginal cost of saving decreases</p>
+</li>
+<li>
+<p>Jackie is very healthy and expects to remain healthy until she draws her last breath. Jack is expecting to develop all kinds of health problems as he ages. If these assessments are correct, then</p>
+<p>A. Jackie’s marginal benefit of saving is higher than Jack’s<br>
+B. Jackie’s marginal benefit of saving is lower than Jack’s<br>
+C. Jackie’s marginal cost of saving is higher than Jack’s<br>
+D. Jackie’s marginal cost of saving is lower than Jack’s</p>
+</li>
+<li>
+<p>Rudolf’s marginal benefit from pulling a sleigh through the snow and ice is exactly equal to Rudolph’s marginal cost of pulling the sleigh. If Rudolph is rational, Rudolph should</p>
+<p>A. Pull more<br>
+B. Pull less<br>
+C. Not change the amount of pulling<br>
+D. Put more gifts on the sleigh</p>
+</li>
+<li>
+<p>Mary is planning to go out for dinner Friday night. Before she goes out, she makes a list of the preferences over meals. Mary prefers lobster over chicken, chicken over a burger, a burger over pizza, pizza over mixed vegetables. When she gets to the restaurants, she finds out that the lobster is not available. She chooses the chicken. Her opportunity cost of choosing the chicken is the value she would have obtained from</p>
+<p>A. Lobster<br>
+B. Mixed vegetables<br>
+C. Pizza<br>
+D. The burger</p>
+</li>
+<li>
+<p>In the above problem the highest amount Mary is willing to pay for lobster, chicken, burger, pizza, mixed vegetables are in dollars, 35, 30, 25, 20, 15. The prices of these goods, in the same order are, also in dollars, 30, 25, 20, 15, 10. If the price of mixed vegetables rises to 12 dollars, then Mary’s opportunity cost of eating chicken</p>
+<p>A. Rises<br>
+B. Falls<br>
+C. Stays constant<br>
+D. Is irrelevant for her decision</p>
+</li>
+<li>
+<p>In the above problem with the original valuations by Mary and the original prices, when Mary arrives at the restaurant, she finds out that the only burger available is a bison burger, not the Angus beef that she usually prefers. In this case her opportunity cost of eating chicken has</p>
+<p>A. Increased<br>
+B. Decreased<br>
+C. Stayed constant<br>
+D. Become irrelevant</p>
+</li>
+<li>
+<p>Jack is moving into a new apartment. He cannot lift a heavy sleeper sofa by himself. When Jill arrives, the two of them together can move the sleeper sofa into the new apartment. This is an example of</p>
+<p>A. Opportunity costs<br>
+B. Diminishing returns<br>
+C. Increasing returns<br>
+D. Rationality</p>
+</li>
+<li>
+<p>Mary and Jill both like doing housework equally well. Mary has a degree in Finance from IU, Jill dropped out of high school after 11th grade. If both Mary and Jill are rational, then</p>
+<p>A. Mary will allocate more hours to housework than Jill<br>
+B. Mary will allocate fewer hours to housework than Jill<br>
+C. Mary and Jill will spend the same number of hours doing housework<br>
+D. Jill will hire a nanny.</p>
+</li>
+<li>
+<p>When Mary gets a raise her</p>
+<p>A. Marginal cost of housework increases<br>
+B. Marginal cost of housework decreases<br>
+C. Marginal benefit of housework increases<br>
+D. Marginal benefit of housework decreases</p>
+</li>
+<li>
+<p>Beckie loves drinking coffee with a good amount of hazelnut flavored coffee creamer. If that kind of coffee creamer is unavailable</p>
+<p>A. Her marginal cost of coffee rises<br>
+B. Her marginal cost of coffee falls<br>
+C. Her marginal benefit of coffee rises<br>
+D. Her marginal benefit of coffee falls</p>
+</li>
+<li>
+<p>Rationality means</p>
+<p>A. Choosing a level of activity where marginal benefit is highest<br>
+B. Choosing a level of activity where marginal cost is lowest<br>
+C. Choosing a level of activity where marginal cost is far below marginal benefit<br>
+D. Choosing a level of activity where marginal benefit is equal to marginal cost</p>
+</li>
+<li>
+<p>You are playing center mid on your intra mural soccer team. At the beginning of the season, your teammates always played their hearts out and your team won quite a few games. In today’s game you realize that your teammates don’t want to run, they don’t seem to have their heart in the game. As a consequence</p>
+<p>A. Your marginal cost of playing hard rises<br>
+B. Your marginal cost of playing hard falls<br>
+C. Your marginal benefit of playing hard rises<br>
+D. Your marginal benefit of playing hard falls</p>
+</li>
+</ol>
+</div>
+<div id="answer-key-1" class="section level3" number="4.8.3">
+<h3>
+<span class="header-section-number">4.8.3</span> Answer Key<a class="anchor" aria-label="anchor" href="#answer-key-1"><i class="fas fa-link"></i></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>D</li>
+<li>D</li>
+<li>C</li>
+<li>D</li>
+<li>B</li>
+<li>B</li>
+<li>A</li>
+<li>A</li>
+<li>A</li>
+<li>A</li>
+<li>C</li>
+<li>D</li>
+<li>C</li>
+<li>B</li>
+<li>C</li>
+<li>B</li>
+<li>A</li>
+<li>D</li>
+<li>D</li>
+<li>D</li>
+</ol>
+</div>
+</div>
+</div>
+
+  <div class="chapter-nav">
+<div class="prev"><a href="growth.html"><span class="header-section-number">3</span> Economic Growth</a></div>
+<div class="next"><a href="demand.html"><span class="header-section-number">5</span> Demand</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#rational-choice"><span class="header-section-number">4</span> Rational Choice</a></li>
+<li><a class="nav-link" href="#goals-and-constraints"><span class="header-section-number">4.1</span> Goals and Constraints</a></li>
+<li><a class="nav-link" href="#marginal-costs-and-benefits"><span class="header-section-number">4.2</span> Marginal Costs and Benefits</a></li>
+<li><a class="nav-link" href="#choice"><span class="header-section-number">4.3</span> Choice</a></li>
+<li><a class="nav-link" href="#shifting-curves"><span class="header-section-number">4.4</span> Shifting Curves</a></li>
+<li><a class="nav-link" href="#examples-of-rational-choice"><span class="header-section-number">4.5</span> Examples of Rational Choice</a></li>
+<li><a class="nav-link" href="#increasing-returns"><span class="header-section-number">4.6</span> Increasing Returns</a></li>
+<li><a class="nav-link" href="#glossary-of-terms-2"><span class="header-section-number">4.7</span> Glossary of Terms</a></li>
+<li>
+<a class="nav-link" href="#practice-questions-2"><span class="header-section-number">4.8</span> Practice Questions</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#discussion-2"><span class="header-section-number">4.8.1</span> Discussion</a></li>
+<li><a class="nav-link" href="#multiple-choice-2"><span class="header-section-number">4.8.2</span> Multiple Choice</a></li>
+<li><a class="nav-link" href="#answer-key-1"><span class="header-section-number">4.8.3</span> Answer Key</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/introeconfull/book//blob/master/rationalchoice.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/introeconfull/book//edit/master/rationalchoice.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>An Introductory Course in Economics</strong>" was written by Gerhard Glomm, Joseph Westenberg. It was last built on 2022-01-10.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
