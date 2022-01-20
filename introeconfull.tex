@@ -78,12 +78,22 @@
 }
 \makeatother
 
+\definecolor{iucrim}{HTML}{990000}
+\definecolor{iucream}{HTML}{EEEDEB}
+
 \newtcolorbox{iucolor}{
-  colback=red,
-  colframe=black,
-  coltext=white,
+  colback=iucrim,
+  colframe=iucream,
+  coltext=iucream,
   boxsep=5pt,
   arc=4pt}
+
+  \newtcolorbox{iucolor2}{
+    colback=iucream,
+    colframe=iucrim,
+    coltext=iucrim,
+    boxsep=5pt,
+    arc=4pt}
 
 \newtcolorbox{addition}{
   colback=purple,
@@ -102,13 +112,15 @@
 %     #1 \\
 %     \end{tabular}
 %     \end{mycustomindent}}
+
+
 \ifluatex
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 
 \title{An Introductory Course in Economics}
 \author{Gerhard Glomm, Joseph Westenberg}
-\date{2022-01-10}
+\date{2022-01-12}
 
 \begin{document}
 \maketitle
@@ -529,7 +541,7 @@ The theories we use will be different in economics and in physics. Even within e
 
 How is an abstraction useful? Suppose the job is to drive from Bloomington, IN to Martinsville, IN. We need a map to help us get there.
 
-\newpage{}
+\includegraphics[width=0.75\linewidth]{img/intro/mapshot}
 
 Above we have a map. It has all kinds of information. State Forests, State Parks. Where Bloomington's airport is. County lines. If we zoom out, we get state borders, Lake Michigan, Lake Erie, etc. A whole bunch of information about Illinois. Much of this information is not relevant if the task is to get from Bloomington to Martinsville.
 
@@ -3819,6 +3831,17 @@ Figure \ref{fig:compmarkets04} illustrates the effect of a price ceiling like re
 
 \caption{Unit Taxation.}\label{fig:compmarkets04}
 \end{figure}
+
+\begin{iucolor2}
+
+\begin{center}
+\textbf{LOOK A BIT LIKE THE FIRST PANEL FROM RATIONAL CHOICE CHAPTER?}
+
+\end{center}
+
+\begin{center}\includegraphics[width=1\linewidth]{img/rationalchoice/panels} \end{center}
+
+\end{iucolor2}
 
 At the price p' the quantity supplied is below the quantity demanded. There is excess demand.
 

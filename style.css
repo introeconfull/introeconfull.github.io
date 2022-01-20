@@ -32,6 +32,15 @@ iframe {
 .center {
   text-align: center;
 }
-.questopt{
-  text-indent:40px
+
+.iucolor2 {
+  padding: 1em 1em 1em 4em;
+  margin-bottom: 10px;
+  border: 2px solid #990000;
+  border-radius: 10px;
+  background: #EEEDEB 5px center/3em no-repeat;
+}
+
+.caution {
+  background-image: url("img/notice.png");
 }
