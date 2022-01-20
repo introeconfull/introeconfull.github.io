@@ -2,8 +2,10 @@ fig:intro02
 fig:intro03
 fig:intro04
 fig:intro05
-fig:intro06
-fig:intro07
+fig:introrefugees
+fig:introkidneyfailure
+fig:introemptywallet
+fig:introtime
 fig:growth01
 fig:growth02
 fig:growth04
@@ -228,7 +230,3 @@ mean
 median
 percentiles
 example
-fig:introrefugees
-fig:introkidneyfailure
-fig:introemptywallet
-fig:introtime
