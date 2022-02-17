@@ -6,6 +6,10 @@ fig:introrefugees
 fig:introkidneyfailure
 fig:introemptywallet
 fig:introtime
+fig:introambulance
+fig:intropeterthinker
+fig:introdarwinpebbles
+fig:gssquestions
 fig:growth01
 fig:growth02
 fig:growth04
