@@ -46,6 +46,7 @@ fig:demand06
 fig:demand07
 fig:demand08
 fig:demand09
+fig:drugalcoholsuicidedeaths
 fig:supply01
 fig:supply02
 fig:supply03
@@ -142,9 +143,12 @@ rational-choice
 goals-and-constraints
 marginal-costs-and-benefits
 choice
-shifting-curves
+changes-in-marginal-benefit-andor-marginal-cost
 examples-of-rational-choice
 increasing-returns
+irrationality
+sunk-costs
+examples-2
 glossary-of-terms-2
 practice-questions-2
 discussion-2
@@ -160,6 +164,8 @@ complements
 normal-and-inferior-goods
 product-quality
 uncertainty
+deadly-demand
+substitutes-complements-in-unexpected-places
 glossary-of-terms-3
 practice-questions-3
 discussion-3
@@ -180,7 +186,7 @@ competitive-equilibrium
 consumerproducer-surplus
 unit-taxation
 price-ceilings
-examples-2
+examples-3
 taking-price-as-given
 positive-vs-normative-economics
 efficiency
