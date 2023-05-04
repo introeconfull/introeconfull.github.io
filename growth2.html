@@ -1,94 +1,408 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="" xml:lang="">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 3 Economic Growth II | An Introductory Course in Economics</title>
-<meta name="author" content="Gerhard Glomm, Joseph Westenberg">
-<meta name="description" content="In this chapter you will learn: The basics of human capital accumulation The basics of technological progress  3.1 Human capital accumulation In the Solow model we considered in the previous...">
-<meta name="generator" content="bookdown 0.26 with bs4_book()">
-<meta property="og:title" content="Chapter 3 Economic Growth II | An Introductory Course in Economics">
-<meta property="og:type" content="book">
-<meta property="og:description" content="In this chapter you will learn: The basics of human capital accumulation The basics of technological progress  3.1 Human capital accumulation In the Solow model we considered in the previous...">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 3 Economic Growth II | An Introductory Course in Economics">
-<meta name="twitter:description" content="In this chapter you will learn: The basics of human capital accumulation The basics of technological progress  3.1 Human capital accumulation In the Solow model we considered in the previous...">
-<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
-<script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
-<script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
-<script src="libs/leaflet-binding-2.1.1/leaflet.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
-    
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-  </style>
-<link rel="stylesheet" href="style.css">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Economic Growth II | An Introductory Course in Economics</title>
+  <meta name="description" content="Notes for introductory economics" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Economic Growth II | An Introductory Course in Economics" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Notes for introductory economics" />
+  <meta name="github-repo" content="introeconfull/book" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Economic Growth II | An Introductory Course in Economics" />
+  
+  <meta name="twitter:description" content="Notes for introductory economics" />
+  
+
+<meta name="author" content="Gerhard Glomm, Joseph Westenberg" />
+
+
+<meta name="date" content="2023-05-04" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="growth.html"/>
+<link rel="next" href="decisions-rational-or-irrational.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
+<link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-1.3.1/leaflet.js"></script>
+<link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet" />
+<script src="libs/proj4-2.6.2/proj4.min.js"></script>
+<script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script>
+<link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet" />
+<script src="libs/leaflet-binding-2.0.4.1/leaflet.js"></script>
+\usepackage{booktabs}
+\usepackage{amsthm}
+\usepackage{tcolorbox}
+\makeatletter
+\def\thm@space@setup{%
+  \thm@preskip=8pt plus 2pt minus 4pt
+  \thm@postskip=\thm@preskip
+}
+\makeatother
+
+\definecolor{iucrim}{HTML}{990000}
+\definecolor{iucream}{HTML}{EEEDEB}
+
+\newtcolorbox{iucolor}{
+  colback=iucrim,
+  colframe=iucream,
+  coltext=iucream,
+  boxsep=5pt,
+  arc=4pt}
+
+  \newtcolorbox{iucolor2}{
+    colback=iucream,
+    colframe=iucrim,
+    coltext=iucrim,
+    boxsep=5pt,
+    arc=4pt}
+
+\newtcolorbox{addition}{
+  colback=purple,
+  colframe=black,
+  coltext=white,
+  boxsep=5pt,
+  arc=4pt}
+
+% \newenvironment{mycustomindent}[1]
+%   {\setlength{\parindent}{#1}}
+%   {\setlength{\parindent}{\constzeroindent}}
+
+% \newcommand{\questopt}[1]{
+%     \begin{mycustomindent}{\constsecondindent}
+%     \begin{tabular}{@{}p{17cm}@{}}
+%     #1 \\
+%     \end{tabular}
+%     \end{mycustomindent}}
+
+
+
+
+
+
 </head>
-<body data-spy="scroll" data-target="#toc">
 
-<div class="container-fluid">
-<div class="row">
-  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<body>
 
-    <div class="d-flex align-items-start justify-content-between">
-      <h1>
-        <a href="index.html" title="">An Introductory Course in Economics</a>
-      </h1>
-      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
-    </div>
 
-    <div id="main-nav" class="collapse-lg">
-      <form role="search">
-        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
-</form>
 
-      <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled">
-<li><a class="" href="index.html"><span class="header-section-number">1</span> Introduction</a></li>
-<li><a class="" href="growth.html"><span class="header-section-number">2</span> Economic Growth</a></li>
-<li><a class="active" href="growth2.html"><span class="header-section-number">3</span> Economic Growth II</a></li>
-<li><a class="" href="rational-choice.html"><span class="header-section-number">4</span> Rational Choice</a></li>
-<li><a class="" href="demand.html"><span class="header-section-number">5</span> Demand</a></li>
-<li><a class="" href="supply.html"><span class="header-section-number">6</span> Supply</a></li>
-<li><a class="" href="competitive-markets.html"><span class="header-section-number">7</span> Competitive Markets</a></li>
-<li><a class="" href="externalities.html"><span class="header-section-number">8</span> Externalities</a></li>
-<li><a class="" href="monopoly.html"><span class="header-section-number">9</span> Monopoly</a></li>
-<li><a class="" href="game-theory.html"><span class="header-section-number">10</span> Game Theory</a></li>
-<li><a class="" href="oligopoly.html"><span class="header-section-number">11</span> Oligopoly</a></li>
-<li><a class="" href="appendix.html"><span class="header-section-number">12</span> Appendix</a></li>
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><strong><a href="./">Introduction to Economics</a></strong></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#what-is-economics-all-about"><i class="fa fa-check"></i><b>1.1</b> What is Economics All About?</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#what-is-economics-good-for"><i class="fa fa-check"></i><b>1.2</b> What is Economics Good For?</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#unintended-consequences"><i class="fa fa-check"></i><b>1.3</b> Unintended Consequences</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="index.html"><a href="index.html#unintended-consequences-examples"><i class="fa fa-check"></i><b>1.3.1</b> Unintended Consequences Examples</a></li>
+<li class="chapter" data-level="1.3.2" data-path="index.html"><a href="index.html#exercises"><i class="fa fa-check"></i><b>1.3.2</b> Exercises</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#role-of-theory"><i class="fa fa-check"></i><b>1.4</b> Role of Theory</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="index.html"><a href="index.html#abstractions"><i class="fa fa-check"></i><b>1.4.1</b> Abstractions</a></li>
+<li class="chapter" data-level="1.4.2" data-path="index.html"><a href="index.html#prejudice-based-wage-discrimination"><i class="fa fa-check"></i><b>1.4.2</b> Prejudice-Based Wage Discrimination</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#dealing-with-data"><i class="fa fa-check"></i><b>1.5</b> Dealing with Data</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="index.html"><a href="index.html#empirical-regularities"><i class="fa fa-check"></i><b>1.5.1</b> Empirical regularities</a></li>
+<li class="chapter" data-level="1.5.2" data-path="index.html"><a href="index.html#correlation-vs-causation"><i class="fa fa-check"></i><b>1.5.2</b> Correlation vs Causation</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#glossary-of-terms"><i class="fa fa-check"></i><b>1.6</b> Glossary of Terms</a></li>
+<li class="chapter" data-level="1.7" data-path="index.html"><a href="index.html#practice-questions"><i class="fa fa-check"></i><b>1.7</b> Practice Questions</a>
+<ul>
+<li class="chapter" data-level="1.7.1" data-path="index.html"><a href="index.html#discussion"><i class="fa fa-check"></i><b>1.7.1</b> Discussion</a></li>
+<li class="chapter" data-level="1.7.2" data-path="index.html"><a href="index.html#multiple-choice"><i class="fa fa-check"></i><b>1.7.2</b> Multiple Choice</a></li>
+<li class="chapter" data-level="1.7.3" data-path="index.html"><a href="index.html#answer-key"><i class="fa fa-check"></i><b>1.7.3</b> Answer Key</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="growth.html"><a href="growth.html"><i class="fa fa-check"></i><b>2</b> Economic Growth</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="growth.html"><a href="growth.html#why-study-growth"><i class="fa fa-check"></i><b>2.1</b> Why Study Growth?</a></li>
+<li class="chapter" data-level="2.2" data-path="growth.html"><a href="growth.html#gdp"><i class="fa fa-check"></i><b>2.2</b> GDP</a></li>
+<li class="chapter" data-level="2.3" data-path="growth.html"><a href="growth.html#basic-notation"><i class="fa fa-check"></i><b>2.3</b> Basic Notation</a></li>
+<li class="chapter" data-level="2.4" data-path="growth.html"><a href="growth.html#measuring-economic-growth"><i class="fa fa-check"></i><b>2.4</b> Measuring economic growth:</a>
+<ul>
+<li class="chapter" data-level="2.4.1" data-path="growth.html"><a href="growth.html#a-thought-experiment"><i class="fa fa-check"></i><b>2.4.1</b> A thought experiment</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="growth.html"><a href="growth.html#the-rule-of-70"><i class="fa fa-check"></i><b>2.5</b> The Rule of 70!</a></li>
+<li class="chapter" data-level="2.6" data-path="growth.html"><a href="growth.html#the-solow-growth-model"><i class="fa fa-check"></i><b>2.6</b> The Solow Growth Model</a>
+<ul>
+<li class="chapter" data-level="2.6.1" data-path="growth.html"><a href="growth.html#physical-capital-accumulation"><i class="fa fa-check"></i><b>2.6.1</b> Physical Capital Accumulation</a></li>
+<li class="chapter" data-level="2.6.2" data-path="growth.html"><a href="growth.html#production-function"><i class="fa fa-check"></i><b>2.6.2</b> Production Function</a></li>
+<li class="chapter" data-level="2.6.3" data-path="growth.html"><a href="growth.html#in-per-capita-terms"><i class="fa fa-check"></i><b>2.6.3</b> In Per Capita Terms</a></li>
+<li class="chapter" data-level="2.6.4" data-path="growth.html"><a href="growth.html#predictions"><i class="fa fa-check"></i><b>2.6.4</b> Predictions</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="growth.html"><a href="growth.html#solow-model-and-data"><i class="fa fa-check"></i><b>2.7</b> Solow Model and Data</a>
+<ul>
+<li class="chapter" data-level="2.7.1" data-path="growth.html"><a href="growth.html#post-wwii"><i class="fa fa-check"></i><b>2.7.1</b> Post WWII</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="growth.html"><a href="growth.html#glossary-of-terms-1"><i class="fa fa-check"></i><b>2.8</b> Glossary of Terms</a></li>
+<li class="chapter" data-level="2.9" data-path="growth.html"><a href="growth.html#practice-questions-1"><i class="fa fa-check"></i><b>2.9</b> Practice Questions</a>
+<ul>
+<li class="chapter" data-level="2.9.1" data-path="growth.html"><a href="growth.html#discussion-1"><i class="fa fa-check"></i><b>2.9.1</b> Discussion</a></li>
+<li class="chapter" data-level="2.9.2" data-path="growth.html"><a href="growth.html#multiple-choice-1"><i class="fa fa-check"></i><b>2.9.2</b> Multiple Choice</a></li>
+<li class="chapter" data-level="2.9.3" data-path="growth.html"><a href="growth.html#answer-key-1"><i class="fa fa-check"></i><b>2.9.3</b> Answer Key</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="growth2.html"><a href="growth2.html"><i class="fa fa-check"></i><b>3</b> Economic Growth II</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="growth2.html"><a href="growth2.html#human-capital-accumulation"><i class="fa fa-check"></i><b>3.1</b> Human capital accumulation</a></li>
+<li class="chapter" data-level="3.2" data-path="growth2.html"><a href="growth2.html#more-human-capital"><i class="fa fa-check"></i><b>3.2</b> More Human Capital</a></li>
+<li class="chapter" data-level="3.3" data-path="growth2.html"><a href="growth2.html#technological-progress"><i class="fa fa-check"></i><b>3.3</b> Technological progress</a></li>
+<li class="chapter" data-level="3.4" data-path="growth2.html"><a href="growth2.html#nails"><i class="fa fa-check"></i><b>3.4</b> Nails</a></li>
+<li class="chapter" data-level="3.5" data-path="growth2.html"><a href="growth2.html#light"><i class="fa fa-check"></i><b>3.5</b> Light</a></li>
+<li class="chapter" data-level="3.6" data-path="growth2.html"><a href="growth2.html#additive-growth"><i class="fa fa-check"></i><b>3.6</b> Additive Growth</a></li>
+<li class="chapter" data-level="3.7" data-path="growth2.html"><a href="growth2.html#glossary-of-terms-2"><i class="fa fa-check"></i><b>3.7</b> Glossary of Terms</a></li>
+<li class="chapter" data-level="3.8" data-path="growth2.html"><a href="growth2.html#practice-questions-2"><i class="fa fa-check"></i><b>3.8</b> Practice Questions</a>
+<ul>
+<li class="chapter" data-level="3.8.1" data-path="growth2.html"><a href="growth2.html#discussion-2"><i class="fa fa-check"></i><b>3.8.1</b> Discussion</a></li>
+<li class="chapter" data-level="3.8.2" data-path="growth2.html"><a href="growth2.html#multiple-choice-2"><i class="fa fa-check"></i><b>3.8.2</b> Multiple Choice</a></li>
+<li class="chapter" data-level="3.8.3" data-path="growth2.html"><a href="growth2.html#answers"><i class="fa fa-check"></i><b>3.8.3</b> Answers</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="decisions-rational-or-irrational.html"><a href="decisions-rational-or-irrational.html"><i class="fa fa-check"></i><b>4</b> Decisions: Rational or Irrational?</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="decisions-rational-or-irrational.html"><a href="decisions-rational-or-irrational.html#goals-and-constraints"><i class="fa fa-check"></i><b>4.1</b> Goals and Constraints</a></li>
+<li class="chapter" data-level="4.2" data-path="decisions-rational-or-irrational.html"><a href="decisions-rational-or-irrational.html#marginal-costs-and-benefits"><i class="fa fa-check"></i><b>4.2</b> Marginal Costs and Benefits</a></li>
+<li class="chapter" data-level="4.3" data-path="decisions-rational-or-irrational.html"><a href="decisions-rational-or-irrational.html#choice"><i class="fa fa-check"></i><b>4.3</b> Choice</a></li>
+<li class="chapter" data-level="4.4" data-path="decisions-rational-or-irrational.html"><a href="decisions-rational-or-irrational.html#changes-in-marginal-benefit-andor-marginal-cost"><i class="fa fa-check"></i><b>4.4</b> Changes in Marginal Benefit and/or Marginal Cost</a></li>
+<li class="chapter" data-level="4.5" data-path="decisions-rational-or-irrational.html"><a href="decisions-rational-or-irrational.html#examples-of-rational-choice"><i class="fa fa-check"></i><b>4.5</b> Examples of Rational Choice</a></li>
+<li class="chapter" data-level="4.6" data-path="decisions-rational-or-irrational.html"><a href="decisions-rational-or-irrational.html#increasing-returns"><i class="fa fa-check"></i><b>4.6</b> Increasing Returns</a></li>
+<li class="chapter" data-level="4.7" data-path="decisions-rational-or-irrational.html"><a href="decisions-rational-or-irrational.html#irrationality"><i class="fa fa-check"></i><b>4.7</b> Irrationality</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="decisions-rational-or-irrational.html"><a href="decisions-rational-or-irrational.html#sunk-costs"><i class="fa fa-check"></i><b>4.7.1</b> Sunk Costs</a></li>
+<li class="chapter" data-level="4.7.2" data-path="decisions-rational-or-irrational.html"><a href="decisions-rational-or-irrational.html#examples-2"><i class="fa fa-check"></i><b>4.7.2</b> Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="decisions-rational-or-irrational.html"><a href="decisions-rational-or-irrational.html#glossary-of-terms-3"><i class="fa fa-check"></i><b>4.8</b> Glossary of Terms</a></li>
+<li class="chapter" data-level="4.9" data-path="decisions-rational-or-irrational.html"><a href="decisions-rational-or-irrational.html#practice-questions-3"><i class="fa fa-check"></i><b>4.9</b> Practice Questions</a>
+<ul>
+<li class="chapter" data-level="4.9.1" data-path="decisions-rational-or-irrational.html"><a href="decisions-rational-or-irrational.html#discussion-3"><i class="fa fa-check"></i><b>4.9.1</b> Discussion</a></li>
+<li class="chapter" data-level="4.9.2" data-path="decisions-rational-or-irrational.html"><a href="decisions-rational-or-irrational.html#multiple-choice-3"><i class="fa fa-check"></i><b>4.9.2</b> Multiple Choice</a></li>
+<li class="chapter" data-level="4.9.3" data-path="decisions-rational-or-irrational.html"><a href="decisions-rational-or-irrational.html#answer-key-2"><i class="fa fa-check"></i><b>4.9.3</b> Answer Key</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="demand.html"><a href="demand.html"><i class="fa fa-check"></i><b>5</b> Demand</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="demand.html"><a href="demand.html#introductory-video"><i class="fa fa-check"></i><b>5.1</b> Introductory Video</a></li>
+<li class="chapter" data-level="5.2" data-path="demand.html"><a href="demand.html#what-is-demand"><i class="fa fa-check"></i><b>5.2</b> What is Demand?</a>
+<ul>
+<li class="chapter" data-level="5.2.1" data-path="demand.html"><a href="demand.html#individual-to-market-demand"><i class="fa fa-check"></i><b>5.2.1</b> Individual to Market Demand</a></li>
+<li class="chapter" data-level="5.2.2" data-path="demand.html"><a href="demand.html#alternate-view-of-demand"><i class="fa fa-check"></i><b>5.2.2</b> Alternate View of Demand</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="demand.html"><a href="demand.html#elasticity"><i class="fa fa-check"></i><b>5.3</b> Elasticity</a></li>
+<li class="chapter" data-level="5.4" data-path="demand.html"><a href="demand.html#substitutes"><i class="fa fa-check"></i><b>5.4</b> Substitutes</a>
+<ul>
+<li class="chapter" data-level="5.4.1" data-path="demand.html"><a href="demand.html#deadly-demand"><i class="fa fa-check"></i><b>5.4.1</b> Deadly Demand</a></li>
+</ul></li>
+<li class="chapter" data-level="5.5" data-path="demand.html"><a href="demand.html#complements"><i class="fa fa-check"></i><b>5.5</b> Complements</a></li>
+<li class="chapter" data-level="5.6" data-path="demand.html"><a href="demand.html#substitutes-and-complements-in-unexpected-places"><i class="fa fa-check"></i><b>5.6</b> Substitutes and Complements in Unexpected Places</a></li>
+<li class="chapter" data-level="5.7" data-path="demand.html"><a href="demand.html#normal-and-inferior-goods"><i class="fa fa-check"></i><b>5.7</b> Normal and Inferior Goods</a>
+<ul>
+<li class="chapter" data-level="5.7.1" data-path="demand.html"><a href="demand.html#product-quality"><i class="fa fa-check"></i><b>5.7.1</b> Product Quality</a></li>
+<li class="chapter" data-level="5.7.2" data-path="demand.html"><a href="demand.html#uncertainty"><i class="fa fa-check"></i><b>5.7.2</b> Uncertainty</a></li>
+</ul></li>
+<li class="chapter" data-level="5.8" data-path="demand.html"><a href="demand.html#glossary-of-terms-4"><i class="fa fa-check"></i><b>5.8</b> Glossary of Terms</a></li>
+<li class="chapter" data-level="5.9" data-path="demand.html"><a href="demand.html#practice-questions-4"><i class="fa fa-check"></i><b>5.9</b> Practice Questions</a>
+<ul>
+<li class="chapter" data-level="5.9.1" data-path="demand.html"><a href="demand.html#discussion-4"><i class="fa fa-check"></i><b>5.9.1</b> Discussion</a></li>
+<li class="chapter" data-level="5.9.2" data-path="demand.html"><a href="demand.html#multiple-choice-4"><i class="fa fa-check"></i><b>5.9.2</b> Multiple Choice</a></li>
+<li class="chapter" data-level="5.9.3" data-path="demand.html"><a href="demand.html#answer-key-3"><i class="fa fa-check"></i><b>5.9.3</b> Answer Key</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="supply.html"><a href="supply.html"><i class="fa fa-check"></i><b>6</b> Supply</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="supply.html"><a href="supply.html#introductory-video-1"><i class="fa fa-check"></i><b>6.1</b> Introductory Video</a></li>
+<li class="chapter" data-level="6.2" data-path="supply.html"><a href="supply.html#cost-concepts"><i class="fa fa-check"></i><b>6.2</b> Cost concepts</a></li>
+<li class="chapter" data-level="6.3" data-path="supply.html"><a href="supply.html#economies-of-scale"><i class="fa fa-check"></i><b>6.3</b> Economies of Scale</a>
+<ul>
+<li class="chapter" data-level="6.3.1" data-path="supply.html"><a href="supply.html#examples-3"><i class="fa fa-check"></i><b>6.3.1</b> Examples</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="supply.html"><a href="supply.html#profit-maximization"><i class="fa fa-check"></i><b>6.4</b> Profit Maximization</a></li>
+<li class="chapter" data-level="6.5" data-path="supply.html"><a href="supply.html#supply-1"><i class="fa fa-check"></i><b>6.5</b> Supply</a></li>
+<li class="chapter" data-level="6.6" data-path="supply.html"><a href="supply.html#shifts-in-supply"><i class="fa fa-check"></i><b>6.6</b> Shifts in Supply</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="supply.html"><a href="supply.html#individual-to-market-supply"><i class="fa fa-check"></i><b>6.6.1</b> Individual to Market Supply</a></li>
+</ul></li>
+<li class="chapter" data-level="6.7" data-path="supply.html"><a href="supply.html#glossary-of-terms-5"><i class="fa fa-check"></i><b>6.7</b> Glossary of Terms</a></li>
+<li class="chapter" data-level="6.8" data-path="supply.html"><a href="supply.html#practice-questions-5"><i class="fa fa-check"></i><b>6.8</b> Practice Questions</a>
+<ul>
+<li class="chapter" data-level="6.8.1" data-path="supply.html"><a href="supply.html#discussion-5"><i class="fa fa-check"></i><b>6.8.1</b> Discussion</a></li>
+<li class="chapter" data-level="6.8.2" data-path="supply.html"><a href="supply.html#multiple-choice-5"><i class="fa fa-check"></i><b>6.8.2</b> Multiple Choice</a></li>
+<li class="chapter" data-level="6.8.3" data-path="supply.html"><a href="supply.html#answer-key-4"><i class="fa fa-check"></i><b>6.8.3</b> Answer Key</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="competitive-markets.html"><a href="competitive-markets.html"><i class="fa fa-check"></i><b>7</b> Competitive Markets</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="competitive-markets.html"><a href="competitive-markets.html#competitive-equilibrium"><i class="fa fa-check"></i><b>7.1</b> Competitive Equilibrium</a></li>
+<li class="chapter" data-level="7.2" data-path="competitive-markets.html"><a href="competitive-markets.html#consumerproducer-surplus"><i class="fa fa-check"></i><b>7.2</b> Consumer/Producer Surplus</a></li>
+<li class="chapter" data-level="7.3" data-path="competitive-markets.html"><a href="competitive-markets.html#unit-taxation"><i class="fa fa-check"></i><b>7.3</b> Unit Taxation</a></li>
+<li class="chapter" data-level="7.4" data-path="competitive-markets.html"><a href="competitive-markets.html#price-ceilings"><i class="fa fa-check"></i><b>7.4</b> Price Ceilings</a></li>
+<li class="chapter" data-level="7.5" data-path="competitive-markets.html"><a href="competitive-markets.html#examples-4"><i class="fa fa-check"></i><b>7.5</b> Examples</a></li>
+<li class="chapter" data-level="7.6" data-path="competitive-markets.html"><a href="competitive-markets.html#taking-price-as-given"><i class="fa fa-check"></i><b>7.6</b> Taking Price as given</a></li>
+<li class="chapter" data-level="7.7" data-path="competitive-markets.html"><a href="competitive-markets.html#positive-vs-normative-economics"><i class="fa fa-check"></i><b>7.7</b> Positive vs Normative Economics</a></li>
+<li class="chapter" data-level="7.8" data-path="competitive-markets.html"><a href="competitive-markets.html#efficiency"><i class="fa fa-check"></i><b>7.8</b> Efficiency</a></li>
+<li class="chapter" data-level="7.9" data-path="competitive-markets.html"><a href="competitive-markets.html#a-macro-connection"><i class="fa fa-check"></i><b>7.9</b> A Macro Connection</a></li>
+<li class="chapter" data-level="7.10" data-path="competitive-markets.html"><a href="competitive-markets.html#glossary-of-terms-6"><i class="fa fa-check"></i><b>7.10</b> Glossary of Terms</a></li>
+<li class="chapter" data-level="7.11" data-path="competitive-markets.html"><a href="competitive-markets.html#practice-questions-6"><i class="fa fa-check"></i><b>7.11</b> Practice Questions</a>
+<ul>
+<li class="chapter" data-level="7.11.1" data-path="competitive-markets.html"><a href="competitive-markets.html#discussion-6"><i class="fa fa-check"></i><b>7.11.1</b> Discussion</a></li>
+<li class="chapter" data-level="7.11.2" data-path="competitive-markets.html"><a href="competitive-markets.html#multiple-choice-6"><i class="fa fa-check"></i><b>7.11.2</b> Multiple Choice</a></li>
+<li class="chapter" data-level="7.11.3" data-path="competitive-markets.html"><a href="competitive-markets.html#answer-key-5"><i class="fa fa-check"></i><b>7.11.3</b> Answer Key</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="externalities.html"><a href="externalities.html"><i class="fa fa-check"></i><b>8</b> Externalities</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="externalities.html"><a href="externalities.html#introductory-videos"><i class="fa fa-check"></i><b>8.1</b> Introductory Videos</a></li>
+<li class="chapter" data-level="8.2" data-path="externalities.html"><a href="externalities.html#negative-externalities"><i class="fa fa-check"></i><b>8.2</b> Negative Externalities</a>
+<ul>
+<li class="chapter" data-level="8.2.1" data-path="externalities.html"><a href="externalities.html#pigouvian-tax"><i class="fa fa-check"></i><b>8.2.1</b> Pigouvian Tax</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="externalities.html"><a href="externalities.html#positive-externalities"><i class="fa fa-check"></i><b>8.3</b> Positive Externalities</a></li>
+<li class="chapter" data-level="8.4" data-path="externalities.html"><a href="externalities.html#example"><i class="fa fa-check"></i><b>8.4</b> Example</a></li>
+<li class="chapter" data-level="8.5" data-path="externalities.html"><a href="externalities.html#numerical-problems"><i class="fa fa-check"></i><b>8.5</b> Numerical Problems</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="monopoly.html"><a href="monopoly.html"><i class="fa fa-check"></i><b>9</b> Monopoly</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="monopoly.html"><a href="monopoly.html#introduction"><i class="fa fa-check"></i><b>9.1</b> Introduction</a></li>
+<li class="chapter" data-level="9.2" data-path="monopoly.html"><a href="monopoly.html#monopoly-pricing"><i class="fa fa-check"></i><b>9.2</b> Monopoly Pricing</a></li>
+<li class="chapter" data-level="9.3" data-path="monopoly.html"><a href="monopoly.html#mark-ups"><i class="fa fa-check"></i><b>9.3</b> Mark-ups</a></li>
+<li class="chapter" data-level="9.4" data-path="monopoly.html"><a href="monopoly.html#two-corrective-policies"><i class="fa fa-check"></i><b>9.4</b> Two Corrective Policies</a></li>
+<li class="chapter" data-level="9.5" data-path="monopoly.html"><a href="monopoly.html#price-discrimination"><i class="fa fa-check"></i><b>9.5</b> Price Discrimination</a></li>
+<li class="chapter" data-level="9.6" data-path="monopoly.html"><a href="monopoly.html#mickey-mouse-pricing"><i class="fa fa-check"></i><b>9.6</b> Mickey Mouse Pricing</a></li>
+<li class="chapter" data-level="9.7" data-path="monopoly.html"><a href="monopoly.html#taylor-swift-pricing"><i class="fa fa-check"></i><b>9.7</b> Taylor Swift Pricing</a></li>
+<li class="chapter" data-level="9.8" data-path="monopoly.html"><a href="monopoly.html#glossary-of-terms-7"><i class="fa fa-check"></i><b>9.8</b> Glossary of Terms</a></li>
+<li class="chapter" data-level="9.9" data-path="monopoly.html"><a href="monopoly.html#practice-questions-7"><i class="fa fa-check"></i><b>9.9</b> Practice Questions</a>
+<ul>
+<li class="chapter" data-level="9.9.1" data-path="monopoly.html"><a href="monopoly.html#discussion-7"><i class="fa fa-check"></i><b>9.9.1</b> Discussion</a></li>
+<li class="chapter" data-level="9.9.2" data-path="monopoly.html"><a href="monopoly.html#multiple-choice-7"><i class="fa fa-check"></i><b>9.9.2</b> Multiple Choice</a></li>
+<li class="chapter" data-level="9.9.3" data-path="monopoly.html"><a href="monopoly.html#answer-key-6"><i class="fa fa-check"></i><b>9.9.3</b> Answer Key</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="game-theory.html"><a href="game-theory.html"><i class="fa fa-check"></i><b>10</b> Game Theory</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="game-theory.html"><a href="game-theory.html#motivation"><i class="fa fa-check"></i><b>10.1</b> Motivation</a></li>
+<li class="chapter" data-level="10.2" data-path="game-theory.html"><a href="game-theory.html#introduction-1"><i class="fa fa-check"></i><b>10.2</b> Introduction</a></li>
+<li class="chapter" data-level="10.3" data-path="game-theory.html"><a href="game-theory.html#specific-games"><i class="fa fa-check"></i><b>10.3</b> Specific Games</a>
+<ul>
+<li class="chapter" data-level="10.3.1" data-path="game-theory.html"><a href="game-theory.html#prisoners-dilemma"><i class="fa fa-check"></i><b>10.3.1</b> Prisoners Dilemma</a></li>
+<li class="chapter" data-level="10.3.2" data-path="game-theory.html"><a href="game-theory.html#bach-or-stravinsky"><i class="fa fa-check"></i><b>10.3.2</b> Bach or Stravinsky</a></li>
+<li class="chapter" data-level="10.3.3" data-path="game-theory.html"><a href="game-theory.html#chicken"><i class="fa fa-check"></i><b>10.3.3</b> Chicken</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="game-theory.html"><a href="game-theory.html#repeated-games"><i class="fa fa-check"></i><b>10.4</b> Repeated Games</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="game-theory.html"><a href="game-theory.html#tit-for-tat"><i class="fa fa-check"></i><b>10.4.1</b> Tit for Tat</a></li>
+<li class="chapter" data-level="10.4.2" data-path="game-theory.html"><a href="game-theory.html#christmas-truce-wwi-1914"><i class="fa fa-check"></i><b>10.4.2</b> Christmas Truce WWI 1914</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="game-theory.html"><a href="game-theory.html#glossary-of-terms-8"><i class="fa fa-check"></i><b>10.5</b> Glossary of Terms</a></li>
+<li class="chapter" data-level="10.6" data-path="game-theory.html"><a href="game-theory.html#practice-questions-8"><i class="fa fa-check"></i><b>10.6</b> Practice Questions</a>
+<ul>
+<li class="chapter" data-level="10.6.1" data-path="game-theory.html"><a href="game-theory.html#discussion-8"><i class="fa fa-check"></i><b>10.6.1</b> Discussion</a></li>
+<li class="chapter" data-level="10.6.2" data-path="game-theory.html"><a href="game-theory.html#multiple-choice-8"><i class="fa fa-check"></i><b>10.6.2</b> Multiple Choice</a></li>
+<li class="chapter" data-level="10.6.3" data-path="game-theory.html"><a href="game-theory.html#answer-key-7"><i class="fa fa-check"></i><b>10.6.3</b> Answer Key</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="oligopoly.html"><a href="oligopoly.html"><i class="fa fa-check"></i><b>11</b> Oligopoly</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="oligopoly.html"><a href="oligopoly.html#motivation-1"><i class="fa fa-check"></i><b>11.1</b> Motivation</a></li>
+<li class="chapter" data-level="11.2" data-path="oligopoly.html"><a href="oligopoly.html#cournot-equilibrium"><i class="fa fa-check"></i><b>11.2</b> Cournot Equilibrium</a></li>
+<li class="chapter" data-level="11.3" data-path="oligopoly.html"><a href="oligopoly.html#bertrand-equilibrium"><i class="fa fa-check"></i><b>11.3</b> Bertrand Equilibrium</a></li>
+<li class="chapter" data-level="11.4" data-path="oligopoly.html"><a href="oligopoly.html#mergers-and-acquisitions"><i class="fa fa-check"></i><b>11.4</b> Mergers and Acquisitions</a></li>
+<li class="chapter" data-level="11.5" data-path="oligopoly.html"><a href="oligopoly.html#product-differentiation"><i class="fa fa-check"></i><b>11.5</b> Product Differentiation</a>
+<ul>
+<li class="chapter" data-level="11.5.1" data-path="oligopoly.html"><a href="oligopoly.html#political-interpretation"><i class="fa fa-check"></i><b>11.5.1</b> Political Interpretation</a></li>
+</ul></li>
+<li class="chapter" data-level="11.6" data-path="oligopoly.html"><a href="oligopoly.html#more-firms"><i class="fa fa-check"></i><b>11.6</b> More Firms!</a></li>
+<li class="chapter" data-level="11.7" data-path="oligopoly.html"><a href="oligopoly.html#glossary-of-terms-9"><i class="fa fa-check"></i><b>11.7</b> Glossary of Terms</a></li>
+<li class="chapter" data-level="11.8" data-path="oligopoly.html"><a href="oligopoly.html#practice-questions-9"><i class="fa fa-check"></i><b>11.8</b> Practice Questions</a>
+<ul>
+<li class="chapter" data-level="11.8.1" data-path="oligopoly.html"><a href="oligopoly.html#discussion-9"><i class="fa fa-check"></i><b>11.8.1</b> Discussion</a></li>
+<li class="chapter" data-level="11.8.2" data-path="oligopoly.html"><a href="oligopoly.html#multiple-choice-9"><i class="fa fa-check"></i><b>11.8.2</b> Multiple Choice</a></li>
+<li class="chapter" data-level="11.8.3" data-path="oligopoly.html"><a href="oligopoly.html#answer-key-8"><i class="fa fa-check"></i><b>11.8.3</b> Answer Key</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i><b>12</b> Appendix</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="appendix.html"><a href="appendix.html#statistical-fundamentals"><i class="fa fa-check"></i><b>12.1</b> Statistical Fundamentals</a>
+<ul>
+<li class="chapter" data-level="12.1.1" data-path="appendix.html"><a href="appendix.html#centrality-measures"><i class="fa fa-check"></i><b>12.1.1</b> Centrality Measures</a></li>
+<li class="chapter" data-level="12.1.2" data-path="appendix.html"><a href="appendix.html#percentiles"><i class="fa fa-check"></i><b>12.1.2</b> Percentiles</a></li>
+<li class="chapter" data-level="12.1.3" data-path="appendix.html"><a href="appendix.html#example-1"><i class="fa fa-check"></i><b>12.1.3</b> Example</a></li>
+</ul></li>
+</ul></li>
 </ul>
 
-        <div class="book-extra">
-          <p><a id="book-repo" href="https://github.com/introeconfull/book/">View book source <i class="fab fa-github"></i></a></p>
-        </div>
       </nav>
-</div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="growth2" class="section level1" number="3">
-<h1>
-<span class="header-section-number">3</span> Economic Growth II<a class="anchor" aria-label="anchor" href="#growth2"><i class="fas fa-link"></i></a>
-</h1>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">An Introductory Course in Economics</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="growth2" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Economic Growth II<a href="growth2.html#growth2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>In this chapter you will learn:</p>
 <ul>
 <li>The basics of human capital accumulation</li>
 <li>The basics of technological progress</li>
 </ul>
-<div id="human-capital-accumulation" class="section level2" number="3.1">
-<h2>
-<span class="header-section-number">3.1</span> Human capital accumulation<a class="anchor" aria-label="anchor" href="#human-capital-accumulation"><i class="fas fa-link"></i></a>
-</h2>
+<div id="human-capital-accumulation" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Human capital accumulation<a href="growth2.html#human-capital-accumulation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In the Solow model we considered in the previous sections, there was only one factor to be accumulated: physical capital. In this section we will allow for two augmentable factors: physical capital and human capital.</p>
 <p>By human capital we simply mean all the marketable skill. In the Solow model the production function is given by
 <span class="math display">\[y_t=A F(k_t)\]</span></p>
 <p>Recall that when we hold labor constant, then output is basically a function of capital only and the production function exhibits diminishing returns to capital.
 We will now generalize the production function to</p>
 <p><span class="math display">\[Y_t = A F (K_t, H_tN_t)\]</span></p>
-<p>In this formulation <span class="math inline">\(N_t\)</span> stands for labor as before. Labor could be measured by the total number of people employed or by the total number of hours worked. <span class="math inline">\(K_t\)</span> is the total capital stock, <span class="math inline">\(Y_t\)</span> is output of GDP and <span class="math inline">\(A\)</span>, as before is a measure of technology.</p>
+<p>In this formulation, <span class="math inline">\(N_t\)</span> stands for labor as before. Labor could be measured by the total number of people employed or by the total number of hours worked. <span class="math inline">\(K_t\)</span> is the total capital stock, <span class="math inline">\(Y_t\)</span> is output of GDP and <span class="math inline">\(A\)</span>, as before, is a measure of technology.</p>
 <p>What is new here is <span class="math inline">\(H_t\)</span>, which stands for human capital. What we do here is we multiply <span class="math inline">\(H_t\)</span> and <span class="math inline">\(N_t\)</span> together to get</p>
 <p><span class="math display">\[H_tN_t\]</span></p>
-<p>We call this product “effective labor.” We can think of <span class="math inline">\(N_t\)</span> as hours worked. If we multiply the hours worked <span class="math inline">\(N_t\)</span> with skill or human capital <span class="math inline">\(H_t\)</span> we can get a measure of how much can be done or accomplished in the time spent working. We will refer to <span class="math inline">\(N_t\)</span> as “raw labor” and to <span class="math inline">\(H_tN_t\)</span> as “effective labor.”</p>
-<p>Effective labor varies both across countries and over time. The average Norwegian worker has more human capital and thus more effective labor then the average Nepali worker. Also, the typical American worker now has more human capital than the typical American worker had 100 years ago.</p>
+<p>We call this product “effective labor.” We can think of <span class="math inline">\(N_t\)</span> as hours worked. If we multiply the hours worked <span class="math inline">\(N_t\)</span> with skill or human capital <span class="math inline">\(H_t\)</span>, we can get a measure of how much can be done or accomplished in the time spent working. We will refer to <span class="math inline">\(N_t\)</span> as “raw labor” and to <span class="math inline">\(H_tN_t\)</span> as “effective labor.”</p>
+<p>Effective labor varies both across countries and over time. The average Norwegian worker has more human capital and thus more effective labor than the average Nepali worker. Also, the typical American worker now has more human capital than the typical American worker had 100 years ago.</p>
 <p>Just like physical capital, human capital can be accumulated; it can grow. It can also depreciate or become obsolete.</p>
 <p>There are multiple ways to accumulate human capital.</p>
 <ul>
@@ -97,17 +411,17 @@ We will now generalize the production function to</p>
 <li>Leaning by doing</li>
 </ul>
 <p>There is a large literature on each one of these components. Here we will focus on formal schooling, partially because in many countries formal schooling budgets take up large fractions of national income, GDP. In some cases, this is more than 5 or 6 % of GDP.</p>
-<p>So, one way to measure formal schooling is through expenditures. How much do we spend as a fraction of GDP on formal public education? When answering this question we have to be cognizant of the fact that there is also a significant private expenditure in formal schooling.</p>
-<p>The second way to measure formal schooling or education is simply to ask how much schooling, how many years of schooling do students get. Of course, in every country there will be a distribution. Often, we categorize this the different stages of education completed, such as college completion or high school completion.</p>
+<p>One way to measure formal schooling is through expenditures. How much do we spend as a fraction of GDP on formal public education? When answering this question, we have to be cognizant of the fact that there is also a significant private expenditure in formal schooling.</p>
+<p>The second way to measure formal schooling or education is simply to ask how many years of schooling do students get. Of course, in every country there will be a distribution. Often, we categorize this as the different stages of education completed, such as college completion or high school completion.</p>
 <p>Figure 14 below shows that education in the US has increased tremendously. The fraction of the labor force that has completed college has increased substantially while the fraction of the labor force that has only finished elementary education or not finished high school has fallen drastically.</p>
 <p>GENERATE THIS IMAGE
 Figure 14 Increasing schooling time</p>
-<p>Most countries have seen similarly large increases in years of schooling. Measured in average or median years or schooling. Or measured in the fraction of the labor force that has completed college.</p>
+<p>Most countries have seen similarly large increases in years of schooling, this being measured in average or median years of schooling or measured in the fraction of the labor force that has completed college or high school.</p>
 <p>Beware of measurements!</p>
 <p>Measurements should be useful for the purpose at hand.</p>
 <p>Measurements should not be too costly.</p>
 <p>Both of these are worthwhile considerations.</p>
-<p>But, sometimes measurements are taken simply because they are cheap. Please consider the link below. There are reports from central planning in the Soviet Union by plans being fulfilled by a very small number of huge nails or, alternatively, by a huge number of tiny nails. It all depended on the specifications given by the planner to the factory.</p>
+<p>But, sometimes measurements are taken simply because they are cheap. Please consider the link below. There are reports from central planning in the Soviet Union by plans being fulfilled by a very small number of huge nails, or, alternatively, by a huge number of tiny nails. It all depended on the specifications given by the planner to the factory.</p>
 <p>See the cartoon below.</p>
 <p><a href="https://www.quora.com/Whats-the-meaning-of-this-Soviet-cartoon" class="uri">https://www.quora.com/Whats-the-meaning-of-this-Soviet-cartoon</a></p>
 <p>Incentives work!</p>
@@ -116,185 +430,183 @@ Figure 14 Increasing schooling time</p>
 <p>The problem: They were just shoes, but not shoes consumers wanted. They were just not comfortable. And forget fashionable.</p>
 <p>So the statement above about people standing in line for shoes needs a qualification. People were standing in line not just for shoes, not just for any pair of shoes. They were standing in line for comfortable shoes, for durable shoes, for practical shoes, for shoes that fit their needs.</p>
 <p>Why am I telling you nail and shoe stories?</p>
-<p>In education there is the risk, that we are looking at numbers, data, measurement in a way that is very similar to the way data were looked at in the nail and shoe stories.</p>
+<p>In education, there is the risk that we are looking at numbers, data, measurement in a way that is very similar to the way data were looked at in the nail and shoe stories.</p>
 <p>In education we sometimes look at numbers that are easy to collect. And sometimes these numbers are not meaningful. Or at least, it is not clear how meaningful they are.</p>
 <ul>
 <li>Years of schooling.</li>
 <li>The fraction of 18 years olds going to college.</li>
-<li>The number of hours spent studying
-All these data fall into the category of questionable data. Whether data is questionable ALWAYS depends on a particular purpose: Is that data useful for my particular purpose?</li>
+<li>The number of hours spent studying.</li>
 </ul>
+<p>All these data fall into the category of questionable data. Whether data is questionable ALWAYS depends on a particular purpose: Is that data useful for my particular purpose?</p>
 <p>So what could/would be our purpose here? We would hope that education makes people more productive. If education makes people more productive, we would see the effect of education in GDP.</p>
-<p>Now, before we take a closer look at the connection between education, we can use some introspection to think about how useful or how accurate the above three measure can be.</p>
+<p>Now, before we take a closer look at the connection between education and GDP, we can use some introspection to think about how useful or how accurate the above three measures can be.</p>
 <p>Go back to high school and think of all the students who were you in graduating class. At that point they all had 12 years of schooling. Now consider the difference, if there is any, in the marketable skills among all the graduates in your class? Is that difference small? Is it large? How much do we miss in terms of productivity if for all these students, we just record 12 years of schooling?</p>
 <p>Now think of two typical 18 year olds going to college. They are the same in all respects, expect one: Jill attends IU Kokomo; and Jackie attends Princeton. Should both Jackie and Jill be counted equally as attending college? Which one might be more productive in the labor force? How big might such differences in labor productivity be?</p>
-<p>John and Jack both are first year students at IU. Both are studying psychology. Both John and Jack report that, outside of class, they spend 20 hours per week studying. Would/should we expect John and Jack to learn equally during those 20 hours. John concentrates on his work and Jack texts with his girlfriend, checks the stock market and pays his bursars bills while while doing his homework. Should we count these two sets of 20 hours the same?</p>
-<p>Apart from these issues, all of these measurements of inputs, not of outputs. The outputs are what is actually learned. What are the marketable and other skills? We should care about the outputs, more than the inputs. The outputs are hard to measure, the inputs are easier to measure. So, we will measure the inputs.</p>
-<p>Hanushek and Kimko in their 2000 research paper: <a href="https://www.researchgate.net/profile/Eric-Hanushek/publication/4980899_Schooling_Labor-Force_Quality_and_the_Growth_of_Nations/links/551427960cf283ee0834ac50/Schooling-Labor-Force-Quality-and-the-Growth-of-Nations.pdf">Schooling, Labor-Force Quality, and the Growth of Nations</a> make a big effort to get this right. For a bunch of countries, they look at the correlation between years of schooling and economic growth. They do find a positive correlation, exactly what one might expect. But correlation can go both ways: More years of schooling could imply higher growth. Higher economic growth induces people to get more schooling. So inferring causality from more years of schooling to economic growth is dicey.</p>
+<p>John and Jack both are first year students at IU. Both are studying psychology. Both John and Jack report that, outside of class, they spend 20 hours per week studying. Would/should we expect John and Jack to learn equally during those 20 hours. John concentrates on his work and Jack texts with his girlfriend, checks the stock market, and pays his bursars bills while doing his homework. Should we count these two sets of 20 hours the same?</p>
+<p>Apart from these issues, all of these are measurements of inputs, not of outputs. The outputs are what is actually learned. What are the marketable and other skills? We should care about the outputs, more than the inputs. The outputs are hard to measure, the inputs are easier to measure. So, we will measure the inputs.</p>
+<p>Hanushek and Kimko in their 2000 paper: <a href="https://www.researchgate.net/profile/Eric-Hanushek/publication/4980899_Schooling_Labor-Force_Quality_and_the_Growth_of_Nations/links/551427960cf283ee0834ac50/Schooling-Labor-Force-Quality-and-the-Growth-of-Nations.pdf">Schooling, Labor-Force Quality, and the Growth of Nations</a> make a big effort to get this right. For a bunch of countries, they look at the correlation between years of schooling and economic growth. They do find a positive correlation, exactly what one might expect. But correlation allows for causation in both directinos: More years of schooling could imply higher growth. Higher economic growth induces people to get more schooling. So inferring causality from more years of schooling to economic growth is dicey.</p>
 <p>There is more. We actually have data on math and science scores of students at the high school level that are comparable across countries. This is a measure of an output, things that students actually learned and know. As an aside, the US performance in these international tests is very mediocre.</p>
 <p>If we introduce this measure of student scores in our statistical analysis of schooling and economic growth, the correlation between years of schooling and economic growth goes to zero and the correlation between learning scores and economic growth is positive. And it is large. Very large.</p>
 <p>A one standard deviation increase in these test scores is associated with a 1.4% increase in the growth rate. This is huge. Recall that for the longest time the growth rate of real per capita income in the US has been 1.8% annually. So, if, somehow magically, or perhaps less magically by prudent choice of education policy, the test scores of US students could be increased by 1.4% to 3.2%. That is big. Very big.</p>
 <p>Imagine that we start with an income of $60,000. In one case we have a growth rate of 1.8% and in the other case we have a growth rate of 3.2%. Then we have income after 10 years</p>
 <p><span class="math display">\[\$60,000 (1.018)^{10} = \$71,718 \]</span></p>
 <p><span class="math display">\[\$60,000 (1.032)^{10} = \$82,214\]</span></p>
-<p>A ten thousand dollar difference is large, by any stretch of the imagination. We could have made this appear even bigger by calculating differences twenty of thirty years out.</p>
-<p>There are two more stunning observations that come out of the above paper.
-1. Economic growth in that sample of countries is uncorrelated with public expenditures on education.
-2. The test scores in that sample of countries are uncorrelated with public expenditures on education.</p>
+<p>A ten thousand dollar difference is large, by any stretch of the imagination. We could have made this appear even bigger by calculating differences twenty or thirty years out.</p>
+<p>There are two more stunning observations that come out of the above paper.</p>
+<ol style="list-style-type: decimal">
+<li>Economic growth in that sample of countries is uncorrelated with public expenditures on education.</li>
+<li>The test scores in that sample of countries are uncorrelated with public expenditures on education.</li>
+</ol>
 <p>Putting these two things together means that the amount of resources does not matter that much. What matters more is what you do with them.</p>
 </div>
-<div id="more-human-capital" class="section level2" number="3.2">
-<h2>
-<span class="header-section-number">3.2</span> More Human Capital<a class="anchor" aria-label="anchor" href="#more-human-capital"><i class="fas fa-link"></i></a>
-</h2>
+<div id="more-human-capital" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> More Human Capital<a href="growth2.html#more-human-capital" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>It is well to consider the correlation between PISA scores and economic growth as done by Hanushek and Kimko, but there is certainly room to do more. Perhaps one can really construct a measure of that H variable that shows up in our production functions, or at least a proxy.</p>
-<p>This is done by Egert et al. (2022)<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;&lt;a href="https://www.cesifo.org/en/publikationen/2022/working-paper/new-macroeconomic-measure-human-capital-exploiting-pisa-and-piaac" class="uri"&gt;https://www.cesifo.org/en/publikationen/2022/working-paper/new-macroeconomic-measure-human-capital-exploiting-pisa-and-piaac&lt;/a&gt;&lt;/p&gt;'><sup>32</sup></a>.</p>
-<p>First: The PISA scores measure what 15 years old know. Much of that knowledge might disappear before these youths reach their productive years in the labor force. There is a measure of adult knowledge called the Programme for the International Assessment of Adult Competencies, PIAAC. This measures adult literacy, numeracy and problem-solving skills. As a drawback this is only available for relatively few countries. Egert et al. show that PISA scores and PIAAC scores are highly correlated. So, they can use the PISA scores in their attempt to construct a measure of human capital.</p>
-<p>Second: Then Egert el al. constructs their measure of human capital for about 80 countries by combining PISA scores and median years of schooling. And there is one more issue. If we look at the US or any other labor force now, we are looking at 20-year-old workers, 65-year-old workers and workers of all ages in between. The 20-year olds were 15 just 5 years ago. The 65 years olds were 15 years of age 50 years ago in 1972. So, we have to average all these PISA scores over all these ages or cohorts. When we do this for the population ages the US is sort of in the middle of the pack just above Austria, Hungary, Spain and Italy but below these countries:</p>
+<p>This is done by Egert et al. (2022)<a href="#fn32" class="footnote-ref" id="fnref32"><sup>32</sup></a>.</p>
+<p>First: The PISA scores measure what 15 years old know. Much of that knowledge might disappear before these youths reach their productive years in the labor force. There is a measure of adult knowledge called the Programme for the International Assessment of Adult Competencies, PIAAC. This measures adult literacy, numeracy and problem-solving skills. As a drawback this is only available for relatively few countries. Egert et al. shows that PISA scores and PIAAC scores are highly correlated. So, they can use the PISA scores in their attempt to construct a measure of human capital.</p>
+<p>Second: Then Egert el al. constructs their measure of human capital for about 80 countries by combining PISA scores and median years of schooling. And there is one more issue. If we look at the US or any other labor force now, we are looking at 20-year-old workers, 65-year-old workers and workers of all ages in between. The 20-year olds were 15 just 5 years ago. The 65 years olds were 15 years of age 50 years ago in 1972. So, we have to average all these PISA scores over all these ages or cohorts. When we do this, the US is sort of in the middle of the pack just above Austria, Hungary, Spain and Italy but below these countries:</p>
 <p>France, Slovakia, Belgium, Sweden, Poland, Czech Republic, etc.</p>
-<p>The highest countries by this measure are: South Korea, Finland, Japan.</p>
-<p>Third: Their constructed measure of human capital is highly correlated with Total Factor Productivity. That is the A in our production functions. This is illustrated in Figure X below.</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:egertfig5"></span>
-<img src="img/growth2/egertfig5.png" alt="Taken directly from Egert et al (2022) Figure 5" width="100%"><p class="caption">
+<p>The highest countries by this measure are: South Korea, Finland, and Japan.</p>
+<p>Third: Their constructed measure of human capital is highly correlated with Total Factor Productivity. That is the A in our production functions. This is illustrated in <a href="growth2.html#fig:egertfig5">3.1</a> below.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:egertfig5"></span>
+<img src="img/growth2/egertfig5.png" alt="Taken directly from Egert et al (2022) Figure 5" width="100%" />
+<p class="caption">
 Figure 3.1: Taken directly from Egert et al (2022) Figure 5
 </p>
 </div>
-<p>Fourth: Which aspect of human capital, the PISA score or median years of schooling is more important for increases in productivity? It turns out the effect of increasing PISA scores is about twice as big as the effect of increasing median years of schooling.</p>
-<p>Fifth: Early childhood intervention</p>
-<p>There is a large literature by now on the effects of early childhood intervention. Heckman et al. (2010) is just one example. So, what is early childhood intervention? Substantial education programs for children at risk and their moms. There is a lot of evidence that the rate of return, the benefit-cost ratio, the bang for the buck is increasing the younger the age of the students. It is truly very large for the youngest students, three and four year olds. The US is near the bottom of this distribution. See Figure <a href="growth2.html#fig:egertfig7">3.2</a>.</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:egertfig7"></span>
-<img src="img/growth2/egertfig7.png" alt="Taken directly from Egert et al (2022) Figure 7" width="100%"><p class="caption">
+<p>Fourth: Which aspect of human capital, the PISA score or median years of schooling, is more important for increases in productivity? It turns out the effect of increasing PISA scores is about twice as big as the effect of increasing median years of schooling.</p>
+<p>Fifth: Early childhood intervention.</p>
+<p>There is a large literature by now on the effects of early childhood intervention. Heckman et al. (2010) is just one example. So, what is early childhood intervention? Substantial education programs for children at risk and their moms. There is a lot of evidence that the rate of return, the benefit-cost ratio, the bang for the buck is increasing the younger are the students. It is truly very large for the youngest students, three and four year olds. The US is near the bottom of this distribution. See Figure <a href="growth2.html#fig:egertfig7">3.2</a>.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:egertfig7"></span>
+<img src="img/growth2/egertfig7.png" alt="Taken directly from Egert et al (2022) Figure 7" width="100%" />
+<p class="caption">
 Figure 3.2: Taken directly from Egert et al (2022) Figure 7
 </p>
 </div>
-<p>Egert et al. show that improving early childhood education can have very large positive effects on future productivity. Perhaps this is not that surprising. Of course, we will have to wait a bit for these effects to kick in. After all, it will take a while for these kids to grow up and join the labor force. But good things are worth waiting for.</p>
+<p>Egert et al. shows that improving early childhood education can have very large positive effects on future productivity. Perhaps this is not that surprising. Of course, we will have to wait a bit for these effects to kick in. After all, it will take a while for these kids to grow up and join the labor force. But good things are worth waiting for.</p>
 <p>These effects are especially large at the bottom of the early childhood schooling distribution, where the US seems to dwell. Which of course raises the question: Why is a rich country like the US not doing more to improve early childhood intervention?</p>
 </div>
-<div id="technological-progress" class="section level2" number="3.3">
-<h2>
-<span class="header-section-number">3.3</span> Technological progress<a class="anchor" aria-label="anchor" href="#technological-progress"><i class="fas fa-link"></i></a>
-</h2>
+<div id="technological-progress" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Technological progress<a href="growth2.html#technological-progress" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We write the production function as</p>
 <p><span class="math display">\[Y_t  =  A_t F( K_t, H_tN_t)\]</span></p>
-<p>where the subscript t stands for the time period and the symbols Y, A, K, H, N stand for, in order output/GDP, productivity, physical capital, human capital and labor time/ hours worked. So far, we have addressed the growth of physical and of human capital. That leaves the question:
-- How does productivity grow?
-- What factors influence the growth of technology?
-- What factors influence technological progress?</p>
+<p>where the subscript t stands for the time period and the symbols Y, A, K, H, N stand for, in order output/GDP, productivity, physical capital, human capital and labor time/ hours worked. So far, we have addressed the growth of physical and of human capital. That leaves the questions:</p>
+<ul>
+<li>How does productivity grow?</li>
+<li>What factors influence the growth of technology?</li>
+<li>What factors influence technological progress?</li>
+</ul>
 <p>We will use the simplest possible model to give an answer to this question.</p>
 <p>Note that I did NOT say that I will answer this question. I said to “provide an answer.” There are many ways to provide SOME answers.</p>
-<p>One simple way to provide an answer is simply to assume that the new ideas that generate technological progress are created by hiring workers to create new ideas. These workers are called, surprise, surprise, scientists. We let <span class="math inline">\(S_t\)</span> denote the number of scientists hired, then we posit that technological growth is described by</p>
+<p>One simple way to provide an answer is simply to assume that the new ideas that generate technological progress are created by hiring workers to create new ideas. These workers are called, surprise, surprise, scientists. We let <span class="math inline">\(S_t\)</span> denote the number of scientists hired, then we assume that technological growth is described by</p>
 <p><span class="math display">\[ \frac{A_{t+1} - A_t}{At}  =  B S_t \]</span></p>
-<p>The left- hand side is just the percentage growth of productivity. The right- hand side is just the resources allocated to research. This could include the number of scientists employed, perhaps weighted by their human capital, but also the labs, the buildings for the labs, the lab equipment, and supplies and energy to run the lab experiments. The relationship is very simple: The more resources allocated to science, the higher is economic growth. More precisely, as specified, this relationship is linear. A doubling of resources leads, in this specification, to a doubling of the growth rates. This is an assumption; the world does not have to look like this.</p>
+<p>The left- hand side is the percentage growth of productivity. The right- hand side is the resources allocated to research. This could include the number of scientists employed, perhaps weighted by their human capital, but also the labs, the buildings for the labs, the lab equipment, and supplies and energy to run the lab experiments. The relationship is very simple: The more resources allocated to science, the higher the economic growth. B is a measure of productivity in research. More precisely, as specified, this relationship is linear. A doubling of resources leads, in this specification, to a doubling of the growth rates. This is an assumption; the world does not have to look like this.</p>
 <p>We must keep in mind that there is a feasibility or adding up constraint. There is a total number of workers in an economy. They can be either production workers or scientists/researchers who produce ideas. If we let N be the fraction of production workers and S the fraction of scientists, then we must have</p>
-<p><span class="math display">\[ N + S = 1 \]</span></p>
-<p>We can now take a look at technological progress in a few sectors. Perhaps the most celebrated example of technological progress is Moore’s Law. Moore’s law was promulgated in the early 1970s by Gordon Moore, one of the co-founders of Intel, and meant as a forecast that the number of transistors on an integrated circuit, perhaps we can think of this as computing power, would double ever 2 years. This “law” stood the test of time. Over the last 40 years this relationship has held up very well. Note the scale on the vertical axis in Figure <a href="growth2.html#fig:growth15">3.3</a>. In 40 years going from 2,300 in 1971 to 2,600,000, 000. That is nothing short of spectacular.</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:growth15"></span>
-<img src="img/growth/moore15.png" alt="Moores Law" width="100%"><p class="caption">
+<p><span class="math display">\[ N + S = 1, \]</span></p>
+<p>where 1 is the total number of workers. That number cannot be exceeded. We can now take a look at technological progress in a few sectors. Perhaps the most celebrated example of technological progress is Moore’s Law. Moore’s law was promulgated in the early 1970s by Gordon Moore<a href="#fn33" class="footnote-ref" id="fnref33"><sup>33</sup></a>, one of the co-founders of Intel, and meant as a forecast that the number of transistors on an integrated circuit, perhaps we can think of this as computing power, would double ever 2 years. This “law” stood the test of time. Over the last 40 years this relationship has held up very well. Note the scale on the vertical axis in Figure <a href="growth2.html#fig:growth15">3.3</a>. In 40 years going from 2,300 in 1971 to 2,600,000, 000. That is nothing short of spectacular.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:growth15"></span>
+<img src="img/growth/moore15.png" alt="Moores Law" width="100%" />
+<p class="caption">
 Figure 3.3: Moores Law
 </p>
 </div>
 <p>Considering that graph above, one could be very optimistic. There does not seem to be any break in that trend. The best fit in these data points seems to be a straight line with constant slope. Since the scale on the vertical axis is logarithmic, this looks like exponential growth at a constant rate. If there were no extra information one could become quite sanguine and expect constant exponential technological progress to continue.</p>
 <p>Alas, there are other things to consider. What did it take to maintain the incredible growth of computing power summarized by Moore’s law?</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:growth16"></span>
-<img src="img/growth/moore16.png" alt="Moore’s law requires huge increases in the number of researchers" width="100%"><p class="caption">
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:growth16"></span>
+<img src="img/growth/moore16.png" alt="Moore’s law requires huge increases in the number of researchers" width="100%" />
+<p class="caption">
 Figure 3.4: Moore’s law requires huge increases in the number of researchers
 </p>
 </div>
-<p>Figure <a href="growth2.html#fig:growth16">3.4</a> shows that over time the number of workers/scientists required to maintain Moore’s law want up by a factor of 25 over that period.</p>
+<p>Figure <a href="growth2.html#fig:growth16">3.4</a> shows that over time the number of workers/scientists required to maintain Moore’s law went up by a factor of 25 over that period.</p>
 <p>A factor of 25!</p>
-<p>We can conclude from these two numbers that back in the 1970s, it was easier to double every two years. Now it is harder to double. It takes more resources to double.</p>
+<p>We can conclude from the two numbers that back in the 1970s, it was easier to double every two years. Now it is harder to double. It takes more resources to double.</p>
 <p>That is diminishing returns.</p>
 <p>There is no hint in the data, these two series in Figures 3 and 4, that future doubling will require fewer inputs.</p>
 <p>We picked the low hanging fruit first. Now we got to climb higher.</p>
 <p>Figure <a href="growth2.html#fig:growth17">3.5</a> shows something similar for agriculture: Yields per acre have been growing, but at declining rates but the number of researchers has been rising tremendously. Wheat, corn, soybeans, cotton; its all the same story.</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:growth17"></span>
-<img src="img/growth/moore17.png" alt="For agriculture it seems the same holds true. Increases in productivity come at an ever increasing resource requirement." width="100%"><p class="caption">
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:growth17"></span>
+<img src="img/growth/moore17.png" alt="For agriculture it seems the same holds true. Increases in productivity come at an ever increasing resource requirement." width="100%" />
+<p class="caption">
 Figure 3.5: For agriculture it seems the same holds true. Increases in productivity come at an ever increasing resource requirement.
 </p>
 </div>
 <p>Low hanging fruit was picked long time ago.</p>
 <p>Figure <a href="growth2.html#fig:growth18">3.6</a> panel b shows the same story for mortality or survival from breast cancer. Mortality rates are way down, and they are declining, albeit at declining rates. Research effort measured by scientific publications and clinical trials are way up.</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:growth18"></span>
-<img src="img/growth/moore18.png" alt="For health again it seems the same holds true. Increasing productivity comes at the cost of ever increasing resource requirements." width="100%"><p class="caption">
-Figure 3.6: For health again it seems the same holds true. Increasing productivity comes at the cost of ever increasing resource requirements.
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:growth18"></span>
+<img src="img/growth/moore18.png" alt="For health, again, it seems the same holds true. Increasing productivity comes at the cost of ever increasing resource requirements." width="100%" />
+<p class="caption">
+Figure 3.6: For health, again, it seems the same holds true. Increasing productivity comes at the cost of ever increasing resource requirements.
 </p>
 </div>
 <p>Same old song: Low hanging fruit was picked years ago.</p>
 <p>Figure <a href="growth2.html#fig:growth19">3.7</a> shows how drastic these diminishing returns are. Peak productivity was reached around 1990 when one clinical trial was responsible for about 16 life years saved per 100,000. Now we are down to 1.</p>
 <p>A drop from 16 to 1.</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:growth19"></span>
-<img src="img/growth/moore19.png" alt="sample caption" width="100%"><p class="caption">
-Figure 3.7: sample caption
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:growth19"></span>
+<img src="img/growth/moore19.png" alt="Diminishing returns to breast cancer after 1985" width="100%" />
+<p class="caption">
+Figure 3.7: Diminishing returns to breast cancer after 1985
 </p>
 </div>
 <p>Most low hanging fruit seems to be gone. If we want to get any fruit, we got to climb REEEEAAAAAALLLLLLY high.</p>
-<p>Since there seem to be many industries where technological progress is only achieved with the help of ever-increasing numbers of scientists it is a fair question to ask whether this is true also in the aggregate, i.e., for the total economy.</p>
-<p>The answer to this question is a resounding YES. Figure 1 shoes aggregate technological progress for the US economy over a 70-year period starting with the 1930s. The pattern is clear: There is no increase at all in the rate at which technology has progressed. If anything, there is a declining trend.</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:growth20"></span>
-<img src="img/growth/moore20.png" alt="sample caption" width="100%"><p class="caption">
-Figure 3.8: sample caption
+<p>Since there seem to be many industries where technological progress is only achieved with the help of ever-increasing numbers of scientists, it is a fair question to ask whether this is true also in the aggregate, i.e., for the total economy.</p>
+<p>The answer to this question is a resounding YES. Figure 1 shows aggregate technological progress for the US economy over a 70-year period starting with the 1930s. The pattern is clear: There is no increase at all in the rate at which technology has progressed. If anything, there is a declining trend.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:growth20"></span>
+<img src="img/growth/moore20.png" alt="Constant or declining productivity growth has required ever more researchers" width="100%" />
+<p class="caption">
+Figure 3.8: Constant or declining productivity growth has required ever more researchers
 </p>
 </div>
 <p>Figure <a href="growth2.html#fig:growth20">3.8</a> shows that this rise in productivity (at a declining rate) has been accomplished by an increase in researchers in the order of a factor of 20! This is huge.</p>
-<p>Just like at the level of individual industries or activities, there is no evidence that these trends will be reversed. We can, with some degree of confidence predict, that future economic growth will be lower than past economic growth.</p>
-<p>Those politicians running for election, who promise to make the economy grow at 3 or 4 % annually, have to work really hard to fulfill their promises, since they are working against strong headwinds that are basically beyond their control.</p>
+<p>Just like at the level of individual industries or activities, there is no evidence that these trends will be reversed. We can, with some degree of confidence, predict that future economic growth will be lower than past economic growth.</p>
+<p>Those politicians running for election who promise to make the economy grow at 3 or 4 % annually, have to work really hard to fulfill their promises since they are working against strong headwinds that are basically beyond their control.</p>
 <p>(All the above figures are from the first paper listed below.)</p>
-<p>The second paper below addresses the questions:
-- What factors are contributors to the growth of real per capita GDP or output for short? And how important are they?
-- What factors are contributors to technological progress or the growth in productivity? And how important are they?</p>
-<p>Given the production function specified above, we can decompose the growth in output into the following components
-1. Changes in the ratio of capital to output
-2. Changes in educational attainment/ growth in human capital
-3. Changes in the employment to population ratio
-4. Changes in the fraction of workers in production rather than research.</p>
-<p>Given the production function for new ideas we can decompose the growth rate of new ideas above we can decompose the rate of technological progress into:
-- Changes in the fraction of workers employed in research rather than production
-- Changes in the overall labor force.</p>
-<p>How big is each of these factors? Jones (2021) provides the estimates. In the US starting in the 1950s, an increase in fraction of people employed is responsible for growth of 0.2%, the increase in human capital per person is responsible for growth of 0.5 % and technological progress contributes 1.3% for a total of 2% annual real per capita growth. Productivity growth or technological progress is responsible for the lion’s share of growth.</p>
-<p>Population growth contributes 0.3 % to growth of productivity, while research intensity, hiring more researchers contributes 0.7 % to productivity growth.</p>
+<p>The second paper below addresses the questions:</p>
+<ul>
+<li>What factors are contributors to the growth of real per capita GDP? And how important are they?</li>
+<li>What factors are contributors to technological progress or the growth in productivity? And how important are they?</li>
+</ul>
+<p>Given the production function specified above, we can decompose the growth in output into the following components:</p>
+<ol style="list-style-type: decimal">
+<li>Changes in the ratio of capital to output</li>
+<li>Changes in educational attainment/growth in human capital</li>
+<li>Changes in the employment to population ratio</li>
+<li>Changes in the fraction of workers in production rather than research.</li>
+</ol>
+<p>How big is each of these factors? Jones (2021) provides the estimates. In the US starting in the 1950s, an increase in fraction of people employed is responsible for growth of 0.2%, the increase in human capital per person is responsible for growth of 0.5%, and technological progress contributes 1.3% for a total of 2% annual real per capita growth. Punchline: productivity growth or technological progress is responsible for the biggest part of growth.</p>
 <p>What is the potential for future economic growth?</p>
-<p>It seems difficult to imagine that educational attainment can still increase substantially. In the US median years of schooling increased relatively rapidly till about 1980, but then the curve flattened out and that growth diminished. It is unlike that that growth will increase in the near term.</p>
+<p>It seems difficult to imagine that educational attainment can still increase substantially. In the US, median years of schooling increased relatively rapidly until about 1980, but then the curve flattened out and that growth diminished. It is unlike that that growth will increase in the near term.</p>
 <p>We are already hiring more and more researchers to generate more ideas with diminishing returns. Hiring more and more researchers comes at a cost of fewer workers in production with a corresponding current output decline. It seems hard to think of factors that can turn the declining research productivity around.</p>
-<p>How about population growth? As the population grows, there are potentially more researchers as well. But population growth rates are falling worldwide?</p>
+<p>How about population growth? As the population grows, there are potentially more researchers as well. But population growth rates are falling worldwide.</p>
 <p>Perhaps we can do a better job identifying and fostering future Einsteins and Curies? According to some estimates only 12% of inventors are women, while roughly half of the population is women. Policies that increase that number might increase growth by 0.3%.</p>
 <p><a href="https://web.stanford.edu/~chadj/dignity.pdf" class="uri">https://web.stanford.edu/~chadj/dignity.pdf</a></p>
 <p><a href="https://web.stanford.edu/~chadj/annualreview.pdf" class="uri">https://web.stanford.edu/~chadj/annualreview.pdf</a></p>
 </div>
-<div id="nails" class="section level2" number="3.4">
-<h2>
-<span class="header-section-number">3.4</span> Nails<a class="anchor" aria-label="anchor" href="#nails"><i class="fas fa-link"></i></a>
-</h2>
+<div id="nails" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Nails<a href="growth2.html#nails" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Sometimes we see something very extra ordinary in something totally ordinary. But I think that is true in life in general. Sometimes we see it. Sometimes we don’t.</p>
 <p>Nails are very ordinary. Our lives are made much better by nails. All of our kitchen cabinets, let alone our houses, are all held together by nails.</p>
 <p>So, what is so remarkable about nails?</p>
 <p>It is the prices!</p>
-<p>Sichel (2022) has pit together a long data series on nail prices. See Figure <a href="growth2.html#fig:sichelfig2">3.9</a> below.</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:sichelfig2"></span>
-<img src="img/growth2/sichelfig2.PNG" alt="Taken directly from The Price of Nails Since 1695: A Window into Economic Change by Daniel Sichel (Journal of Economic Perspectives 2022), Figure 2 " width="100%"><p class="caption">
+<p>Sichel (2022) has put together a long data series on nail prices. See Figure <a href="growth2.html#fig:sichelfig2">3.9</a> below.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:sichelfig2"></span>
+<img src="img/growth2/sichelfig2.png" alt="Taken directly from The Price of Nails Since 1695: A Window into Economic Change by Daniel Sichel (Journal of Economic Perspectives 2022), Figure 2 " width="100%" />
+<p class="caption">
 Figure 3.9: Taken directly from The Price of Nails Since 1695: A Window into Economic Change by Daniel Sichel (Journal of Economic Perspectives 2022), Figure 2
 </p>
 </div>
-<p>But you will say: what is unusual about this? The price is kind a constant, then drops then rises. We all know that prices always fluctuate.</p>
-<p>But let us not been that dismissive that quickly. The prices in that figure are nominal prices. We should probably correct for inflation and for changes in nail quality. Nail quality would be something like “holding power.”</p>
+<p>But you will say: what is unusual about this? The price is kind of constant, then drops then rises. We all know that prices always fluctuate.</p>
+<p>But let us not be that dismissive that quickly. The prices in that figure are nominal prices. We should correct for inflation and for changes in nail quality. Nail quality would be something like “holding power.”</p>
 <p>If we do this, we get a series of nail prices as in Figure <a href="growth2.html#fig:sichelfig4">3.10</a>.</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:sichelfig4"></span>
-<img src="img/growth2/sichelfig4.PNG" alt="Taken directly from The Price of Nails Since 1695: A Window into Economic Change by Daniel Sichel (Journal of Economic Perspectives 2022), Figure 4 " width="100%"><p class="caption">
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:sichelfig4"></span>
+<img src="img/growth2/sichelfig4.png" alt="Taken directly from The Price of Nails Since 1695: A Window into Economic Change by Daniel Sichel (Journal of Economic Perspectives 2022), Figure 4 " width="100%" />
+<p class="caption">
 Figure 3.10: Taken directly from The Price of Nails Since 1695: A Window into Economic Change by Daniel Sichel (Journal of Economic Perspectives 2022), Figure 4
 </p>
 </div>
 <p>The drop in prices between 1695 and 1935 is spectacular: The price has dropped from almost 2 cents a nail to about 0.15 cents a nail. That is drop by a factor of 10!</p>
 <p>Why would the price drop so much?</p>
-<p>There typical reasons are:</p>
+<p>The typical reasons are:</p>
 <ul>
 <li>The availability and prices of inputs in the production of nails.</li>
 <li>The quality of such inputs.</li>
@@ -302,23 +614,21 @@ Figure 3.10: Taken directly from The Price of Nails Since 1695: A Window into Ec
 </ul>
 <p>So, what is the lions’ share of the reasons for this large drop in the price of nails? It is total factor productivity. That factor is so large that it totally overwhelms the other factors. The periods where total factor productivity really had its biggest kick are the periods where rapid technological change happened such as the switch from steam to electricity.</p>
 </div>
-<div id="light" class="section level2" number="3.5">
-<h2>
-<span class="header-section-number">3.5</span> Light<a class="anchor" aria-label="anchor" href="#light"><i class="fas fa-link"></i></a>
-</h2>
+<div id="light" class="section level2 hasAnchor" number="3.5">
+<h2><span class="header-section-number">3.5</span> Light<a href="growth2.html#light" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><a href="https://www.nber.org/system/files/chapters/c6064/c6064.pdf" class="uri">https://www.nber.org/system/files/chapters/c6064/c6064.pdf</a></p>
 <p>What a miracle. You wake up in the morning in January and you flip a switch, and voila, you can see, dimly because you are not quite awake, but you can see; you can see because there is light.
 It has not always been like that. Our early ancestors struggled mightily to get some light by making a fire so they could see.</p>
 <p>Over thousands of years things have changed and improved. We went from collecting firewood and rubbing stones together to flipping a switch.</p>
 <p>These technological advances involved changes from the open fires to lamps, to candles, to gas and petroleum, to electric lighting, and from carbon to tungsten filaments.</p>
 <p>These historical developments are listed in Table <a href="growth2.html#fig:nordhaustab1p3">3.11</a> below</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:nordhaustab1p3"></span>
-<img src="img/growth2/nordhaustab1p3.PNG" alt="Taken directly from Do Real-Output and Real-Wage Measures Capture Reality? The History of Lighting Suggests Not by William D. Nordhaus (NBER 1996), Table 1.3" width="100%"><p class="caption">
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:nordhaustab1p3"></span>
+<img src="img/growth2/nordhaustab1p3.png" alt="Taken directly from Do Real-Output and Real-Wage Measures Capture Reality? The History of Lighting Suggests Not by William D. Nordhaus (NBER 1996), Table 1.3" width="100%" />
+<p class="caption">
 Figure 3.11: Taken directly from Do Real-Output and Real-Wage Measures Capture Reality? The History of Lighting Suggests Not by William D. Nordhaus (NBER 1996), Table 1.3
 </p>
 </div>
-<p>Before we follow the historical development of these technological improvements, we need to fix few terms.</p>
+<p>Before we follow the historical development of these technological improvements, we need to fix a few terms.</p>
 <ul>
 <li>Light is radiation that stimulates the retina.</li>
 <li>Light flux or flow is the rate of emission from a source.</li>
@@ -327,35 +637,33 @@ Figure 3.11: Taken directly from Do Real-Output and Real-Wage Measures Capture R
 </ul>
 <p>All of this is physics so far. We need to get to the economics…</p>
 <p>We are interested in the price of a lumen hour. The price is an imperfect measure.</p>
-<p>There are many factors which influence the price. There are input prices that can increase or decrease over time. There is technological change. Getting the price changes right is crucial. The price of light of course depends on the price of inputs. Between 883 and 1983 the price of gas and kerosene rose by a factor of 10 and the price of electricity fell by a factor of 3!</p>
-<p>Adjusting for quality is another major issue. Just imagine sitting by the light of two candles in the UK in the 1700 hundreds and doing your algebra homework. Or imagine your parents paying a slew of medical bills over an open fire pit.</p>
-<p>If you do all these things carefully, you can constrict price of light data for the last 200 years. This is exactly what Nordhaus did in 1996. His results are in Figure <a href="growth2.html#fig:nordhausfig1p3">3.12</a> below.</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:nordhausfig1p3"></span>
-<img src="img/growth2/nordhausfig1p3.PNG" alt="Taken directly from Do Real-Output and Real-Wage Measures Capture Reality? The History of Lighting Suggests Not by William D. Nordhaus (NBER 1996), Figure 1.3" width="100%"><p class="caption">
+<p>There are many factors which influence the price. There are input prices that can increase or decrease over time. There is technological change. Getting the price changes right is crucial. The price of light of course depends on the price of inputs. Between 1883 and 1983, the price of gas and kerosene rose by a factor of 10 and the price of electricity fell by a factor of 3!</p>
+<p>Adjusting for quality is another major issue. Just imagine sitting by the light of two candles in the UK in the 1700s and doing your algebra homework. Or imagine your parents paying a slew of medical bills over an open fire pit.</p>
+<p>If you do all these things carefully, you can construct price of light data for the last 200 years. This is exactly what Nordhaus did in 1996. His results are in Figure <a href="growth2.html#fig:nordhausfig1p3">3.12</a> below.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:nordhausfig1p3"></span>
+<img src="img/growth2/nordhausfig1p3.png" alt="Taken directly from Do Real-Output and Real-Wage Measures Capture Reality? The History of Lighting Suggests Not by William D. Nordhaus (NBER 1996), Figure 1.3" width="100%" />
+<p class="caption">
 Figure 3.12: Taken directly from Do Real-Output and Real-Wage Measures Capture Reality? The History of Lighting Suggests Not by William D. Nordhaus (NBER 1996), Figure 1.3
 </p>
 </div>
 <p>That is an impressive drop. From almost 1000 to about 0.1.</p>
 <p>Three cheers for technological progress!</p>
 </div>
-<div id="additive-growth" class="section level2" number="3.6">
-<h2>
-<span class="header-section-number">3.6</span> Additive Growth<a class="anchor" aria-label="anchor" href="#additive-growth"><i class="fas fa-link"></i></a>
-</h2>
-<p>So far the basic underlying assumption in everything we have done is that</p>
+<div id="additive-growth" class="section level2 hasAnchor" number="3.6">
+<h2><span class="header-section-number">3.6</span> Additive Growth<a href="growth2.html#additive-growth" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>So far, the basic underlying assumption in everything we have done is that</p>
 <div class="center">
 <p>growth is exponential.</p>
 </div>
 <p>A recent paper by Philippon (2022) casts grave doubt on this assumption. We briefly lay out his main arguments here.</p>
-<p>Imagine that technological progress is the main driver of economic growth. We can and we have modelled technological progress as</p>
+<p>Imagine that technological progress is the main driver of economic growth. We can and we have modeled technological progress as</p>
 <p><span class="math display" id="eq:techmult">\[\begin{equation}
 \frac{A_{t+1}}{A_t}=A_t(1+g)
 \tag{3.1}
 \end{equation}\]</span></p>
 <p>Here, of course, <span class="math inline">\(A_t\)</span> is the level of technology and <span class="math inline">\(g\)</span> is a positive number. This equation just says that the growth rate of technology takes the current level of technology and multiplies it by some number. This is all well and good and it sounds very reasonable. And a bunch of economic research going back all the way to Solow (1956) has made and used this assumption.</p>
 <p>But:</p>
-<p>It would just have been as reasonable to assume and write</p>
+<p>It would have been just as reasonable to assume and write</p>
 <p><span class="math display" id="eq:techadd">\[\begin{equation}
 \frac{A_{t+1}}{A_t}=A_t + b
 \tag{3.2}
@@ -364,7 +672,7 @@ Figure 3.12: Taken directly from Do Real-Output and Real-Wage Measures Capture R
 <p>There is no “a priori” (you may want to look this up) reason to believe that one of those two equations is a better assumption for research on economic growth than the other.</p>
 <p>So how do we distinguish one model, one assumption, one theory from another?</p>
 <p>We use data. At least we try to use data.</p>
-<p>This is the approach social scientists take in many areas of live: using data to distinguish theories.</p>
+<p>This is the approach social scientists take in many areas of life: using data to distinguish theories.</p>
 <p>Here is another example:</p>
 <p>Suicides by incidence in the US is very high.</p>
 <p>Theory 1: It is a mental health problem.
@@ -372,20 +680,20 @@ Theory 2: It is a gun availability problem.</p>
 <p>Question: What is the best data you can use to distinguish between these two theories?</p>
 <p>Back to growth.</p>
 <p>How does Philippon (2022) use data to distinguish Equations <a href="growth2.html#eq:techmult">(3.1)</a> and <a href="growth2.html#eq:techadd">(3.2)</a>?</p>
-<p>First, he takes data on total factor productivity (TFP) the $ {A_t}$ series in the models for the US from 1947 to 2019. He hires two statisticians, George (for geometric growth), and Daniela (for addititive growth). He gives them the sample from 1947 to 1983 and asks them to forecast the data up until 2019.</p>
+<p>First, he takes data on total factor productivity (TFP) the series <span class="math inline">\(A_t\)</span> in the models for the US from 1947 to 2019. He hires two statisticians, George (for geometric growth), and Daniela (for addititive growth). He gives them the sample from 1947 to 1983 and asks them to forecast the data up until 2019.</p>
 <p>Their answers are below in Figure <a href="growth2.html#fig:philipponfig1">3.13</a></p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:philipponfig1"></span>
-<img src="img/growth2/philipponfig1.PNG" alt="Taken directly from Additive Growth by Thomas Philippon (NBER 2022), Figure 1" width="100%"><p class="caption">
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:philipponfig1"></span>
+<img src="img/growth2/philipponfig1.png" alt="Taken directly from Additive Growth by Thomas Philippon (NBER 2022), Figure 1" width="100%" />
+<p class="caption">
 Figure 3.13: Taken directly from Additive Growth by Thomas Philippon (NBER 2022), Figure 1
 </p>
 </div>
 <p>The data (reality) is the solid line. George’s forecast is exponential (Equation <a href="growth2.html#eq:techmult">(3.1)</a>) and is way off.</p>
 <p>It appears that Daniela’s forecast, using Equation <a href="growth2.html#eq:techadd">(3.2)</a> is much better.</p>
 <p>But growth here in it’s additive form is not constant over very long horizons. Consider Figure <a href="growth2.html#fig:philipponfig4">3.14</a> below</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:philipponfig4"></span>
-<img src="img/growth2/philipponfig4.PNG" alt="Taken directly from Additive Growth by Thomas Philippon (NBER 2022), Figure 4" width="100%"><p class="caption">
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:philipponfig4"></span>
+<img src="img/growth2/philipponfig4.png" alt="Taken directly from Additive Growth by Thomas Philippon (NBER 2022), Figure 4" width="100%" />
+<p class="caption">
 Figure 3.14: Taken directly from Additive Growth by Thomas Philippon (NBER 2022), Figure 4
 </p>
 </div>
@@ -403,13 +711,19 @@ Figure 3.14: Taken directly from Additive Growth by Thomas Philippon (NBER 2022)
 <p>the productivity slowdown.</p>
 </div>
 <p>And along with this discussion of the productivity slowdown, come all kinds of well and ill informed policy proposals:</p>
+<!-- - Change education -->
+<!-- - Lower Taxes -->
+<!-- - Ease the Regulatory Burden -->
+<!-- - Etc. -->
+<!-- - Etc. -->
+<!-- - Etc. -->
 <div class="center">
-<p>Change education
-Lower Taxes
-Ease the Regulatory Burden
-Etc.
-Etc.
-Etc.</p>
+<p>change education,
+lower taxes,
+ease the regulatory burden,
+etc.,
+etc.,
+etc.</p>
 </div>
 <p>IF growth is not exponential, IF growth is indeed linear, then Phillipon says</p>
 <div class="center">
@@ -417,147 +731,150 @@ Etc.</p>
 </div>
 <p>and all the above policy discussions are moot.</p>
 </div>
-<div id="glossary-of-terms-2" class="section level2" number="3.7">
-<h2>
-<span class="header-section-number">3.7</span> Glossary of Terms<a class="anchor" aria-label="anchor" href="#glossary-of-terms-2"><i class="fas fa-link"></i></a>
-</h2>
+<div id="glossary-of-terms-2" class="section level2 hasAnchor" number="3.7">
+<h2><span class="header-section-number">3.7</span> Glossary of Terms<a href="growth2.html#glossary-of-terms-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Human Capital:</strong> the stock of marketable skills of the labor force in a country.</p>
 <p><strong>Technological Progress:</strong> increase in total factor productivity.</p>
 </div>
-<div id="practice-questions-2" class="section level2" number="3.8">
-<h2>
-<span class="header-section-number">3.8</span> Practice Questions<a class="anchor" aria-label="anchor" href="#practice-questions-2"><i class="fas fa-link"></i></a>
-</h2>
-<div id="discussion-2" class="section level3" number="3.8.1">
-<h3>
-<span class="header-section-number">3.8.1</span> Discussion<a class="anchor" aria-label="anchor" href="#discussion-2"><i class="fas fa-link"></i></a>
-</h3>
+<div id="practice-questions-2" class="section level2 hasAnchor" number="3.8">
+<h2><span class="header-section-number">3.8</span> Practice Questions<a href="growth2.html#practice-questions-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="discussion-2" class="section level3 hasAnchor" number="3.8.1">
+<h3><span class="header-section-number">3.8.1</span> Discussion<a href="growth2.html#discussion-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 </div>
-<div id="multiple-choice-2" class="section level3" number="3.8.2">
-<h3>
-<span class="header-section-number">3.8.2</span> Multiple Choice<a class="anchor" aria-label="anchor" href="#multiple-choice-2"><i class="fas fa-link"></i></a>
-</h3>
+<div id="multiple-choice-2" class="section level3 hasAnchor" number="3.8.2">
+<h3><span class="header-section-number">3.8.2</span> Multiple Choice<a href="growth2.html#multiple-choice-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <ol style="list-style-type: decimal">
-<li>
-<p>Which of the following is the best measure of human capital if we want to assess skills of the labor force in a variety of countries?</p>
-<p>A. Average years of schooling<br>
-B. Median years of schooling<br>
-C. PISA scores in math and science<br>
-D. The college graduation rate</p>
-</li>
-<li>
-<p>Moore’s Law</p>
-<p>A. Is an example of arithmetic growth<br>
-B. Is an example of exponential decline<br>
-C. Is an example of exponential growth<br>
-D. Does not hold in the data between 1970 and 2000</p>
-</li>
-<li>
-<p>Mortality rates from breast cancer in the US fell while</p>
-<p>A. The number of researchers working on cancer treatment was constant<br>
-B. The number of clinical trials for cancer treatments was constant<br>
-C. The number of scientific publications about cancer was increasing over time<br>
-D. The number of scientific publications about cancer was increasing over time</p>
-</li>
-<li>
-<p>Since about 1980 the productivity of cancer research has</p>
-<p>A. Increased<br>
-B. Decreased<br>
-C. Stayed constant<br>
-D. Decreased initially and then increased</p>
-</li>
-<li>
-<p>The largest share of the growth of real per capita GDP in the US since 1950 can be explained by</p>
-<p>A. The increase in the capital stock per worker<br>
-B. The increase in educational attainment<br>
-C. Technological progress<br>
-D. Increased social security spending</p>
-</li>
-<li>
-<p>Increased subsidies for attending college are expected to</p>
-<p>A. Increase the stock of human capital<br>
-B. Increase the stock of physical capital, if human and physical capital are complements<br>
-C. Increase GDP if initial college attendance is low<br>
-D. All of the above</p>
-</li>
+<li><p>The best measure of human capital in an economy is</p>
+<p>A. The fraction of workers with a college degree
+B. The fraction of workers with a high school degree
+C. Test scores of students in math and science
+D. The high school drop out rate</p></li>
+<li><p>The best measure of human capital in the labor force in United States in the year 2015 is</p>
+<p>A. Test scores in math and science of workers who entered the labor force in 2010
+B. Test scores in math and science of workers who entered the labor force in 1970
+C. Test scores in math and science of workers who entered the labor force in 1950
+D. Test scores in math and science of workers who entered the labor force between 1970 and 2010</p></li>
+<li><p>In the data set used by Hanushek and Kimko (2000) which pairs of data across countries are correlated</p>
+<p>A. Education expenditure per student and test scores
+B. Education expenditure per student and growth rates of GDP
+C. Growth rates of GDP and test scores
+D. Growth rates of GDP and median years of schooling, after correcting for the math and science scores</p></li>
+<li><p>If the process of economic growth is linear as claimed by Philippon, then the percentage growth rates over time will be</p>
+<p>A. Increasing
+B. Decreasing
+C. Constant
+D. Oscillating</p></li>
+<li><p>Imagine that in the years 1980, 1990, 2000, 2010 and 2020 the 5 year mortality rates from colon cancer are 45%, 40%, 35%, 30% and 25%, respectively. The number of researchers employed in these years is 100, 110, 121, 133, 147. If we consider the percentage reductions in mortality rate the research output, then this example displays</p>
+<p>A. Constant returns to research
+B. Decreasing returns to research
+C. Increasing returns to research
+D. Initially increasing and then decreasing returns to research</p></li>
+<li><p>Imagine that human capital and physical capital are equally important in the production of output. The growth rate of human capital is 4% per year and the growth rate of physical capital is 2% per year. Then the annual growth rate of output will be in percent</p>
+<p>A. 2
+B. 3
+C. 4
+D. 5</p></li>
+<li><p>Imagine that physical and human capital are constant over time and that there are diminishing returns to research. Then we should expect</p>
+<p>A. GDP growth rates to decrease over time
+B. GDP growth rates to stay constant over time
+C. GDP growth rates to increase over time
+D. GDP growth rats to fluctuate over time</p></li>
+<li><p>Imagine that the stock of physical capital grows at 2% annually, that the stock of human capital is constant. If there are diminishing returns to research, then we would expect that</p>
+<p>A. The growth rate of GDP converges to 2% over time
+B. The growth rate of GDP is constant at 2%
+C. The growth rate of GDP converges to 0% over time
+D. The growth rate of GDP converges to 3% over time</p></li>
+<li><p>Which one does not belong</p>
+<p>A. A new and improved surgical instrument
+B. A more fuel efficient car
+C. Better graphics for video games
+D. More varieties of soft drinks</p></li>
+<li><p>Which one does not belong</p>
+<p>A. Electricity
+B. A fork lift
+C. A warehouse
+D. An algorithm</p></li>
 </ol>
 </div>
+<div id="answers" class="section level3 hasAnchor" number="3.8.3">
+<h3><span class="header-section-number">3.8.3</span> Answers<a href="growth2.html#answers" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+
+<!-- Corrections: 2? -->
 </div>
 </div>
-
-  <div class="chapter-nav">
-<div class="prev"><a href="growth.html"><span class="header-section-number">2</span> Economic Growth</a></div>
-<div class="next"><a href="rational-choice.html"><span class="header-section-number">4</span> Rational Choice</a></div>
-</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
-    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#growth2"><span class="header-section-number">3</span> Economic Growth II</a></li>
-<li><a class="nav-link" href="#human-capital-accumulation"><span class="header-section-number">3.1</span> Human capital accumulation</a></li>
-<li><a class="nav-link" href="#more-human-capital"><span class="header-section-number">3.2</span> More Human Capital</a></li>
-<li><a class="nav-link" href="#technological-progress"><span class="header-section-number">3.3</span> Technological progress</a></li>
-<li><a class="nav-link" href="#nails"><span class="header-section-number">3.4</span> Nails</a></li>
-<li><a class="nav-link" href="#light"><span class="header-section-number">3.5</span> Light</a></li>
-<li><a class="nav-link" href="#additive-growth"><span class="header-section-number">3.6</span> Additive Growth</a></li>
-<li><a class="nav-link" href="#glossary-of-terms-2"><span class="header-section-number">3.7</span> Glossary of Terms</a></li>
-<li>
-<a class="nav-link" href="#practice-questions-2"><span class="header-section-number">3.8</span> Practice Questions</a><ul class="nav navbar-nav">
-<li><a class="nav-link" href="#discussion-2"><span class="header-section-number">3.8.1</span> Discussion</a></li>
-<li><a class="nav-link" href="#multiple-choice-2"><span class="header-section-number">3.8.2</span> Multiple Choice</a></li>
-</ul>
-</li>
-</ul>
-
-      <div class="book-extra">
-        <ul class="list-unstyled">
-<li><a id="book-source" href="https://github.com/introeconfull/book//blob/master/growth2.Rmd">View source <i class="fab fa-github"></i></a></li>
-          <li><a id="book-edit" href="https://github.com/introeconfull/book//edit/master/growth2.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
-        </ul>
 </div>
-    </nav>
+<div class="footnotes">
+<hr />
+<ol start="32">
+<li id="fn32"><p><a href="https://www.cesifo.org/en/publikationen/2022/working-paper/new-macroeconomic-measure-human-capital-exploiting-pisa-and-piaac" class="uri">https://www.cesifo.org/en/publikationen/2022/working-paper/new-macroeconomic-measure-human-capital-exploiting-pisa-and-piaac</a><a href="growth2.html#fnref32" class="footnote-back">↩︎</a></p></li>
+<li id="fn33"><p><a href="https://www.cnn.com/2023/03/24/tech/gordon-moore-obituary/index.html" class="uri">https://www.cnn.com/2023/03/24/tech/gordon-moore-obituary/index.html</a><a href="growth2.html#fnref33" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
+            </section>
 
-</div>
-</div> <!-- .container -->
-
-<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
-
-  <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>An Introductory Course in Economics</strong>" was written by Gerhard Glomm, Joseph Westenberg. It was last built on 2022-06-03.</p>
+          </div>
+        </div>
+      </div>
+<a href="growth.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="decisions-rational-or-irrational.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
   </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/introeconfull/book/edit/master/growth2.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["introeconfull.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+},
+"css": "style.css"
+});
+});
+</script>
 
-  <div class="col-12 col-md-6 mt-3">
-    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
-  </div>
-
-</div></div>
-</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
     var src = "true";
-    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))
         src = src.replace(/^https?:/, '');
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
-</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
-for (let popover of popovers) {
-  const div = document.createElement('div');
-  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
-  div.innerHTML = popover.getAttribute('data-content');
-
-  var has_math = div.querySelector("span.math");
-  if (has_math) {
-    document.body.appendChild(div);
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
-    MathJax.Hub.Queue(function() {
-      popover.setAttribute('data-content', div.innerHTML);
-      document.body.removeChild(div);
-    })
-  }
-}
 </script>
 </body>
+
 </html>
