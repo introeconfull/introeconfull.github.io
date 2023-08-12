@@ -17,7 +17,10 @@
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.0/transition.js"></script><script src="libs/bs3compat-0.5.0/tabs.js"></script><script src="libs/bs3compat-0.5.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="libs/leaflet-binding-2.1.2/leaflet.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
@@ -42,7 +45,20 @@
 </form>
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled"><li><a class="" href="index.html"><span class="header-section-number">Chapter 7</span> Competitive Markets</a></li></ul>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Introduction</a></li>
+<li><a class="" href="growth.html"><span class="header-section-number">2</span> Economic Growth</a></li>
+<li><a class="" href="growth2.html"><span class="header-section-number">3</span> Economic Growth II</a></li>
+<li><a class="" href="decisions-rational-or-irrational.html"><span class="header-section-number">4</span> Decisions: Rational or Irrational?</a></li>
+<li><a class="" href="demand.html"><span class="header-section-number">5</span> Demand</a></li>
+<li><a class="" href="supply.html"><span class="header-section-number">6</span> Supply</a></li>
+<li><a class="active" href="competitive-markets.html"><span class="header-section-number">7</span> Competitive Markets</a></li>
+<li><a class="" href="externalities.html"><span class="header-section-number">8</span> Externalities</a></li>
+<li><a class="" href="monopoly.html"><span class="header-section-number">9</span> Monopoly</a></li>
+<li><a class="" href="game-theory.html"><span class="header-section-number">10</span> Game Theory</a></li>
+<li><a class="" href="oligopoly.html"><span class="header-section-number">11</span> Oligopoly</a></li>
+<li><a class="" href="appendix.html"><span class="header-section-number">12</span> Appendix</a></li>
+</ul>
 
         <div class="book-extra">
           <p><a id="book-repo" href="https://github.com/introeconfull/book/">View book source <i class="fab fa-github"></i></a></p>
@@ -197,7 +213,7 @@ Figure 7.7: Unit Taxation.
 <p>But that is not the end of story. Fossil fuels are traded on a world market. If a large economy like the US economy reduces its demand for fossil fuels massively, there is likely a massive reduction in the world price. If there is a large reduction in the world price of fossil fuels, other countries like China, India, Brazil will just walk down their downward sloping demand curve and consume more fossil fuels.
 Punchline: The US policy of reducing US demand for fossil fuels is like to do very little to decrease the GLOBAL output of <span class="math inline">\(CO_2\)</span> and equivalent gases.</p>
 <hr>
-<p><strong>Example 4:</strong> Another Green Paradox<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;&lt;a href="https://www.sciencedirect.com/science/article/pii/S0014292113000512" class="uri"&gt;https://www.sciencedirect.com/science/article/pii/S0014292113000512&lt;/a&gt;&lt;/p&gt;'><sup>1</sup></a></p>
+<p><strong>Example 4:</strong> Another Green Paradox<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;&lt;a href="https://www.sciencedirect.com/science/article/pii/S0014292113000512" class="uri"&gt;https://www.sciencedirect.com/science/article/pii/S0014292113000512&lt;/a&gt;&lt;/p&gt;'><sup>42</sup></a></p>
 <p>We have heard it time and time again. By the year 2050 we will reduce demand for fossil fuels by something like 40 or 50%, by a large fraction in any case.
 Good intention/policy or bad intention/policy?</p>
 <p>Some simple economics comes into play. See Figure <a href="competitive-markets.html#fig:compmarkets08">7.8</a>.</p>
@@ -234,11 +250,11 @@ Figure 7.9: Unit Taxation.
 <li><p>Textile prices in the US will rise and the standard of living fall, since the tariff induces firms to switch from a very low-cost international supplier to another international supplier, whose costs are higher.</p></li>
 </ol>
 <hr>
-<p><strong>Example 6:</strong> Who Pays for Tariffs?<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;&lt;a href="https://pubs.aeaweb.org/doi/pdfplus/10.1257/aeri.20190536" class="uri"&gt;https://pubs.aeaweb.org/doi/pdfplus/10.1257/aeri.20190536&lt;/a&gt;&lt;/p&gt;'><sup>2</sup></a></p>
+<p><strong>Example 6:</strong> Who Pays for Tariffs?<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;&lt;a href="https://pubs.aeaweb.org/doi/pdfplus/10.1257/aeri.20190536" class="uri"&gt;https://pubs.aeaweb.org/doi/pdfplus/10.1257/aeri.20190536&lt;/a&gt;&lt;/p&gt;'><sup>43</sup></a></p>
 <p>Who pays for the tariffs on Chinese imports imposed in 2017 and 2018, importers or exporters? Firms or consumers?</p>
 <p>In 2018, the Trump administration-imposed tariffs on many goods such as washing machines, solar panels, steel, aluminum imported from several countries and on several hundred billion worth of goods imported from China. This happened in waves in July 2018, August 2018, and September 2018. The rates were 10% or 25% depending on the good. In May 2019 the 10% rate was increased to 25% on many goods. China and many other countries responded by imposing tariffs on their own imports from the US.</p>
 <p>We want to know how prices responded, both in the case of prices of imports and in the case of prices of exports.</p>
-<p>There are many possibilities. Imagine a market for washing machines with a large number of firms and that some of these washing machines are imported from China. The firms that are hit with the tariffs, foreign firms, now face a higher marginal cost and the domestic firms have a cost advantage. Will the “domestic market” respond by increasing prices to the higher level that might be implied by the tariffs? Or will the foreign market respond by decreasing pre-tariff prices to be still competitive with the firms in the “domestic market”? Both of these are reasonable consequences. Which of these will happen or in which combination is an open question. Cavalo et al. (2021)<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;&lt;a href="https://www.aeaweb.org/articles?id=10.1257/aeri.20190536" class="uri"&gt;https://www.aeaweb.org/articles?id=10.1257/aeri.20190536&lt;/a&gt;&lt;/p&gt;'><sup>3</sup></a> addresses exactly these issues.</p>
+<p>There are many possibilities. Imagine a market for washing machines with a large number of firms and that some of these washing machines are imported from China. The firms that are hit with the tariffs, foreign firms, now face a higher marginal cost and the domestic firms have a cost advantage. Will the “domestic market” respond by increasing prices to the higher level that might be implied by the tariffs? Or will the foreign market respond by decreasing pre-tariff prices to be still competitive with the firms in the “domestic market”? Both of these are reasonable consequences. Which of these will happen or in which combination is an open question. Cavalo et al. (2021)<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;&lt;a href="https://www.aeaweb.org/articles?id=10.1257/aeri.20190536" class="uri"&gt;https://www.aeaweb.org/articles?id=10.1257/aeri.20190536&lt;/a&gt;&lt;/p&gt;'><sup>44</sup></a> addresses exactly these issues.</p>
 <p>But what prices? You may think this is a stupid question, but there is really something to it. An imported washing machine, say, has a price as it crosses the border. That price is not necessarily the same when that washing machine is sold at your favorite store in Indianapolis. The border prices are collected through the International Pricing Program of the Bureau of Labor Statistics. For the prices at retails stores the authors use data from 30 large retail stores. These prices are scraped daily from the stores’ webpages. The estimates are done at the product category, i.e., each data point is a product i imported from country j in sector k in month m. There are lots and lots of data point, over 800,000, so things can be estimated rather precisely.</p>
 <p>Here are two results from this estimation:</p>
 <ol style="list-style-type: decimal">
@@ -266,7 +282,7 @@ Figure 7.9: Unit Taxation.
 <li><p>A decline in the share of US household expenditures going to domestically produced goods is associated with smaller goods inflation, i.e., prices of goods rise more slowly. We might want to know how BIG is this effect. Prices of goods with median exposure to Chinese imports grow 0.17 percentage points slower than prices of goods with no exposure to Chinese imports. To get a sense of the magnitude of this effect, If prices grow at 3% annually for 10 years, after ten years they will have increased by 34 percent. If prices had grown by 0.17% less each year for 10 years, due to competition from Chinese imports, after ten years prices would be 14% higher. A whopping 20% difference!</p></li>
 </ol>
 <hr>
-<p><strong>Example 8:</strong> The China Syndrome: Horizontally we Fall, Vertically we Stand<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;&lt;a href="https://www.nber.org/papers/w29196" class="uri"&gt;https://www.nber.org/papers/w29196&lt;/a&gt;&lt;/p&gt;'><sup>4</sup></a></p>
+<p><strong>Example 8:</strong> The China Syndrome: Horizontally we Fall, Vertically we Stand<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;&lt;a href="https://www.nber.org/papers/w29196" class="uri"&gt;https://www.nber.org/papers/w29196&lt;/a&gt;&lt;/p&gt;'><sup>45</sup></a></p>
 <p>Paper below distinguishes two cases. In case 1, Chinese socks compete with French socks. We call this horizontal competition. In case 2, the French use a Chinese import as an intermediate good to produce something else. In case 1 we can think of women’s jackets as the good. If there are more jackets imported from China, then we can capture this with a shift to the right of supply. This rightward shift will decrease the price, sales and employment of domestic jackets. This is exactly what the paper below finds.</p>
 <p>On the other hand, some Chinese imports are intermediate goods in some other production process. In that case, an increase in Chinese imports, decreases marginal costs of final goods production, which can show up as an increase in sales and in employment. In the paper below, some of these effects are indeed positive but some are indistinguishable from zero.</p>
 </div>
@@ -427,7 +443,7 @@ opportunities for resale, arbitrage assures that identical products trade at the
 </blockquote>
 </div>
 <p>This is how concisely one of the greats in Economics, Noble Laureate Dan McFadden<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;
-&lt;a href="https://en.wikipedia.org/wiki/Daniel_McFadden" class="uri"&gt;https://en.wikipedia.org/wiki/Daniel_McFadden&lt;/a&gt;&lt;/p&gt;'><sup>5</sup></a> describes the Law of One Price. To paraphrase
+&lt;a href="https://en.wikipedia.org/wiki/Daniel_McFadden" class="uri"&gt;https://en.wikipedia.org/wiki/Daniel_McFadden&lt;/a&gt;&lt;/p&gt;'><sup>46</sup></a> describes the Law of One Price. To paraphrase
 the statement, we can say:</p>
 <p>If we are dealing with an object whose qualities can easily be ascertained and when there are lots and lots of trading possibilities then we would expect that object to trade at one price, at least approximately. And the availability and closeness of substitutes also matters of course.</p>
 <p>So, if we are to analyze the Law of One Price we must consider three factors:</p>
@@ -769,15 +785,36 @@ D. All of the above</p>
 </div>
 
   <div class="chapter-nav">
-<div class="empty"></div>
-<div class="empty"></div>
+<div class="prev"><a href="supply.html"><span class="header-section-number">6</span> Supply</a></div>
+<div class="next"><a href="externalities.html"><span class="header-section-number">8</span> Externalities</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <div id="book-on-this-page"></div>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#competitive-markets"><span class="header-section-number">7</span> Competitive Markets</a></li>
+<li><a class="nav-link" href="#competitive-equilibrium"><span class="header-section-number">7.1</span> Competitive Equilibrium</a></li>
+<li><a class="nav-link" href="#consumerproducer-surplus"><span class="header-section-number">7.2</span> Consumer/Producer Surplus</a></li>
+<li><a class="nav-link" href="#unit-taxation"><span class="header-section-number">7.3</span> Unit Taxation</a></li>
+<li><a class="nav-link" href="#price-ceilings"><span class="header-section-number">7.4</span> Price Ceilings</a></li>
+<li><a class="nav-link" href="#examples-4"><span class="header-section-number">7.5</span> Examples</a></li>
+<li><a class="nav-link" href="#taking-price-as-given"><span class="header-section-number">7.6</span> Taking Price as given</a></li>
+<li><a class="nav-link" href="#positive-vs-normative-economics"><span class="header-section-number">7.7</span> Positive vs Normative Economics</a></li>
+<li><a class="nav-link" href="#efficiency"><span class="header-section-number">7.8</span> Efficiency</a></li>
+<li><a class="nav-link" href="#a-macro-connection"><span class="header-section-number">7.9</span> A Macro Connection</a></li>
+<li><a class="nav-link" href="#the-law-of-one-price-and-arbitrage"><span class="header-section-number">7.10</span> The Law of One Price and Arbitrage</a></li>
+<li><a class="nav-link" href="#glossary-of-terms-6"><span class="header-section-number">7.11</span> Glossary of Terms</a></li>
+<li>
+<a class="nav-link" href="#practice-questions-6"><span class="header-section-number">7.12</span> Practice Questions</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#discussion-6"><span class="header-section-number">7.12.1</span> Discussion</a></li>
+<li><a class="nav-link" href="#multiple-choice-6"><span class="header-section-number">7.12.2</span> Multiple Choice</a></li>
+<li><a class="nav-link" href="#answer-key-5"><span class="header-section-number">7.12.3</span> Answer Key</a></li>
+</ul>
+</li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-          
+<li><a id="book-source" href="https://github.com/introeconfull/book//blob/master/compmarkets.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/introeconfull/book//edit/master/compmarkets.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -789,7 +826,7 @@ D. All of the above</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>An Introductory Course in Economics</strong>" was written by Gerhard Glomm, Joseph Westenberg. It was last built on 2023-08-09.</p>
+    <p>"<strong>An Introductory Course in Economics</strong>" was written by Gerhard Glomm, Joseph Westenberg. It was last built on 2023-08-12.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

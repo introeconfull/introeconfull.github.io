@@ -17,7 +17,10 @@
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.0/transition.js"></script><script src="libs/bs3compat-0.5.0/tabs.js"></script><script src="libs/bs3compat-0.5.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
+<script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
+<script src="libs/leaflet-binding-2.1.2/leaflet.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
@@ -42,7 +45,20 @@
 </form>
 
       <nav aria-label="Table of contents"><h2>Table of contents</h2>
-        <ul class="book-toc list-unstyled"><li><a class="" href="index.html"><span class="header-section-number">Chapter 6</span> Supply</a></li></ul>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html"><span class="header-section-number">1</span> Introduction</a></li>
+<li><a class="" href="growth.html"><span class="header-section-number">2</span> Economic Growth</a></li>
+<li><a class="" href="growth2.html"><span class="header-section-number">3</span> Economic Growth II</a></li>
+<li><a class="" href="decisions-rational-or-irrational.html"><span class="header-section-number">4</span> Decisions: Rational or Irrational?</a></li>
+<li><a class="" href="demand.html"><span class="header-section-number">5</span> Demand</a></li>
+<li><a class="active" href="supply.html"><span class="header-section-number">6</span> Supply</a></li>
+<li><a class="" href="competitive-markets.html"><span class="header-section-number">7</span> Competitive Markets</a></li>
+<li><a class="" href="externalities.html"><span class="header-section-number">8</span> Externalities</a></li>
+<li><a class="" href="monopoly.html"><span class="header-section-number">9</span> Monopoly</a></li>
+<li><a class="" href="game-theory.html"><span class="header-section-number">10</span> Game Theory</a></li>
+<li><a class="" href="oligopoly.html"><span class="header-section-number">11</span> Oligopoly</a></li>
+<li><a class="" href="appendix.html"><span class="header-section-number">12</span> Appendix</a></li>
+</ul>
 
         <div class="book-extra">
           <p><a id="book-repo" href="https://github.com/introeconfull/book/">View book source <i class="fab fa-github"></i></a></p>
@@ -88,7 +104,7 @@
 <p>Average variable costs, <span class="math inline">\(AVC = \frac{VC}{q}\)</span>.</p>
 <p>Average total costs, <span class="math inline">\(ATC = \frac{TC}{q}\)</span>.</p>
 <p>Marginal cost, <span class="math inline">\(MC\)</span>: is the extra cost incurred to produce one more unit.</p>
-<p>Average fixed cost is easily graphed as in Figure <a href="supply.html#fig:supply01">6.1</a>. The fact that this is downward sloping and slowly approaches 0 should not be a surprise. This is just an application of “the big-little principle<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Big Little Principle: Dividing by a large number, gives a small number. Dividing by a small number gives a big number&lt;/p&gt;"><sup>1</sup></a>” from middle school. Since fixed costs do not depend on quantity produced, as we are increasing quantity over the x-axis we are spreading the fixed costs out more and more over a larger quantity (denominator for AFC).</p>
+<p>Average fixed cost is easily graphed as in Figure <a href="supply.html#fig:supply01">6.1</a>. The fact that this is downward sloping and slowly approaches 0 should not be a surprise. This is just an application of “the big-little principle<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Big Little Principle: Dividing by a large number, gives a small number. Dividing by a small number gives a big number&lt;/p&gt;"><sup>40</sup></a>” from middle school. Since fixed costs do not depend on quantity produced, as we are increasing quantity over the x-axis we are spreading the fixed costs out more and more over a larger quantity (denominator for AFC).</p>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:supply01"></span>
 <img src="img/supply/fig1.jpg" alt="Average Fixed Costs" width="75%"><p class="caption">
@@ -233,14 +249,14 @@ Figure 6.8: Technological Progress Example: Moores Law
 Figure 6.9: Technological Progress Example: Solar Panelsd.
 </p>
 </div>
-<p>Nordhaus (1996)<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;&lt;a href="https://www.nber.org/system/files/chapters/c6064/c6064.pdf" class="uri"&gt;https://www.nber.org/system/files/chapters/c6064/c6064.pdf&lt;/a&gt;&lt;/p&gt;'><sup>2</sup></a> has documented that the cost of light, measured in lumens, has experienced a similarly drastic fall over the last 200 years (Figure <a href="supply.html#fig:supply10">6.10</a> below)</p>
+<p>Nordhaus (1996)<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;&lt;a href="https://www.nber.org/system/files/chapters/c6064/c6064.pdf" class="uri"&gt;https://www.nber.org/system/files/chapters/c6064/c6064.pdf&lt;/a&gt;&lt;/p&gt;'><sup>41</sup></a> has documented that the cost of light, measured in lumens, has experienced a similarly drastic fall over the last 200 years (Figure <a href="supply.html#fig:supply10">6.10</a> below)</p>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:supply10"></span>
 <img src="img/supply/fig10.png" alt="Technological Progress Example: Solar Panels." width="75%"><p class="caption">
 Figure 6.10: Technological Progress Example: Solar Panels.
 </p>
 </div>
-<p>Of course, there are also forces that can increase marginal costs, and thus, decrease supply, i.e., shift supply to the left. If there is an increase in the minimum wage, the marginal cost of production will rise to the extent that the costs of labor are variable costs. If the government imposes extra safety regulations that increase marginal costs, then supply will decrease or shift to the left. If the price of gasoline rises, the supply of rides by Lyft, Uber or cabs decreases. Such a leftward shift in supply is indicated in Figure <a href="#fig:supply011"><strong>??</strong></a>.</p>
+<p>Of course, there are also forces that can increase marginal costs, and thus, decrease supply, i.e., shift supply to the left. If there is an increase in the minimum wage, the marginal cost of production will rise to the extent that the costs of labor are variable costs. If the government imposes extra safety regulations that increase marginal costs, then supply will decrease or shift to the left. If the price of gasoline rises, the supply of rides by Lyft, Uber or cabs decreases. Such a leftward shift in supply is indicated in Figure <a href="supply.html#fig:supply11">6.11</a>.</p>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:supply11"></span>
 <img src="img/supply/fig11.jpg" alt="Increase in marginal cost." width="75%"><p class="caption">
@@ -479,15 +495,36 @@ D. Its quantity supplied to fall</p>
 </div>
 
   <div class="chapter-nav">
-<div class="empty"></div>
-<div class="empty"></div>
+<div class="prev"><a href="demand.html"><span class="header-section-number">5</span> Demand</a></div>
+<div class="next"><a href="competitive-markets.html"><span class="header-section-number">7</span> Competitive Markets</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <div id="book-on-this-page"></div>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#supply"><span class="header-section-number">6</span> Supply</a></li>
+<li><a class="nav-link" href="#introductory-video-1"><span class="header-section-number">6.1</span> Introductory Video</a></li>
+<li><a class="nav-link" href="#cost-concepts"><span class="header-section-number">6.2</span> Cost concepts</a></li>
+<li>
+<a class="nav-link" href="#economies-of-scale"><span class="header-section-number">6.3</span> Economies of Scale</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#examples-3"><span class="header-section-number">6.3.1</span> Examples</a></li></ul>
+</li>
+<li><a class="nav-link" href="#profit-maximization"><span class="header-section-number">6.4</span> Profit Maximization</a></li>
+<li><a class="nav-link" href="#supply-1"><span class="header-section-number">6.5</span> Supply</a></li>
+<li>
+<a class="nav-link" href="#shifts-in-supply"><span class="header-section-number">6.6</span> Shifts in Supply</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#individual-to-market-supply"><span class="header-section-number">6.6.1</span> Individual to Market Supply</a></li></ul>
+</li>
+<li><a class="nav-link" href="#glossary-of-terms-5"><span class="header-section-number">6.7</span> Glossary of Terms</a></li>
+<li>
+<a class="nav-link" href="#practice-questions-5"><span class="header-section-number">6.8</span> Practice Questions</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#discussion-5"><span class="header-section-number">6.8.1</span> Discussion</a></li>
+<li><a class="nav-link" href="#multiple-choice-5"><span class="header-section-number">6.8.2</span> Multiple Choice</a></li>
+<li><a class="nav-link" href="#answer-key-4"><span class="header-section-number">6.8.3</span> Answer Key</a></li>
+</ul>
+</li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
-          
+<li><a id="book-source" href="https://github.com/introeconfull/book//blob/master/supply.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/introeconfull/book//edit/master/supply.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
         </ul>
 </div>
     </nav>
@@ -499,7 +536,7 @@ D. Its quantity supplied to fall</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>An Introductory Course in Economics</strong>" was written by Gerhard Glomm, Joseph Westenberg. It was last built on 2023-08-09.</p>
+    <p>"<strong>An Introductory Course in Economics</strong>" was written by Gerhard Glomm, Joseph Westenberg. It was last built on 2023-08-12.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
