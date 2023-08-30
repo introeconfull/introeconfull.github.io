@@ -108,6 +108,9 @@
 %     \end{tabular}
 %     \end{mycustomindent}}
 
+ \usepackage{float}
+ \floatplacement{figure}{H}
+
 
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
@@ -123,7 +126,7 @@
 
 \title{An Introductory Course in Economics}
 \author{Gerhard Glomm, Joseph Westenberg}
-\date{2023-08-12}
+\date{2023-08-30}
 
 \begin{document}
 \maketitle
@@ -1226,7 +1229,7 @@ where F stands for any function which transforms our inputs into outputs. In mos
 
 The production function at the level of an individual firm is an engineering description of the production process. There is very little, if any, economics here. If you are running a barbershop, you need barbers and scissors, to produce haircuts. If you are running an oil refinery you need chemical engineers and crude oil and a few other things to produce gasoline. To produce an iPhone you need rare earth minerals, cobalt and such. No cobalt, no iPhone.
 
-At the level of an entire economy the production function is simply a relationship between the major inputs, things like capital and labor. Sometimes, (this depends on the application, the question at hand), we include raw materials, cobalt?, or energy.
+At the level of an entire economy the production function is simply a relationship between the major inputs, things like capital and labor. Sometimes, (this depends on the application, the question at hand), we include raw materials, cobalt, or energy.
 
 A few things should be clear.
 
@@ -1241,7 +1244,7 @@ A few things should be clear.
 \hypertarget{measuring-economic-growth}{%
 \section{Measuring economic growth:}\label{measuring-economic-growth}}
 
-We let \(y_t\) denote real per capita GDP in period t. For all time periods t. Then \(y_{t+1}\) is GDP, real and per capita, for period t+1. We let gt denote the growth rate of real per capita GDP. Then we can define the growth of real per capita GDP from period t to period t+1 to be
+We let \(y_t\) denote real per capita GDP in period t. For all time periods t. Then \(y_{t+1}\) is GDP, real and per capita, for period t+1. We let \(g_t\) denote the growth rate of real per capita GDP. Then we can define the growth of real per capita GDP from period \(t\) to period \(t+1\) to be
 
 \[g_t = \frac{y_{t+1} - y_t}{y_t}\]
 
@@ -1277,8 +1280,9 @@ India & 1.5 \% & 50 years & 2 \\
 
 This thought experiment is based on true data. The two numbers in the first column are the actual growth rates for these countries in that period. A South Korean grandchild will be richer than the grandparent by a factor of 32! This is assuming that a generation comes every 25 years, which is an eminently reasonable assumption. A factor of 32 is huge.
 
-Remember this is per capita and it is already adjusted for inflation.\\
-If we assume that India and South Korea had he same initial starting conditions in 1960, then after 50 years, the typical South Korean will be 16 times as well off as the typical person in India. That is a stunning difference in purchasing power.
+Remember this is per capita and it is already adjusted for inflation.
+
+If we assume that India and South Korea had the same initial starting conditions in 1960, then after 50 years, the typical South Korean will be 16 times as well off as the typical person in India. That is a stunning difference in purchasing power.
 
 To convince yourself of the enormous difference in the quality of life associated with such large growth rates of 7\% or so, google images of Seoul in 1955 and in 2015. What a difference, like night and day! (See Figure 3.)
 
@@ -1292,7 +1296,7 @@ The Rule of 70 is a convenient way to get an idea of how fast exponential growth
 \begin{itemize}
 \tightlist
 \item
-  How long will it take for GDP to double if the average annual growth rates in x\%?
+  How long will it take for GDP to double if the average annual growth rate is x\%?
 \item
   How long will it take for my \$1,000 investment to double if the interest rate is y\%?
 \item
@@ -1303,16 +1307,16 @@ The power of exponential growth is often underappreciated.
 
 So here is the rule:
 
-Doubling time = 70/g
+Doubling time = \(\frac{70}{g}\)
 
-where g is the growth rate.
+where \(g\) is the growth rate.
 
 Examples:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  If the growth rate is 3.5\%. then it will take 20 years for income to double.
+  If the growth rate is 3.5\%, then it will take 20 years for income to double.
 \item
   The economy in China started to grow like gangbusters around 1990. After 1990 their growth rate has averaged about 7\% annually. At that rate incomes will double every 10 years. In 2020 Chinese per capita GDP was about \$10,000. Using the rule of 70 we can infer that Chinese GDP per person was:
   \$5,000 in 2010
@@ -1337,13 +1341,7 @@ Examples:
 
 We will begin with a workhorse model that can provide some, but not all, answers. No model will ever provide all answers. In the model, named after Robert Solow, we will first trace out the evolution or growth of the capital stock.
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-A student once said that the Slow model was confusing. I assume it is less confusing than the fast model, so we have made these notes even slower.
-
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
-
-Learning about the Solow Model can be somewhat challenging, it is not a way most people are used to think. Take the reading slow, reread, stare at it, ask questions. We will get through this chapter together with a deeper understanding of abstract reasoning. It will come to you. Like many things in life, worthwhile things are hard to get. You must fight for it.
+Learning about the Solow Model can be somewhat challenging. This way of thinking is not what most people are used to. Take the reading slow, reread, stare at it, ask questions. We will get through this chapter together with a deeper understanding of abstract reasoning. It will come to you. Like many things in life, worthwhile things are hard to get. You must fight for it.
 
 \hypertarget{physical-capital-accumulation}{%
 \subsection{Physical Capital Accumulation}\label{physical-capital-accumulation}}
@@ -5880,6 +5878,20 @@ There are cases where the eviction from assisted living was followed very rapidl
 \hypertarget{externalities}{%
 \chapter{Externalities}\label{externalities}}
 
+In this chapter we will learn:
+
+\begin{itemize}
+\tightlist
+\item
+  The definition of an externality
+\item
+  The distinction between positive and negative externalities
+\item
+  The (in)efficiency properties of competitive markets in the presence of externalities
+\item
+  How and to what extent government policies can be used to make competitive equlibria with externalities more efficient
+\end{itemize}
+
 \hypertarget{introductory-videos}{%
 \section{Introductory Videos}\label{introductory-videos}}
 
@@ -6922,38 +6934,47 @@ You will rarely see advertisements for strawberries, wheat, lettuce, peaches. Bu
 \hypertarget{multiple-choice-7}{%
 \subsection{Multiple Choice}\label{multiple-choice-7}}
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\linewidth]{img/monopoly/practicefigure} 
+
+}
+
+\caption{For problems 1-3.}\label{fig:practiceproblem}
+\end{figure}
+
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  In the figure above the area ABCD represents
+  In Figure \ref{fig:practiceproblem} above the area ABCD represents
 
   A. Total revenue for the monopolist\\
   B. Total profit for the monopolist\\
   C. The deadweight loss of monopoly\\
   D. Consumers' surplus
 \item
-  In the figure above the area GHCD represents
+  In Figure \ref{fig:practiceproblem} above the area GHCD represents
 
   A. Total revenue for the monopolist\\
   B. Total profit for the monopolist\\
   C. The deadweight loss of monopoly\\
   D. Consumers' surplus
 \item
-  Imagine that in the above figure marginal costs drops by 15\%. The we would expect
+  Imagine that in Figure \ref{fig:practiceproblem} marginal costs drops by 15\%. The we would expect
 
   A. Consumers' surplus to increase\\
   B. Total profit to increase\\
   C. The price to decrease\\
   D. All if the above
 \item
-  In the above figure the most efficient point is
+  In Figure \ref{fig:practiceproblem} above the most efficient point is
 
   A. C\\
   B. B\\
   C. E\\
   D. F
 \item
-  Imagine in the figure above that the government imposes a price ceiling that is below the line DC. Then
+  Imagine in Figure \ref{fig:practiceproblem} above that the government imposes a price ceiling that is below the line DC. Then
 
   A. The monopolist's profit will decline\\
   B. Consumers' surplus will increase\\
@@ -7667,30 +7688,16 @@ American industry is highly concentrated, now more than 50 years ago. You might 
 
 But this does not spell competition.
 
-Table \ref{tab:oligopoly1} below (Eeckhout 2021) shows some illustrative examples of how highly concentrated many markets are.
+Figure \ref{fig:oligopoly1} below (Eeckhout 2021) shows some illustrative examples of how highly concentrated many markets are.
 
-\begin{table}
+\begin{figure}
 
-\caption{\label{tab:oligopoly1}Market Concentrations}
-\centering
-\begin{tabular}[t]{l|c|c}
-\hline
-Industry & Market Share (\%) & Number of Firms\\
-\hline
-Pacemakers & 89 & 3\\
-\hline
-Baby Formula & 69 & 2\\
-\hline
-Dry Cat Food & 57 & 1\\
-\hline
-Mayonnaise & 87 & 2\\
-\hline
-Home Improvements & 81 & 2\\
-\hline
-Coffins & 82 & 2\\
-\hline
-\end{tabular}
-\end{table}
+{\centering \includegraphics[width=0.8\linewidth]{img/oligopoly/gentable1} 
+
+}
+
+\caption{Market Concentrations}\label{fig:oligopoly1}
+\end{figure}
 
 We have to understand how markets with such large concentrations work.
 
@@ -7717,36 +7724,16 @@ Assume the demand is given by (Recall, \(Q\) denotes market quantity, but we are
 
 and that marginal cost is given by \(MC = 9\). The profit maximizing calculation is illustrated in Table 2 below (recall \(MB=MC\))
 
-\begin{table}
+\begin{figure}
 
-\caption{\label{tab:oligopoly02}Monopoly pricing calculation}
-\centering
-\begin{tabular}[t]{c|c|c|c|c}
-\hline
-Q & P & TR & MR & MC\\
-\hline
-1 & 19 & 19 & 19 & 9\\
-\hline
-2 & 18 & 36 & 17 & 9\\
-\hline
-3 & 17 & 51 & 15 & 9\\
-\hline
-4 & 16 & 64 & 13 & 9\\
-\hline
-5 & 15 & 75 & 11 & 9\\
-\hline
-6 & 14 & 84 & 9 & 9\\
-\hline
-7 & 13 & 91 & 7 & 9\\
-\hline
-8 & 12 & 96 & 5 & 9\\
-\hline
-9 & 11 & 99 & 3 & 9\\
-\hline
-\end{tabular}
-\end{table}
+{\centering \includegraphics[width=0.8\linewidth]{img/oligopoly/gentable2} 
 
-The upshot from Table \ref{tab:oligopoly02} is the profit maximizing quantity is \(Q = 6\) with corresponding price: \(P=14\) and profit \(\pi=30\)
+}
+
+\caption{Monopoly pricing calculation}\label{fig:oligopoly2}
+\end{figure}
+
+The upshot from Figure \ref{fig:oligopoly2} is the profit maximizing quantity is \(Q = 6\) with corresponding price: \(P=14\) and profit \(\pi=30\)
 
 Let's keep these numbers in mind when we think about the duopoly. We assume exactly the same demand and the same marginal cost. Now, the decisions of one firm will depend upon the decisions of the other firm. That is since \(Q\) is market quantity and we now have more than one firm: \(Q=q_1+q_2\).
 
@@ -7756,34 +7743,107 @@ So, let's assume that firm 1 produces 3 units. That leaves a residual demand for
 
 Given that residual demand we can do Firm 2's profit maximization calculations. These are contained in Table \ref{tab:oligopoly03}.
 
-\begin{table}
+\label{tab:oligopoly03}Firm 2s profit maximizing calculation if firm 1 sells 3 units
 
-\caption{\label{tab:oligopoly03}Firm 2s profit maximizing calculation if firm 1 sells 3 units}
-\centering
-\begin{tabular}[t]{c|c|c|c|c}
-\hline
-Q2 & P & TR2 & MR2 & MC\\
-\hline
-1 & 16 & 16 & 16 & 9\\
-\hline
-2 & 15 & 30 & 14 & 9\\
-\hline
-3 & 14 & 42 & 12 & 9\\
-\hline
-4 & 13 & 52 & 10 & 9\\
-\hline
-5 & 12 & 60 & 8 & 9\\
-\hline
-6 & 11 & 66 & 6 & 9\\
-\hline
-7 & 10 & 70 & 4 & 9\\
-\hline
-8 & 9 & 72 & 2 & 9\\
-\hline
-9 & 8 & 72 & 0 & 9\\
-\hline
-\end{tabular}
-\end{table}
+Q2
+
+P
+
+TR2
+
+MR2
+
+MC
+
+1
+
+16
+
+16
+
+16
+
+9
+
+2
+
+15
+
+30
+
+14
+
+9
+
+3
+
+14
+
+42
+
+12
+
+9
+
+4
+
+13
+
+52
+
+10
+
+9
+
+5
+
+12
+
+60
+
+8
+
+9
+
+6
+
+11
+
+66
+
+6
+
+9
+
+7
+
+10
+
+70
+
+4
+
+9
+
+8
+
+9
+
+72
+
+2
+
+9
+
+9
+
+8
+
+72
+
+0
+
+9
 
 Given these numbers, it is best for firm 2 to produce somewhere between 4 and 5 units.
 
@@ -7807,34 +7867,107 @@ In Table 4 we illustrate firm 2s profit maximization when firm 1 is assumed to p
 
 How firm 2 responds to firm 1 producing 5 units is illustrated in Table \ref{tab:oligopoly04} below.
 
-\begin{table}
+\label{tab:oligopoly04}Firm 2s profit maximization calculation when firm 1 sells 5 units
 
-\caption{\label{tab:oligopoly04}Firm 2s profit maximization calculation when firm 1 sells 5 units}
-\centering
-\begin{tabular}[t]{c|c|c|c|c}
-\hline
-Q2 & P & TR2 & MR2 & MC\\
-\hline
-1 & 14 & 14 & 14 & 9\\
-\hline
-2 & 13 & 26 & 12 & 9\\
-\hline
-3 & 12 & 36 & 10 & 9\\
-\hline
-4 & 11 & 44 & 8 & 9\\
-\hline
-5 & 10 & 50 & 6 & 9\\
-\hline
-6 & 9 & 54 & 4 & 9\\
-\hline
-7 & 8 & 56 & 2 & 9\\
-\hline
-8 & 7 & 56 & 0 & 9\\
-\hline
-9 & 6 & 54 & -2 & 9\\
-\hline
-\end{tabular}
-\end{table}
+Q2
+
+P
+
+TR2
+
+MR2
+
+MC
+
+1
+
+14
+
+14
+
+14
+
+9
+
+2
+
+13
+
+26
+
+12
+
+9
+
+3
+
+12
+
+36
+
+10
+
+9
+
+4
+
+11
+
+44
+
+8
+
+9
+
+5
+
+10
+
+50
+
+6
+
+9
+
+6
+
+9
+
+54
+
+4
+
+9
+
+7
+
+8
+
+56
+
+2
+
+9
+
+8
+
+7
+
+56
+
+0
+
+9
+
+9
+
+6
+
+54
+
+-2
+
+9
 
 It is apparent from Table \ref{tab:oligopoly04} that firm 2 will produce between 3 and 4 units if firm 1 produces 5 units. That means as firm 1 produces more, firm 2 responds by producing less. But we still have not found the Nash equilibrium?
 
@@ -7848,34 +7981,107 @@ Shangri La!
 
 We have arrived at Nash equilibrium! Each firm's action is a best response to the other firm's actions. That is the definition of Nash equilibrium.
 
-\begin{table}
+\label{tab:oligopoly05}Nash Equilibrium
 
-\caption{\label{tab:oligopoly05}Nash Equilibrium}
-\centering
-\begin{tabular}[t]{c|c|c|c|c}
-\hline
-Q2 & P & TR2 & MR2 & MC\\
-\hline
-1 & 15 & 15 & 13 & 9\\
-\hline
-2 & 14 & 28 & 11 & 9\\
-\hline
-3 & 13 & 39 & 9 & 9\\
-\hline
-4 & 12 & 48 & 7 & 9\\
-\hline
-5 & 11 & 55 & 5 & 9\\
-\hline
-6 & 10 & 60 & 3 & 9\\
-\hline
-7 & 9 & 63 & 1 & 9\\
-\hline
-8 & 8 & 64 & -1 & 9\\
-\hline
-9 & 7 & 63 & -3 & 9\\
-\hline
-\end{tabular}
-\end{table}
+Q2
+
+P
+
+TR2
+
+MR2
+
+MC
+
+1
+
+15
+
+15
+
+13
+
+9
+
+2
+
+14
+
+28
+
+11
+
+9
+
+3
+
+13
+
+39
+
+9
+
+9
+
+4
+
+12
+
+48
+
+7
+
+9
+
+5
+
+11
+
+55
+
+5
+
+9
+
+6
+
+10
+
+60
+
+3
+
+9
+
+7
+
+9
+
+63
+
+1
+
+9
+
+8
+
+8
+
+64
+
+-1
+
+9
+
+9
+
+7
+
+63
+
+-3
+
+9
 
 When each firm produces 4 units, total industry output is 8.
 

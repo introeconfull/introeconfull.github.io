@@ -167,7 +167,7 @@ Figure 2.2: Image from Gregory Clark, Farewell to Alms: A Brief Economic History
 <p><span class="math display">\[Y = F(K,N)\]</span></p>
 <p>where F stands for any function which transforms our inputs into outputs. In most applications the function F will have particular properties that are appropriate for the given application.</p>
 <p>The production function at the level of an individual firm is an engineering description of the production process. There is very little, if any, economics here. If you are running a barbershop, you need barbers and scissors, to produce haircuts. If you are running an oil refinery you need chemical engineers and crude oil and a few other things to produce gasoline. To produce an iPhone you need rare earth minerals, cobalt and such. No cobalt, no iPhone.</p>
-<p>At the level of an entire economy the production function is simply a relationship between the major inputs, things like capital and labor. Sometimes, (this depends on the application, the question at hand), we include raw materials, cobalt?, or energy.</p>
+<p>At the level of an entire economy the production function is simply a relationship between the major inputs, things like capital and labor. Sometimes, (this depends on the application, the question at hand), we include raw materials, cobalt, or energy.</p>
 <p>A few things should be clear.</p>
 <ul>
 <li>With the same number of workers if we use more capital, we will get more output. In “math speak” that is: The function F is increasing in K (capital), holding N (labor) constant.<br>
@@ -179,7 +179,7 @@ Figure 2.2: Image from Gregory Clark, Farewell to Alms: A Brief Economic History
 <h2>
 <span class="header-section-number">2.4</span> Measuring economic growth:<a class="anchor" aria-label="anchor" href="#measuring-economic-growth"><i class="fas fa-link"></i></a>
 </h2>
-<p>We let <span class="math inline">\(y_t\)</span> denote real per capita GDP in period t. For all time periods t. Then <span class="math inline">\(y_{t+1}\)</span> is GDP, real and per capita, for period t+1. We let gt denote the growth rate of real per capita GDP. Then we can define the growth of real per capita GDP from period t to period t+1 to be</p>
+<p>We let <span class="math inline">\(y_t\)</span> denote real per capita GDP in period t. For all time periods t. Then <span class="math inline">\(y_{t+1}\)</span> is GDP, real and per capita, for period t+1. We let <span class="math inline">\(g_t\)</span> denote the growth rate of real per capita GDP. Then we can define the growth of real per capita GDP from period <span class="math inline">\(t\)</span> to period <span class="math inline">\(t+1\)</span> to be</p>
 <p><span class="math display">\[g_t = \frac{y_{t+1} - y_t}{y_t}\]</span></p>
 <p>We can calculate this growth rate for GDP for quarterly data, for annual data or at any frequency where data is available. What frequency we use depends on the particular question we have in mind. If we use quarterly or annual frequencies, we are most likely interested in business cycle questions. For questions of long run growth, we might take calculate growth rates over decades or even longer periods.</p>
 <div id="a-thought-experiment" class="section level3" number="2.4.1">
@@ -216,8 +216,8 @@ Figure 2.2: Image from Gregory Clark, Farewell to Alms: A Brief Economic History
 </tbody>
 </table></div>
 <p>This thought experiment is based on true data. The two numbers in the first column are the actual growth rates for these countries in that period. A South Korean grandchild will be richer than the grandparent by a factor of 32! This is assuming that a generation comes every 25 years, which is an eminently reasonable assumption. A factor of 32 is huge.</p>
-<p>Remember this is per capita and it is already adjusted for inflation.<br>
-If we assume that India and South Korea had he same initial starting conditions in 1960, then after 50 years, the typical South Korean will be 16 times as well off as the typical person in India. That is a stunning difference in purchasing power.</p>
+<p>Remember this is per capita and it is already adjusted for inflation.</p>
+<p>If we assume that India and South Korea had the same initial starting conditions in 1960, then after 50 years, the typical South Korean will be 16 times as well off as the typical person in India. That is a stunning difference in purchasing power.</p>
 <p>To convince yourself of the enormous difference in the quality of life associated with such large growth rates of 7% or so, google images of Seoul in 1955 and in 2015. What a difference, like night and day! (See Figure 3.)</p>
 <p>Figure 3 What a difference economic growth can make</p>
 </div>
@@ -228,17 +228,17 @@ If we assume that India and South Korea had he same initial starting conditions 
 </h2>
 <p>The Rule of 70 is a convenient way to get an idea of how fast exponential growth can be. It allows us to calculate doubling times, if we know the growth rates.</p>
 <ul>
-<li>How long will it take for GDP to double if the average annual growth rates in x%?</li>
+<li>How long will it take for GDP to double if the average annual growth rate is x%?</li>
 <li>How long will it take for my $1,000 investment to double if the interest rate is y%?</li>
 <li>How long will it take for Covid-19 infections to double if R0 , the average infection rate is 2.3?</li>
 </ul>
 <p>The power of exponential growth is often underappreciated.</p>
 <p>So here is the rule:</p>
-<p>Doubling time = 70/g</p>
-<p>where g is the growth rate.</p>
+<p>Doubling time = <span class="math inline">\(\frac{70}{g}\)</span></p>
+<p>where <span class="math inline">\(g\)</span> is the growth rate.</p>
 <p>Examples:</p>
 <ol style="list-style-type: decimal">
-<li><p>If the growth rate is 3.5%. then it will take 20 years for income to double.</p></li>
+<li><p>If the growth rate is 3.5%, then it will take 20 years for income to double.</p></li>
 <li><p>The economy in China started to grow like gangbusters around 1990. After 1990 their growth rate has averaged about 7% annually. At that rate incomes will double every 10 years. In 2020 Chinese per capita GDP was about $10,000. Using the rule of 70 we can infer that Chinese GDP per person was:
 $5,000 in 2010
 $2,500 in 2000
@@ -260,10 +260,7 @@ Of course, all these exercises work well if the growth rate remains constant at 
 <span class="header-section-number">2.6</span> The Solow Growth Model<a class="anchor" aria-label="anchor" href="#the-solow-growth-model"><i class="fas fa-link"></i></a>
 </h2>
 <p>We will begin with a workhorse model that can provide some, but not all, answers. No model will ever provide all answers. In the model, named after Robert Solow, we will first trace out the evolution or growth of the capital stock.</p>
-<hr>
-<p>A student once said that the Slow model was confusing. I assume it is less confusing than the fast model, so we have made these notes even slower.</p>
-<hr>
-<p>Learning about the Solow Model can be somewhat challenging, it is not a way most people are used to think. Take the reading slow, reread, stare at it, ask questions. We will get through this chapter together with a deeper understanding of abstract reasoning. It will come to you. Like many things in life, worthwhile things are hard to get. You must fight for it.</p>
+<p>Learning about the Solow Model can be somewhat challenging. This way of thinking is not what most people are used to. Take the reading slow, reread, stare at it, ask questions. We will get through this chapter together with a deeper understanding of abstract reasoning. It will come to you. Like many things in life, worthwhile things are hard to get. You must fight for it.</p>
 <div id="physical-capital-accumulation" class="section level3" number="2.6.1">
 <h3>
 <span class="header-section-number">2.6.1</span> Physical Capital Accumulation<a class="anchor" aria-label="anchor" href="#physical-capital-accumulation"><i class="fas fa-link"></i></a>
@@ -747,7 +744,7 @@ D. A and C</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>An Introductory Course in Economics</strong>" was written by Gerhard Glomm, Joseph Westenberg. It was last built on 2023-08-12.</p>
+    <p>"<strong>An Introductory Course in Economics</strong>" was written by Gerhard Glomm, Joseph Westenberg. It was last built on 2023-08-30.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
