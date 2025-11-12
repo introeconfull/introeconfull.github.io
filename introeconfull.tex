@@ -1,10 +1,11 @@
 % Options for packages loaded elsewhere
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
-%
 \documentclass[
 ]{book}
+\usepackage{xcolor}
 \usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{5}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -35,7 +36,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
 \usepackage{longtable,booktabs,array}
 \usepackage{calc} % for calculating minipage widths
 % Correct order of tables after \paragraph or \subparagraph
@@ -48,21 +48,22 @@
 \makesavenoteenv{longtable}
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{5}
 \usepackage{booktabs}
 \usepackage{amsthm}
 \usepackage{tcolorbox}
@@ -112,10 +113,7 @@
  \floatplacement{figure}{H}
 
 
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
@@ -126,7 +124,7 @@
 
 \title{An Introductory Course in Economics}
 \author{Gerhard Glomm, Joseph Westenberg}
-\date{2023-09-11}
+\date{2025-11-11}
 
 \begin{document}
 \maketitle
@@ -135,8 +133,7 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\hypertarget{intro}{%
-\chapter{Introduction}\label{intro}}
+\chapter{Introduction}\label{intro}
 
 \textbf{Disclaimer!!}
 
@@ -156,8 +153,7 @@ In this section we will learn
   How do Economists deal with data?
 \end{itemize}
 
-\hypertarget{what-is-economics-all-about}{%
-\section{What is Economics All About?}\label{what-is-economics-all-about}}
+\section{What is Economics All About?}\label{what-is-economics-all-about}
 
 We can get a good sense of what economics is all about when we look at the most frequently used words that show up in publications in scholarly economics journals. In the 1970s the most frequently used words in economics journals were words like
 
@@ -410,8 +406,7 @@ For an illustration of big bandwidth see this scene from the movie Searching for
 
 Many of us will, at some point hit emotional constraints. After strings of setbacks, failures, and disappointments, we will ask: ``How much more can I take?'' Suicide is arguably worst sign of emotional constraints, the ultimate of being at the end of one's rope. Suicides have grown considerably in the 50 States\footnote{\url{https://www.cdc.gov/nchs/data/nvsr/nvsr69/nvsr-69-11-508.pdf}}. There have been proposed policies which could decrease number of suicides\footnote{\url{https://www.nber.org/papers/w25787}}.
 
-\hypertarget{what-is-economics-good-for}{%
-\section{What is Economics Good For?}\label{what-is-economics-good-for}}
+\section{What is Economics Good For?}\label{what-is-economics-good-for}
 
 First and foremost economics, is a social science. We would expect economics to be good and useful in explaining behavior. When we look around, there are all kinds of interesting observations that we would like to explain. And economics can help us go a long way towards providing explanations for all kinds of behavior. Some examples where economics may have the potential to provide some explanations are:
 
@@ -488,8 +483,7 @@ This leads us to a subject that is covered in the opening chapters of basically 
 
 The law of unintended consequences simply states that when a policy is changed, people will respond to that policy change, and frequently in ways that are difficult to forecast by the policy maker. Of course, the more careful the policy maker thinks about possible responses of people to the change in the policy, the fewer surprise responses to the policy there will be. But it is a testimony to human ingenuity and creativity that even with the best intention the best laid plans of mice and men often lead to disastrous outcomes. My guess is that such adverse responses to policy changes will never be eliminated, even after the most careful analysis of the proposed policy change.
 
-\hypertarget{unintended-consequences}{%
-\section{Unintended Consequences}\label{unintended-consequences}}
+\section{Unintended Consequences}\label{unintended-consequences}
 
 It should not be a surprise that people will respond to changes in a policy. People simply do what they believe is in their best interest and when incentives change, chances are their behavior will change as well.
 
@@ -497,8 +491,7 @@ If I announce that in this class there will be a final exam that is comprehensiv
 
 There are some interesting examples to unintended consequences.
 
-\hypertarget{unintended-consequences-examples}{%
-\subsection{Unintended Consequences Examples}\label{unintended-consequences-examples}}
+\subsection{Unintended Consequences Examples}\label{unintended-consequences-examples}
 
 \textbf{(Epidemics I)} I, Gerhard, heard of a convenience store in Virginia that had attached to it a video arcade with a separate entrance. During COVID-19, the convenience store was declared essential and allowed to stay open, the video arcade shut by order of the government. How did the owner of the convenience store and the video arcade respond to this government policy? He simply moved some of the video games into the convenience store, thereby increasing the density of customers in the store. Chances are the risk of infection increased.
 
@@ -562,8 +555,7 @@ None of these effects are found for Muslim boys. None of these effects are found
 
 Why do we find these effects for Muslim immigrant girls? Parents of Muslim immigrant girls react strongly to counteract the pull of German society to keep their daughters withing their cultural and religious traditions.
 
-\hypertarget{exercises}{%
-\subsection{Exercises}\label{exercises}}
+\subsection{Exercises}\label{exercises}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -580,8 +572,7 @@ Why do we find these effects for Muslim immigrant girls? Parents of Muslim immig
   B. How hard is it to foresee/forecast these consequences?
 \end{enumerate}
 
-\hypertarget{role-of-theory}{%
-\section{Role of Theory}\label{role-of-theory}}
+\section{Role of Theory}\label{role-of-theory}
 
 What is the role of theory in economics?
 
@@ -628,8 +619,7 @@ So, what is this thing called a ``theory''? I will use the words: theory, model,
 
 Theories used in economics will be different than in theories used in physics. Even within economics there will be different theories or models. Macroeconomists will use different models than economists who study anti-trust. The main job of a model is to help us understand how a part of the world works. Any theory or model is supposed to be useful, for understanding.
 
-\hypertarget{abstractions}{%
-\subsection{Abstractions}\label{abstractions}}
+\subsection{Abstractions}\label{abstractions}
 
 How is an abstraction useful? Suppose the job is to drive from Indianapolis, IN to Columbus, OH. We need a map to help us get there.
 
@@ -645,8 +635,7 @@ There are a few more things that one might reasonably add to our ``model'' of th
 
 Indianapolis---------------------------I 70--------------------G-----------Columbus
 
-\hypertarget{prejudice-based-wage-discrimination}{%
-\subsection{Prejudice-Based Wage Discrimination}\label{prejudice-based-wage-discrimination}}
+\subsection{Prejudice-Based Wage Discrimination}\label{prejudice-based-wage-discrimination}
 
 How to find prejudice-based wage discrimination?
 
@@ -712,11 +701,9 @@ When you look for the connection between prejudice and wage discrimination by lo
 
 But when you look for it in the way suggested by the theory, the 6th percentile of prejudice distribution in WI, the 34th percentile in MS, then BINGO! There it is, clear and significant evidence linking prejudice to wage discrimination. You just need to know where to look. Theory helps.
 
-\hypertarget{dealing-with-data}{%
-\section{Dealing with Data}\label{dealing-with-data}}
+\section{Dealing with Data}\label{dealing-with-data}
 
-\hypertarget{empirical-regularities}{%
-\subsection{Empirical regularities}\label{empirical-regularities}}
+\subsection{Empirical regularities}\label{empirical-regularities}
 
 First of all, we note that we are more interested in empirical regularities rather than in singular observations. Jennifer being 5'4'' is an example of a singular observation. That is only one observation. ``Dutch women are tall'' is an example of an empirical regularity. More precisely the average height of Dutch women is 5'7'', compared to the average height of American women which is 5'4''. This observation is more general. We would find this if we looked at a sample of women from Amsterdam, from Rotterdam, from The Hague, etc.
 
@@ -730,8 +717,7 @@ The sex ratio in the US is 1.04. The sex ratio is the ratio of the number of wom
 
 One of the important issues we have to discuss is: Are numbers big or small. This is especially true when we are talking about dollars, taxes, expenditures, the size of government programs.
 
-\hypertarget{examples}{%
-\subsubsection{Examples}\label{examples}}
+\subsubsection{Examples}\label{examples}
 
 \textbf{(Earthquake Relief)} After the Haiti earthquake in 2010, the US government committed \$100 million in earthquake relief. Big number or small number? It might look like a big number. But when you consider that there are over 300 million Americans, we realize that each of us gave about 30 cents, which looks miserly. Of course, this does not include private charitable contributions.
 
@@ -747,8 +733,7 @@ One of the important issues we have to discuss is: Are numbers big or small. Thi
 
 COVID-19 does not only kill Americans. We now know that the death toll is much higher. The question is: Is the \$10 billion expenditure noted above a big number or a small number? Or: Should we have spent more on vaccine research in 2020?
 
-\hypertarget{correlation-vs-causation}{%
-\subsection{Correlation vs Causation}\label{correlation-vs-causation}}
+\subsection{Correlation vs Causation}\label{correlation-vs-causation}
 
 This distinction is crucial. Knowing whether 2 variables are correlated is useful, but it is not enough. In order to make any kind of policy decision we must know causation. Correlation only tells us about a statistical relationship. Two variables may be positively correlated or they may be negatively correlated. Suppose variable X is positively correlated with variable Y. Then if X is large (small), then Y is large (small) as well. If the two variables X and Y are negatively correlated, that means that If X is large (small), then Y is small (large). Of course, there is also the possibility of no correlation.
 
@@ -791,8 +776,7 @@ In order to tease causation out of the data, we try to create what we call {\tex
 
 The point of this parallel universe is to look at two cases, two ``universes'' that are equal in all aspects except one aspect, the aspect we want to study.
 
-\hypertarget{examples-1}{%
-\subsubsection{Examples}\label{examples-1}}
+\subsubsection{Examples}\label{examples-1}
 
 \textbf{(Stand Your Ground)} \footnote{\url{https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2582988}
   For more comprehensive evidence, see
@@ -830,8 +814,7 @@ The paper below provides an answer by considering a natural treatment and contro
 
 Exploiting such parallel universes can, evidently, be quite useful.
 
-\hypertarget{glossary-of-terms}{%
-\section{Glossary of Terms}\label{glossary-of-terms}}
+\section{Glossary of Terms}\label{glossary-of-terms}
 
 \textbf{Causation:} one event leads to another or that a change in one variable leads inexorably to a change in another variable.
 
@@ -847,11 +830,9 @@ Exploiting such parallel universes can, evidently, be quite useful.
 
 \textbf{Theory:} a mind construct of how a part of the world may work. The point of a theory is to help us understand that part of the world. A synonym for theory is ``Model''.
 
-\hypertarget{practice-questions}{%
-\section{Practice Questions}\label{practice-questions}}
+\section{Practice Questions}\label{practice-questions}
 
-\hypertarget{discussion}{%
-\subsection{Discussion}\label{discussion}}
+\subsection{Discussion}\label{discussion}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -885,8 +866,7 @@ Exploiting such parallel universes can, evidently, be quite useful.
   Imagine you obtain data on how many hours Indiana University students study for Finite Math and their grade in Introductory English. Would you expect these two datasets to be positively or negatively correlated. Explain.
 \end{enumerate}
 
-\hypertarget{multiple-choice}{%
-\subsection{Multiple Choice}\label{multiple-choice}}
+\subsection{Multiple Choice}\label{multiple-choice}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1032,8 +1012,7 @@ Exploiting such parallel universes can, evidently, be quite useful.
   D. none of the above
 \end{enumerate}
 
-\hypertarget{answer-key}{%
-\subsection{Answer Key}\label{answer-key}}
+\subsection{Answer Key}\label{answer-key}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1080,8 +1059,7 @@ Exploiting such parallel universes can, evidently, be quite useful.
   D
 \end{enumerate}
 
-\hypertarget{growth}{%
-\chapter{Economic Growth}\label{growth}}
+\chapter{Economic Growth}\label{growth}
 
 In this chapter you will learn:
 
@@ -1097,8 +1075,7 @@ In this chapter you will learn:
   How to interpret data through the lens of the Solow model
 \end{itemize}
 
-\hypertarget{why-study-growth}{%
-\section{Why Study Growth?}\label{why-study-growth}}
+\section{Why Study Growth?}\label{why-study-growth}
 
 We will start with the simple observation:
 
@@ -1182,8 +1159,7 @@ How do we measure this though? When we talk about there was a 1.4\% growth, what
 
 One of the crucial national income accounting concepts is this thing called Gross Domestic Product, or GDP for short.
 
-\hypertarget{gdp}{%
-\section{GDP}\label{gdp}}
+\section{GDP}\label{gdp}
 
 Gross domestic product (GDP) refers to the value of final goods and services produced in a country within a particular period, usually a year.
 
@@ -1210,8 +1186,7 @@ When making comparisons of GDP, total or per person, it is important that this i
 
 When making comparisons of GDP, total or per capita, for a country over time, it is important to adjust for inflation. Inflation here means persistent changes in the price level. This is more important when comparisons are made over longer time spans rather than comparing GDP for two adjacent years, say comparing US GDP in 2020 to GDP in 1975. A gallon on gasoline at that time cost 57 cents.
 
-\hypertarget{basic-notation}{%
-\section{Basic Notation}\label{basic-notation}}
+\section{Basic Notation}\label{basic-notation}
 
 Gross domestic product refers to production. Production requires inputs. In most economic models we will treat GDP as an output and we will assume for starters that there are two inputs, which we will call labor and capital. As a matter of notation, we will let
 
@@ -1241,8 +1216,7 @@ A few things should be clear.
   The same is true for labor. Holding the amount of capital fixed, the more labor we employ, the more output we get. For a fixed level of K, the function F is increasing in N.
 \end{itemize}
 
-\hypertarget{measuring-economic-growth}{%
-\section{Measuring economic growth:}\label{measuring-economic-growth}}
+\section{Measuring economic growth:}\label{measuring-economic-growth}
 
 We let \(y_t\) denote real per capita GDP in period t. For all time periods t. Then \(y_{t+1}\) is GDP, real and per capita, for period t+1. We let \(g_t\) denote the growth rate of real per capita GDP. Then we can define the growth of real per capita GDP from period \(t\) to period \(t+1\) to be
 
@@ -1250,16 +1224,15 @@ We let \(y_t\) denote real per capita GDP in period t. For all time periods t. T
 
 We can calculate this growth rate for GDP for quarterly data, for annual data or at any frequency where data is available. What frequency we use depends on the particular question we have in mind. If we use quarterly or annual frequencies, we are most likely interested in business cycle questions. For questions of long run growth, we might take calculate growth rates over decades or even longer periods.
 
-\hypertarget{a-thought-experiment}{%
-\subsection{A thought experiment}\label{a-thought-experiment}}
+\subsection{A thought experiment}\label{a-thought-experiment}
 
 This thought experiment goes back to Robert Lucas, Nobel Laureate of the University of Chicago\footnote{\url{https://en.wikipedia.org/wiki/Robert_Lucas_Jr}}. from the 1980s. This experiment shows the power of exponential growth.
 
 \begin{longtable}[]{@{}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\centering\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\centering
 Country
@@ -1288,8 +1261,7 @@ To convince yourself of the enormous difference in the quality of life associate
 
 Figure 3 What a difference economic growth can make
 
-\hypertarget{the-rule-of-70}{%
-\section{The Rule of 70!}\label{the-rule-of-70}}
+\section{The Rule of 70!}\label{the-rule-of-70}
 
 The Rule of 70 is a convenient way to get an idea of how fast exponential growth can be. It allows us to calculate doubling times, if we know the growth rates.
 
@@ -1336,15 +1308,13 @@ Examples:
   Of course, all these exercises work well if the growth rate remains constant at the indicated level. And we have to keep in mind that these are long run projections, approximations and that there can be deviations due to business cycles or other more short- term events\footnote{\url{https://en.wikipedia.org/wiki/Rule_of_72}}
 \end{enumerate}
 
-\hypertarget{the-solow-growth-model}{%
-\section{The Solow Growth Model}\label{the-solow-growth-model}}
+\section{The Solow Growth Model}\label{the-solow-growth-model}
 
 We will begin with a workhorse model that can provide some, but not all, answers. No model will ever provide all answers. In the model, named after Robert Solow, we will first trace out the evolution or growth of the capital stock.
 
 Learning about the Solow Model can be somewhat challenging. This way of thinking is not what most people are used to. Take the reading slow, reread, stare at it, ask questions. We will get through this chapter together with a deeper understanding of abstract reasoning. It will come to you. Like many things in life, worthwhile things are hard to get. You must fight for it.
 
-\hypertarget{physical-capital-accumulation}{%
-\subsection{Physical Capital Accumulation}\label{physical-capital-accumulation}}
+\subsection{Physical Capital Accumulation}\label{physical-capital-accumulation}
 
 Remember that the capital stock is a durable input in production, still like tractors, computers, warehouses, etc. As the input capital increases (declines) we can expect output, GDP, to increase (decline) accordingly. It will be convenient to follow the evolution of the capital stock. Once we figure out what happens with the capital, we can figure out what happens with GDP.
 
@@ -1398,8 +1368,7 @@ Let's use s (lower case) to denote the savings rate in the economy. In the term 
 
 As noted way back in our Basic Notation section, \(Y_t\) denotes output, or GDP in period t. That output is produced with inputs, capital \(K_t\) and labor input \(N_t\) according to the production function \(F\).
 
-\hypertarget{production-function}{%
-\subsection{Production Function}\label{production-function}}
+\subsection{Production Function}\label{production-function}
 
 For our basic Solow Growth Model, we assume the production function has the following general properties:
 
@@ -1431,8 +1400,7 @@ In that example the parameter \(\alpha\) is any number strictly between zero and
 
 One more assumption: The population is assumed to be constant. So we can drop the subscript t in the above expression for \(N\).
 
-\hypertarget{in-per-capita-terms}{%
-\subsection{In Per Capita Terms}\label{in-per-capita-terms}}
+\subsection{In Per Capita Terms}\label{in-per-capita-terms}
 
 In what we have done so far, we have let all variables be upper cases. Upper cases in this model will always denote totals. Upper case K denotes total capital stock, upper case Y denotes total output, upper case N denotes total employment.
 
@@ -1490,8 +1458,7 @@ Etc.
 
 Solow Model Capital Accumulation
 
-\hypertarget{predictions}{%
-\subsection{Predictions}\label{predictions}}
+\subsection{Predictions}\label{predictions}
 
 If we look carefully at the graph above, we see
 
@@ -1514,8 +1481,7 @@ Eventually, the growth of capital and of output has to come to an end.
 
 This is known as \textbf{The Convergence Hypothesis:} GDP per capita in these economies is predicted to converge. Whether this is true in the data, in which data and to what extent is an interesting question and there is a large literature on this issue.
 
-\hypertarget{solow-model-and-data}{%
-\section{Solow Model and Data}\label{solow-model-and-data}}
+\section{Solow Model and Data}\label{solow-model-and-data}
 
 We will start with data on three large economies, The United States, Japan and China going back to 1950s. We will be utilizing Penn World Tables\footnote{\url{https://www.rug.nl/ggdc/productivity/pwt/?lang=en}} for the data. In the supplemental materials we include the code used to generate the figures.
 
@@ -1556,8 +1522,7 @@ How about China? The growth rates for China are rising, inexorably basically sta
 
 The failure of your TV to take you to the Chicago airport is not a failure either. It was not designed to do that.
 
-\hypertarget{post-wwii}{%
-\subsection{Post WWII}\label{post-wwii}}
+\subsection{Post WWII}\label{post-wwii}
 
 The Solow model does well in the post WWII context. See the Figure below. In 1945 Germany, France, the UK were all more all less bombed out. See the picture of Dresden in 1945 below in Figure \ref{fig:dresden1945}.
 
@@ -1681,8 +1646,7 @@ We will have to confront the questions:
   And! Is this decline good or bad?
 \end{itemize}
 
-\hypertarget{glossary-of-terms-1}{%
-\section{Glossary of Terms}\label{glossary-of-terms-1}}
+\section{Glossary of Terms}\label{glossary-of-terms-1}
 
 \textbf{Business Cycle:} fluctuations of economic activity around a long run trend. The periods with activity above trend are called expansions or booms, the periods below trend are referred to as busts or recessions. Usually, these cycles take place over a few years.
 
@@ -1734,11 +1698,9 @@ We will have to confront the questions:
 
 \textbf{Total Factor Productivity:} a measure of how much output can be produced with given amounts of the inputs. If output is high (low) with given amounts of the various inputs we say that total factor productivity is high (low).
 
-\hypertarget{practice-questions-1}{%
-\section{Practice Questions}\label{practice-questions-1}}
+\section{Practice Questions}\label{practice-questions-1}
 
-\hypertarget{discussion-1}{%
-\subsection{Discussion}\label{discussion-1}}
+\subsection{Discussion}\label{discussion-1}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1755,8 +1717,7 @@ We will have to confront the questions:
   In 1981 Chile adopted a system of general and country wide school vouchers. There is much evidence to show that this change in education policy was associated with a drop in reading and in math scores, with higher drop out rates and with higher grade repetition rates. Graphically illustrate how this policy impacted economic growth in Chile. Explain your answer in English prose.
 \end{enumerate}
 
-\hypertarget{multiple-choice-1}{%
-\subsection{Multiple Choice}\label{multiple-choice-1}}
+\subsection{Multiple Choice}\label{multiple-choice-1}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1902,8 +1863,7 @@ We will have to confront the questions:
   D. A and C
 \end{enumerate}
 
-\hypertarget{answer-key-1}{%
-\subsection{Answer Key}\label{answer-key-1}}
+\subsection{Answer Key}\label{answer-key-1}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1950,8 +1910,7 @@ We will have to confront the questions:
   A
 \end{enumerate}
 
-\hypertarget{growth2}{%
-\chapter{Economic Growth II}\label{growth2}}
+\chapter{Economic Growth II}\label{growth2}
 
 In this chapter you will learn:
 
@@ -1963,8 +1922,7 @@ In this chapter you will learn:
   The basics of technological progress
 \end{itemize}
 
-\hypertarget{human-capital-accumulation}{%
-\section{Human capital accumulation}\label{human-capital-accumulation}}
+\section{Human capital accumulation}\label{human-capital-accumulation}
 
 In the Solow model we considered in the previous sections, there was only one factor to be accumulated: physical capital. In this section we will allow for two augmentable factors: physical capital and human capital.
 
@@ -2109,8 +2067,7 @@ There are two more stunning observations that come out of the above paper.
 
 Putting these two things together means that the amount of resources does not matter that much. What matters more is what you do with them.
 
-\hypertarget{more-human-capital}{%
-\section{More Human Capital}\label{more-human-capital}}
+\section{More Human Capital}\label{more-human-capital}
 
 It is well to consider the correlation between PISA scores and economic growth as done by Hanushek and Kimko, but there is certainly room to do more. Perhaps one can really construct a measure of that H variable that shows up in our production functions, or at least a proxy.
 
@@ -2154,8 +2111,7 @@ Egert et al.~show that improving early childhood education can have very large p
 
 These effects are especially large at the bottom of the early childhood schooling distribution, where the US seems to dwell. Which of course raises the question: Why is a rich country like the US not doing more to improve early childhood intervention?
 
-\hypertarget{technological-progress}{%
-\section{Technological progress}\label{technological-progress}}
+\section{Technological progress}\label{technological-progress}
 
 We write the production function as
 
@@ -2328,8 +2284,7 @@ Perhaps we can do a better job identifying and fostering future Einsteins and Cu
 
 \url{https://web.stanford.edu/~chadj/annualreview.pdf}
 
-\hypertarget{nails}{%
-\section{Nails}\label{nails}}
+\section{Nails}\label{nails}
 
 Sometimes we see something very extra ordinary in something totally ordinary. But I think that is true in life in general. Sometimes we see it. Sometimes we don't.
 
@@ -2383,8 +2338,7 @@ There typical reasons are:
 
 So, what is the lions' share of the reasons for this large drop in the price of nails? It is total factor productivity. That factor is so large that it totally overwhelms the other factors. The periods where total factor productivity really had its biggest kick are the periods where rapid technological change happened such as the switch from steam to electricity.
 
-\hypertarget{light}{%
-\section{Light}\label{light}}
+\section{Light}\label{light}
 
 \url{https://www.nber.org/system/files/chapters/c6064/c6064.pdf}
 
@@ -2444,8 +2398,7 @@ That is an impressive drop. From almost 1000 to about 0.1.
 
 Three cheers for technological progress!
 
-\hypertarget{additive-growth}{%
-\section{Additive Growth}\label{additive-growth}}
+\section{Additive Growth}\label{additive-growth}
 
 So far the basic underlying assumption in everything we have done is that
 
@@ -2575,21 +2528,17 @@ IF growth is not exponential, IF growth is indeed linear, then Phillipon says
 
 and all the above policy discussions are moot.
 
-\hypertarget{glossary-of-terms-2}{%
-\section{Glossary of Terms}\label{glossary-of-terms-2}}
+\section{Glossary of Terms}\label{glossary-of-terms-2}
 
 \textbf{Human Capital:} the stock of marketable skills of the labor force in a country.
 
 \textbf{Technological Progress:} increase in total factor productivity.
 
-\hypertarget{practice-questions-2}{%
-\section{Practice Questions}\label{practice-questions-2}}
+\section{Practice Questions}\label{practice-questions-2}
 
-\hypertarget{discussion-2}{%
-\subsection{Discussion}\label{discussion-2}}
+\subsection{Discussion}\label{discussion-2}
 
-\hypertarget{multiple-choice-2}{%
-\subsection{Multiple Choice}\label{multiple-choice-2}}
+\subsection{Multiple Choice}\label{multiple-choice-2}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2665,8 +2614,34 @@ and all the above policy discussions are moot.
   D. An algorithm
 \end{enumerate}
 
-\hypertarget{decisions-rational-or-irrational}{%
-\chapter{Decisions: Rational or Irrational?}\label{decisions-rational-or-irrational}}
+\subsection{Answer Key}\label{answer-key-2}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  C
+\item
+  D
+\item
+  C
+\item
+  B
+\item
+  B
+\item
+  B
+\item
+  A
+\item
+  A
+\item
+  D
+\item
+  A
+\end{enumerate}
+
+\chapter{Decisions: Rational or Irrational?}\label{decisions-rational-or-irrational}
 
 In this chapter you will learn:
 
@@ -2684,8 +2659,7 @@ In this chapter you will learn:
   The concept of increasing returns.
 \end{itemize}
 
-\hypertarget{goals-and-constraints}{%
-\section{Goals and Constraints}\label{goals-and-constraints}}
+\section{Goals and Constraints}\label{goals-and-constraints}
 
 In this section we will construct our workhorse model/theory that we will use in the rest of the term. We will learn about the notion of rationality that is commonly used in economics. We will learn what rationality means and we will learn what choices are like if they are governed by rationality.
 
@@ -2734,8 +2708,7 @@ It turns out that for some purposes the doubling of computing power every two ye
 \caption{Source: The Economist, "The cost of training machines is becoming a problem" July 13, 2020.}\label{fig:rationalchoicemooredeep}
 \end{figure}
 
-\hypertarget{marginal-costs-and-benefits}{%
-\section{Marginal Costs and Benefits}\label{marginal-costs-and-benefits}}
+\section{Marginal Costs and Benefits}\label{marginal-costs-and-benefits}
 
 We will now illustrate the foundations for a model of rational choice. Whenever we make a choice we weigh, if we are rational, the costs of the action and the benefits of the action. We will start with an action that can be chosen in small increments.
 
@@ -2820,8 +2793,7 @@ And there are many others. If these are really listed in order of priority and i
 
 What is the opportunity cost of reading a good book? It is not the pleasure I get out of talking to my brother on the phone. That is the fifth best thing I could be doing at that moment. The opportunity cost of reading a good book is reading the New York Times. Reading the New York Times is my next best alternative after reading a good book. So, the opportunity cost of reading a book is the value I would have derived from reading the New York Times, my second-best alternative forgone.
 
-\hypertarget{choice}{%
-\section{Choice}\label{choice}}
+\section{Choice}\label{choice}
 
 We will now present our basic and simple model/theory of rational choice. We make two assumptions.
 
@@ -2940,8 +2912,7 @@ While these panels look slightly differently, they are just slightly different v
 
 At low levels of the activity, marginal benefit is above marginal cost. At high levels of the activity, marginal cost is above the marginal benefit. Somewhere in between there is a sweet spot, where marginal benefit equals marginal cost.
 
-\hypertarget{changes-in-marginal-benefit-andor-marginal-cost}{%
-\section{Changes in Marginal Benefit and/or Marginal Cost}\label{changes-in-marginal-benefit-andor-marginal-cost}}
+\section{Changes in Marginal Benefit and/or Marginal Cost}\label{changes-in-marginal-benefit-andor-marginal-cost}
 
 What if some event occurs in which the marginal benefit or cost of an action changes?
 
@@ -2975,8 +2946,7 @@ Imagine you are planning a 3-hour hike for this coming Saturday. Saturday mornin
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\hypertarget{examples-of-rational-choice}{%
-\section{Examples of Rational Choice}\label{examples-of-rational-choice}}
+\section{Examples of Rational Choice}\label{examples-of-rational-choice}
 
 \textbf{Example 3 (Refreshing Lemonade):} You just cut the grass on a hot July afternoon. You are hot, sweaty, and parched. Figure \ref{fig:rationalchoice06} captures the marginal benefit and the marginal cost of drinking lemonade. Assume the units of measurement are small glasses. The marginal cost of drinking lemonade is just the cost of each glass of lemonade. It is the same for each small glass. It is a horizontal line. The marginal benefit declines with each glass. The first glass is a great thirst quencher and so is, perhaps the second glass. Glasses three and four less so. By the sixth glass the marginal benefit is tiny, below marginal cost. It is rational for you to drink 4 glasses.
 
@@ -3019,8 +2989,7 @@ American families tend to have a preference for sons over daughters.
 \caption{Optimal fertility}\label{fig:rationalchoice08}
 \end{figure}
 
-\hypertarget{increasing-returns}{%
-\section{Increasing Returns}\label{increasing-returns}}
+\section{Increasing Returns}\label{increasing-returns}
 
 We said earlier that diminishing returns is not an iron law. It is an assumption that is helpful in many cases. We have seen some examples above. There are cases where there are not diminishing but increasing returns.
 
@@ -3069,8 +3038,7 @@ The return to an extra year of schooling is basically zero between 1 and 11 year
 
 After high school, earning rise linearly with each extra year of schooling. Even past 16 years of schooling. So, you may want to make the effort to really finish college and perhaps even get a graduate degree. Good luck with that!
 
-\hypertarget{irrationality}{%
-\section{Irrationality}\label{irrationality}}
+\section{Irrationality}\label{irrationality}
 
 In the examples we have studies so far, we have always assumed that individuals make rational choices. Rationality means doing one's best to attain one's goal or goals, given the information we have and staying within our constraints.
 
@@ -3078,8 +3046,7 @@ There is quite a bit of evidence that not all decisions are rational. Many of th
 
 Sometimes we just want to get one small snack, like one small piece of that delicious Swiss chocolate. So, we get the chocolate bar, break off one small piece, which is after all, all we want. But before we know it, the entire bar is devoured. And then regret sets in right away: Why did I eat so much chocolate? Why was I so stupid to eat the whole bar?
 
-\hypertarget{sunk-costs}{%
-\subsection{Sunk Costs}\label{sunk-costs}}
+\subsection{Sunk Costs}\label{sunk-costs}
 
 You get tickets for a Drake concert at the end of the month. You shell over the \$200 for the tickets. The morning of the concert, your girlfriend whom you love above all else, surprises you with a text message. She informs you that she finished her studies abroad at the London School of Economics early, that she is back in town and that she can't wait to spend the evening with you. You have missed her so much. Just the day before, before you saw the text, you told your body you would spend a thousand bucks to be with her. It is now too late to try to sell the Drake tickets on the secondary market.
 
@@ -3135,8 +3102,7 @@ If a manager abandons a project, stockholders, the principal, might draw negativ
 So much for the sunk cost fallacy in this context. It is rational to ``throw good money after bad money''.
 The problem of rationally throwing good money after bad money may even be intensified in the political context. If I know there is a good chance that I will not be re-elected at the next election in two or four or six years, then, if I know the current project has turned out to be a lemon, I have a very large incentive of throwing good money after bad, so that the outcome of my bad decisions can be blamed not on me, but on my successor.
 
-\hypertarget{examples-2}{%
-\subsection{Examples}\label{examples-2}}
+\subsection{Examples}\label{examples-2}
 
 \textbf{Example 9 (Gym membership, we don't sweat it, but perhaps we should.):}\footnote{
   \url{https://pubs.aeaweb.org/doi/pdfplus/10.1257/aer.96.3.694}}
@@ -3182,8 +3148,7 @@ This is similar in many ways to:
     \url{https://enagoski.medium.com/}} \footnote{these-graphs-tell-a-shocking-story-about-the-rampant-college-hookup-culture-38a0ef1b0af8}
 \end{itemize}
 
-\hypertarget{glossary-of-terms-3}{%
-\section{Glossary of Terms}\label{glossary-of-terms-3}}
+\section{Glossary of Terms}\label{glossary-of-terms-3}
 
 \textbf{Diminishing returns:} In production, the amount of extra output produced by an extra unit of an input declines as more of the input is used. Or, alternatively, as the amount of an input used is increasing, it requires more and more of that input to produce one extra unit of output.
 
@@ -3201,11 +3166,9 @@ This is similar in many ways to:
 
 \textbf{Rationality/rational choice:} Choosing an option within the constraints or limits that gets the decision maker closest to their goal, where the decision maker is using all the available information.
 
-\hypertarget{practice-questions-3}{%
-\section{Practice Questions}\label{practice-questions-3}}
+\section{Practice Questions}\label{practice-questions-3}
 
-\hypertarget{discussion-3}{%
-\subsection{Discussion}\label{discussion-3}}
+\subsection{Discussion}\label{discussion-3}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3229,8 +3192,7 @@ This is similar in many ways to:
   Describe three examples of increasing returns in production. Why do the increasing returns arise?
 \end{enumerate}
 
-\hypertarget{multiple-choice-3}{%
-\subsection{Multiple Choice}\label{multiple-choice-3}}
+\subsection{Multiple Choice}\label{multiple-choice-3}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3376,8 +3338,7 @@ This is similar in many ways to:
   D. Your marginal benefit of playing hard falls
 \end{enumerate}
 
-\hypertarget{answer-key-2}{%
-\subsection{Answer Key}\label{answer-key-2}}
+\subsection{Answer Key}\label{answer-key-3}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3424,8 +3385,7 @@ This is similar in many ways to:
   D
 \end{enumerate}
 
-\hypertarget{demand}{%
-\chapter{Demand}\label{demand}}
+\chapter{Demand}\label{demand}
 
 In this chapter we will learn:
 
@@ -3443,13 +3403,11 @@ In this chapter we will learn:
   The notion of the elasticity of demand
 \end{itemize}
 
-\hypertarget{introductory-video}{%
-\section{Introductory Video}\label{introductory-video}}
+\section{Introductory Video}\label{introductory-video}
 
 \url{https://iu.mediaspace.kaltura.com/media/t/1_6qqdrvui}
 
-\hypertarget{what-is-demand}{%
-\section{What is Demand?}\label{what-is-demand}}
+\section{What is Demand?}\label{what-is-demand}
 
 In this chapter, we will study one of the central ingredients used to analyze markets. In this chapter, we will study demand.
 
@@ -3501,8 +3459,7 @@ What does demand represent? Demand represents the marginal benefit a consumer de
 
 Jack's demand for lemonade can, of course, change over time. It will be higher on a hot summer day than on a cold November day. It will be higher in the afternoon than in the morning. Over longer periods, Jack's preferences might also slowly shift away from lemonade, sweet and sugary, to low calorie iced tea or even water.
 
-\hypertarget{individual-to-market-demand}{%
-\subsection{Individual to Market Demand}\label{individual-to-market-demand}}
+\subsection{Individual to Market Demand}\label{individual-to-market-demand}
 
 The analysis above involved demand from an individual consumer. How do we get from individual demand to market demand?
 
@@ -3521,8 +3478,7 @@ Both Joe and Mary face the same price. If the price is \(p_1\), then Joe's quant
 
 This can be done for any product and for any set of consumers.
 
-\hypertarget{alternate-view-of-demand}{%
-\subsection{Alternate View of Demand}\label{alternate-view-of-demand}}
+\subsection{Alternate View of Demand}\label{alternate-view-of-demand}
 
 There are many products or services that are not really divisible. Either you buy them, or you don't. Examples include large ticket items: a car, a washing machine, jet skis, or your dream vacation to Bora Bora or Glacier National Park.
 
@@ -3534,8 +3490,7 @@ This maximum willingness to pay is sometimes called the reservation price. The r
 
 Then, we can line up all the potential consumers in order of their reservation price, with the highest reservation prices on the left and the lowest reservation prices on the right. And, surprise, surprise, we get a downward sloping demand curve.
 
-\hypertarget{elasticity}{%
-\section{Elasticity}\label{elasticity}}
+\section{Elasticity}\label{elasticity}
 
 In the previous section we have established the Law of Demand, that demand is downward sloping, that an increase in the price causes a decrease in the quantity demanded. All of these statements say the same thing.
 
@@ -3631,8 +3586,7 @@ The same for toothpaste. There are no substitutes for toothpaste. Even if the pr
 
 We are not talking about particular brands of coffee or particular brands of toothpaste, but about coffee in general and toothpaste in general. There is one more aspect of toothpaste that especially helps explain why we would expect demand to be inelastic: It occupies a very small part of most of our budgets. Even a doubling of price will have a relatively small impact on our purchasing power, and consequently, we will not make many, if any, adjustments in our consumption.
 
-\hypertarget{substitutes}{%
-\section{Substitutes}\label{substitutes}}
+\section{Substitutes}\label{substitutes}
 
 There are many goods out there that have very similar characteristics and serve very similar purposes. Figure \ref{fig:demand05} shows few of these cases: different soft drinks and different breakfast cereals. But there are lots of other examples. For a beach vacation, any stretch of beach between Florida and North Carolina is a good substitute for other such stretches of beach. To get my hair cut in Bloomington, there are lots and lots of suitable establishments. There are many insurance companies that would like to get my and your premium money. The list goes on and on.
 
@@ -3680,8 +3634,7 @@ Why are durable goods examples of substitutes? A car today is a substitute for a
 
 This just says that the durable good available at two different times is really two different goods that have varying degrees of substitutability. The closer the availability dates, the closer the degree of substitutability.
 
-\hypertarget{deadly-demand}{%
-\subsection{Deadly Demand}\label{deadly-demand}}
+\subsection{Deadly Demand}\label{deadly-demand}
 
 Covid can kill you in surprising ways\footnote{
   \url{https://www.nber.org/system/files/working_papers/w29719/w29719.pdf}}
@@ -3766,8 +3719,7 @@ And a few more. (As an aside, it can be really useful to know human biology!)
 
 These are the kinds of conditions associated with the mortality data and the spike in alcohol related deaths in Figure \ref{fig:drugalcoholsuicidedeaths} above.
 
-\hypertarget{complements}{%
-\section{Complements}\label{complements}}
+\section{Complements}\label{complements}
 
 Some of the goods we buy have synergies with one good enhancing the usefulness or enjoyment of the other good. We call these kinds of good complements. Examples abound.
 
@@ -3805,8 +3757,7 @@ This is illustrated in Figure \ref{fig:demand08} for the case of a price increas
 \caption{Increase in price of a complement}\label{fig:demand08}
 \end{figure}
 
-\hypertarget{substitutes-complements-in-unexpected-places}{%
-\section{Substitutes Complements in Unexpected Places}\label{substitutes-complements-in-unexpected-places}}
+\section{Substitutes Complements in Unexpected Places}\label{substitutes-complements-in-unexpected-places}
 
 Many disasters strike in this country: tornadoes, hurricanes, wildfires, floods, mass shootings, earthquakes, etc., etc., etc. High profile politicians and private citizens invariably offer their condolences in words like:
 
@@ -3855,8 +3806,7 @@ The findings here fit in and are consistent with the literature on ``moral licen
 
 It seems there is, in some peoples mind an ethical budget, a good behavior budget. If one type of good behavior goes up, the other one must go down. Now there is a challenge for all ethics teachers.
 
-\hypertarget{normal-and-inferior-goods}{%
-\section{Normal and Inferior Goods}\label{normal-and-inferior-goods}}
+\section{Normal and Inferior Goods}\label{normal-and-inferior-goods}
 
 Most goods are normal, that is why we call them that.
 
@@ -3871,8 +3821,7 @@ A normal good has the following property: as income increases, demand increases.
 \caption{Price increases}\label{fig:demand09}
 \end{figure}
 
-\hypertarget{product-quality}{%
-\subsection{Product Quality}\label{product-quality}}
+\subsection{Product Quality}\label{product-quality}
 
 The demand function of course depends upon the quality of the product or service. High quality stuff has high demand, low quality stuff has low demand. This simply works because demand IS marginal benefit. High quality stuff is highly satisfying and has high marginal benefit and this high demand, low quality stuff not so much. Demand for IU basketball games would be higher if the quality of the product were higher. Of course, sometimes it is just the perception of quality, not the real quality that matters.
 
@@ -3902,8 +3851,7 @@ Here is the kicker: Fact checking increases the demand for the newsletter for pe
 
 Conclusion: Some people are not so much interested in facts as in confirming their own preconceived notions.
 
-\hypertarget{uncertainty}{%
-\subsection{Uncertainty}\label{uncertainty}}
+\subsection{Uncertainty}\label{uncertainty}
 
 The typical textbook does not list uncertainty as a factor that can shift demand. It should. Consider the demand for big ticket items, durable goods like cars, boats, big entertainment centers, etc. Or even big tickets items that are not durable, like your super fancy vacation on Bora Bora.
 
@@ -3945,8 +3893,7 @@ Natural disasters by their very nature increase uncertainty and Covid-19 is no e
   What are the relative prices of these actions?
 \end{itemize}
 
-\hypertarget{glossary-of-terms-4}{%
-\section{Glossary of Terms}\label{glossary-of-terms-4}}
+\section{Glossary of Terms}\label{glossary-of-terms-4}
 
 \textbf{Complements:} Two or more goods are called complements if consumption of one good enhances the marginal benefit of the other good.
 
@@ -3972,11 +3919,9 @@ Natural disasters by their very nature increase uncertainty and Covid-19 is no e
 
 \textbf{Substitutes:} Two or more goods are called substitutes if they have similar characteristics and/or serve similar purposes.
 
-\hypertarget{practice-questions-4}{%
-\section{Practice Questions}\label{practice-questions-4}}
+\section{Practice Questions}\label{practice-questions-4}
 
-\hypertarget{discussion-4}{%
-\subsection{Discussion}\label{discussion-4}}
+\subsection{Discussion}\label{discussion-4}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3991,8 +3936,7 @@ Natural disasters by their very nature increase uncertainty and Covid-19 is no e
   Without reading the article below, since washers and dryers are complements what would you expect to happen to the demand for dryers after a tariff was imposed on washing machines? Now, read the article below. \url{https://news.uchicago.edu/story/what-washing-machines-can-teach-us-about-cost-tariffs} What DID happen to the price of dryers after there was a tariff on washing machines? How can you explain that?
 \end{enumerate}
 
-\hypertarget{multiple-choice-4}{%
-\subsection{Multiple Choice}\label{multiple-choice-4}}
+\subsection{Multiple Choice}\label{multiple-choice-4}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -4138,8 +4082,7 @@ Natural disasters by their very nature increase uncertainty and Covid-19 is no e
   D. Organic fair-trade coffee
 \end{enumerate}
 
-\hypertarget{answer-key-3}{%
-\subsection{Answer Key}\label{answer-key-3}}
+\subsection{Answer Key}\label{answer-key-4}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -4186,8 +4129,7 @@ Natural disasters by their very nature increase uncertainty and Covid-19 is no e
   D
 \end{enumerate}
 
-\hypertarget{supply}{%
-\chapter{Supply}\label{supply}}
+\chapter{Supply}\label{supply}
 
 In this chapter you will learn:
 
@@ -4205,13 +4147,11 @@ In this chapter you will learn:
   Describe causes for shifts in the supply curve
 \end{itemize}
 
-\hypertarget{introductory-video-1}{%
-\section{Introductory Video}\label{introductory-video-1}}
+\section{Introductory Video}\label{introductory-video-1}
 
 \url{https://iu.mediaspace.kaltura.com/media/t/1_2h6tue0e}
 
-\hypertarget{cost-concepts}{%
-\section{Cost concepts}\label{cost-concepts}}
+\section{Cost concepts}\label{cost-concepts}
 
 We will begin with definitions of fundamental concepts of cost. This might be a bit dry, but it is crucial.
 
@@ -4254,8 +4194,7 @@ Average fixed cost is easily graphed as in Figure \ref{fig:supply01}. The fact t
 \caption{Average Fixed Costs}\label{fig:supply01}
 \end{figure}
 
-\hypertarget{economies-of-scale}{%
-\section{Economies of Scale}\label{economies-of-scale}}
+\section{Economies of Scale}\label{economies-of-scale}
 
 Production costs vary in often fundamental ways across industries. We have many industries that are dominated by a few very large firms. And we have many industries where there are lots and lots of rather small firms.
 
@@ -4313,8 +4252,7 @@ After the cases of increasing returns to scale and the case of decreasing return
 \caption{Constant returns to scale.}\label{fig:supply04}
 \end{figure}
 
-\hypertarget{examples-3}{%
-\subsection{Examples}\label{examples-3}}
+\subsection{Examples}\label{examples-3}
 
 When we look around, we can see decreasing returns and increasing returns in action. When the production technology is characterized by decreasing returns, average cost curves are downward sloping, it is more expensive on average to produce large quantities and less expensive to produce small quantities. If that is so and if firms are concerned with minimizing costs, we would then expect many firms in a market, each producing relatively small amounts. Here we are some examples of industries/markets where we typically see many small firms:
 
@@ -4350,8 +4288,7 @@ In all of the above discussion, the increasing or decreasing returns, whether th
 
 Bloomington, IN hospital has 278 staffed beds. That seems puny relative to the size of the country. But that is beside the point. Bloomington Hospital is intended to only serve Bloomington and the immediately surrounding areas. Here we are talking about a potential market size of perhaps 150,000 people. That hospital with fewer than 300 beds is plenty big, relative to its market.
 
-\hypertarget{profit-maximization}{%
-\section{Profit Maximization}\label{profit-maximization}}
+\section{Profit Maximization}\label{profit-maximization}
 
 We will study profit maximization in a competitive market. The definition of a competitive market, as in chapter 3, is: all participants in the market are price takers, or at least act as if they were price takers.
 
@@ -4393,8 +4330,7 @@ Punchline:
 
 \end{center}
 
-\hypertarget{supply-1}{%
-\section{Supply}\label{supply-1}}
+\section{Supply}\label{supply-1}
 
 Figure \ref{fig:supply06} shows how we can get from profit maximization to supply. Profit maximization says:
 
@@ -4429,8 +4365,7 @@ There is one additional wrinkle: If the price falls too low, below the minimum a
 \caption{Average variable cost and marginal cost.}\label{fig:supply06}
 \end{figure}
 
-\hypertarget{shifts-in-supply}{%
-\section{Shifts in Supply}\label{shifts-in-supply}}
+\section{Shifts in Supply}\label{shifts-in-supply}
 
 There are many factors that can shift the supply curve. The first, and over the long run probably most important, factor is technological progress. When technological progress lowers marginal costs, the supply curve shifts down vertically or, equivalently, it shifts to the right (horizontally). This represents an increase in supply as indicated in Figure \ref{fig:supply07}.
 
@@ -4487,13 +4422,11 @@ Of course, there are also forces that can increase marginal costs, and thus, dec
 \caption{Increase in marginal cost.}\label{fig:supply11}
 \end{figure}
 
-\hypertarget{individual-to-market-supply}{%
-\subsection{Individual to Market Supply}\label{individual-to-market-supply}}
+\subsection{Individual to Market Supply}\label{individual-to-market-supply}
 
 The above analysis covers the supply of an individual competitive firm. Just as in the case of getting from individual demand to market demand, we add up horizontally all individual supply curves to arrive at the market supply curve.
 
-\hypertarget{glossary-of-terms-5}{%
-\section{Glossary of Terms}\label{glossary-of-terms-5}}
+\section{Glossary of Terms}\label{glossary-of-terms-5}
 
 \textbf{Average fixed costs:} Fixed costs divided by the total amount of output.
 
@@ -4525,11 +4458,9 @@ The above analysis covers the supply of an individual competitive firm. Just as 
 
 \textbf{Variable costs:} That part of cost that does depend on the total amount of output produced and sold.
 
-\hypertarget{practice-questions-5}{%
-\section{Practice Questions}\label{practice-questions-5}}
+\section{Practice Questions}\label{practice-questions-5}
 
-\hypertarget{discussion-5}{%
-\subsection{Discussion}\label{discussion-5}}
+\subsection{Discussion}\label{discussion-5}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -4564,8 +4495,7 @@ The above analysis covers the supply of an individual competitive firm. Just as 
   \end{enumerate}
 \end{enumerate}
 
-\hypertarget{multiple-choice-5}{%
-\subsection{Multiple Choice}\label{multiple-choice-5}}
+\subsection{Multiple Choice}\label{multiple-choice-5}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -4711,8 +4641,7 @@ The above analysis covers the supply of an individual competitive firm. Just as 
   D. Its quantity supplied to fall
 \end{enumerate}
 
-\hypertarget{answer-key-4}{%
-\subsection{Answer Key}\label{answer-key-4}}
+\subsection{Answer Key}\label{answer-key-5}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -4759,8 +4688,7 @@ The above analysis covers the supply of an individual competitive firm. Just as 
   C
 \end{enumerate}
 
-\hypertarget{competitive-markets}{%
-\chapter{Competitive Markets}\label{competitive-markets}}
+\chapter{Competitive Markets}\label{competitive-markets}
 
 In this chapter we will learn:
 
@@ -4782,8 +4710,7 @@ In this chapter we will learn:
   Understand why competitive market allocations can be efficient
 \end{itemize}
 
-\hypertarget{competitive-equilibrium}{%
-\section{Competitive Equilibrium}\label{competitive-equilibrium}}
+\section{Competitive Equilibrium}\label{competitive-equilibrium}
 
 We are now in a position to put together supply and demand to ``make'' our model of competitive markets. We think of competitive markets as markets where there are many sellers and many buyers so no individual can influence the price. Each seller and each buyer acts as a price taker.
 
@@ -4814,8 +4741,7 @@ If the price were at \(p_2\), then the quantity demanded is larger than the quan
 
 At price p* the decisions by the buyers are consistent with the decisions of the sellers. This is the only price where this happens. At higher prices, firms want to sell more than households want to buy. At lower prices households want to buy more than firms are willing to sell.
 
-\hypertarget{consumerproducer-surplus}{%
-\section{Consumer/Producer Surplus}\label{consumerproducer-surplus}}
+\section{Consumer/Producer Surplus}\label{consumerproducer-surplus}
 
 In Figure \ref{fig:compmarkets02} we illustrate the concept of consumer surplus. In the figure the equilibrium price is \(p\). At this point, the number of units sold is \(Q\). For all customers who buy the product the marginal benefit of one more unit of the product is higher than the price. It has to be. The transaction is voluntary. No consumer would spend more than the value they attach to the product. So, whoever is buying the product, is getting more than they are paying, they are getting a surplus. That surplus from one particular unit sold is indicated by the distance of the vertical line segment \(\text{KL}\). This surplus applies of course to all units sold. Adding up all the surpluses for all the goods sweeps out the entire area of the triangle \(\text{ABC}\).
 
@@ -4840,8 +4766,7 @@ The sum of consumers' surplus and producers' surplus will be called welfare, \(W
 
 One of the nice things about this construct is that it allows us to evaluate economic policies. In general, policies that shrink \(W\) impose a welfare loss and policies that increase \(W\) generate a welfare gain. Moreover, we can assign quantitative, numeric values to welfare gains or losses from various policies.
 
-\hypertarget{unit-taxation}{%
-\section{Unit Taxation}\label{unit-taxation}}
+\section{Unit Taxation}\label{unit-taxation}
 
 Imagine that the government collects a tax on firms. The tax takes the following form: For each unit sold the firm has to pay \(\$t\) to the government. How could this tax be incorporated into our model of the competitive market?
 
@@ -4882,8 +4807,7 @@ The equilibrium is now at point \(C\) with quantity \(Q_t\) and price \(p_t\). W
 
 Note: Just because taxation imposes a deadweight loss does not imply that taxes are bad. We must always compare the size of the deadweight loss incurred through taxation with the benefit that is possible only through the programs/expenditures the government can finance only through taxation. These include such things as expenditures on national defense, the justice system, the EPA, FDA, expenditures on COVID-19 testing, etc. For some of these the gains from the program/expenditure might exceed the deadweight loss of taxation, but not for others. Whether program benefits exceed the deadweight loss of taxation depends on a carefully done cost benefit analysis.
 
-\hypertarget{price-ceilings}{%
-\section{Price Ceilings}\label{price-ceilings}}
+\section{Price Ceilings}\label{price-ceilings}
 
 Often governments decide that prevailing prices are too high. Then they impose price ceilings. Prominent examples of this are rent control and anti-price gouging laws. We will consider these in turn.
 
@@ -4929,8 +4853,7 @@ But there is more. Other consequences are:
   Apartments are more likely to be turned into condominiums. Condominiums are typically not covered by any rent control legislation and their prices are typically set at higher levels by the market.
 \end{enumerate}
 
-\hypertarget{examples-4}{%
-\section{Examples}\label{examples-4}}
+\section{Examples}\label{examples-4}
 
 \textbf{Example 1:} Beef vs Chicken
 
@@ -5129,8 +5052,7 @@ Paper below distinguishes two cases. In case 1, Chinese socks compete with Frenc
 
 On the other hand, some Chinese imports are intermediate goods in some other production process. In that case, an increase in Chinese imports, decreases marginal costs of final goods production, which can show up as an increase in sales and in employment. In the paper below, some of these effects are indeed positive but some are indistinguishable from zero.
 
-\hypertarget{taking-price-as-given}{%
-\section{Taking Price as given}\label{taking-price-as-given}}
+\section{Taking Price as given}\label{taking-price-as-given}
 
 The market determines the price, and the firm takes the price as given.
 
@@ -5194,8 +5116,7 @@ Then the worry begins:
 
 This is the stuff of sleepless nights. This is the dark side of competitive equilibrium.
 
-\hypertarget{positive-vs-normative-economics}{%
-\section{Positive vs Normative Economics}\label{positive-vs-normative-economics}}
+\section{Positive vs Normative Economics}\label{positive-vs-normative-economics}
 
 Before we tackle the issue of efficiency, we need to clarify a few things.
 
@@ -5221,8 +5142,7 @@ No judgement, no evaluation. It is what it is.
 
 Normative economics evaluates. It asks whether allocations, what people get, are good, bad, ugly, desirable, non-desirable, etc. We will always do this through the lens of efficiency.
 
-\hypertarget{efficiency}{%
-\section{Efficiency}\label{efficiency}}
+\section{Efficiency}\label{efficiency}
 
 We can now, finally, address the question of how efficient markets might be. We need to be clear about what we mean by efficiency. The figure below, which we have seen before many times, will help.
 
@@ -5239,7 +5159,7 @@ The marginal benefit, \(MB\), from beer, for example, is downward sloping and th
 
 The claim is that the quantity \(Q_e\), where \(MB = MC\), is the efficient allocation. Why is that?
 
-Suppose we only produced \(Q_1 < Q_e\). There, \(MB > MC\). The marginal benefit that some consumer gets from an extra sixpack is \(\$18\), but it only costs \(\$4\). That means an extra benefit could be obtained by producing one extra six pack. This extra benefit, the net benefit, marginal benefit minus marginal cost, from one more sixpack is \(\$14\). And more beer should be produced, as indicated by the arrow pointing right.
+Suppose we only produced \(Q_1 < Q_e\). There, \(MB  >  MC\). The marginal benefit that some consumer gets from an extra sixpack is \(\$18\), but it only costs \(\$4\). That means an extra benefit could be obtained by producing one extra six pack. This extra benefit, the net benefit, marginal benefit minus marginal cost, from one more sixpack is \(\$14\). And more beer should be produced, as indicated by the arrow pointing right.
 
 Suppose we are producing \(Q_2 > Q_e\). At that point, \(MC > MB\). That last sixpack that is produced costs \(\$20\) and it generates only a benefit of \(\$5\). Producing this last unit generates a net loss of \(\$15\). That last unit should not be produced. Less beer should be produced, as indicated by the arrow pointing left.
 
@@ -5274,8 +5194,7 @@ At this point we may invoke the often-cited quote from Adam Smith, An Inquiry in
 
 This quote is often used (by some) to argue against government regulation, to leave markets alone and unfettered. Of course, the theorem above only says that competitive markets are efficient. It does not say that all markets are efficient. And, the theorem states, that competitive markets are efficient only under certain conditions. We will spend a fair amount of time on studying these conditions, what these conditions are, how the violation of these conditions prevents efficiency and how frequently violations of these conditions occur. We will find that these conditions are very frequently violated and that the case for markets being typically efficient is not that clear cut.
 
-\hypertarget{a-macro-connection}{%
-\section{A Macro Connection}\label{a-macro-connection}}
+\section{A Macro Connection}\label{a-macro-connection}
 
 Over the last 70 years the US economy has experienced a large decline in the manufacturing sector relative to the rest of the economy. Whether we measure the share of the manufacturing sector by employment or by value added as fraction of GDP. Between 1948 and 2016 employment in manufacturing fell from 35\% of total employment down to 10\%. In terms of manufacturing's share of GDP there is a similarly large drop from 30\% to 13\%.
 
@@ -5355,8 +5274,7 @@ There are two punchlines:
   As an economy gets richer, economic growth has to slow down and it is efficient that it does.
 \end{enumerate}
 
-\hypertarget{the-law-of-one-price-and-arbitrage}{%
-\section{The Law of One Price and Arbitrage}\label{the-law-of-one-price-and-arbitrage}}
+\section{The Law of One Price and Arbitrage}\label{the-law-of-one-price-and-arbitrage}
 
 If you look at any of the pictures of competitive markets in this chapter, you see that there is
 exactly one point where demand intersects supply. Since there is exactly one intersection, there
@@ -5377,7 +5295,7 @@ Sweeping things under the rug is usually not a good idea.
 
 \begin{quote}
 `'In markets characterized by symmetric information among participants and unrestricted
-opportunities for resale, arbitrage assures that identical products trade at the same price.'' - McFadden, 2023
+opportunities for resale, arbitrage assures that identical products trade at the same price.'\,' - McFadden, 2023
 \end{quote}
 
 \end{center}
@@ -5523,7 +5441,7 @@ The Law of One Price holds.
 
 Now, enter price gouging laws. These kinds of laws often declare it illegal to raise prices substantially above levels that are considered reasonable or fair. You can see why these things will often kick in after a natural disaster like a hurricane. In such cases supply shocks often raise some prices through the roof. Such increased prices do not look fair, normal, or reasonable to many people.
 
-Then, sometimes governments take action and invoke `'no price gouging laws''. These are essentially price ceilings. So, they just do what price ceilings always do.
+Then, sometimes governments take action and invoke `'no price gouging laws'\,'. These are essentially price ceilings. So, they just do what price ceilings always do.
 
 Keep the price low, lower than the market clearing price. But at a cost: The mandated price ceiling causes a slide down the supply curve and creates a shortage. At the mandated price ceiling, the quantity demanded exceeds the quantity supplied. There will be many households who cannot get the amenities they need, AT THAT PRICE. Frustration will set in.
 
@@ -5545,7 +5463,7 @@ Option 2: Omaha in Nebraska.
 
 There is a tradeoff: In Manhattan, you get all the fun that money can buy, but your abode will be very small. This is true for most big coastal cities: Seattle, Portland, San Francisco, San Diego, Boston, New York, Philadelphia.
 
-In Omaha things are different. There may be fewer amenities, and the city may now be as `'cool'' as Manhattan, but the house you can afford in Omaha is much bigger than what you could afford in Manhattan. In fact, one migrant stated that his apartment in NYC was as big as his living room in Minneapolis. That is a trade-off. That trade-off has been there all along. In fact, a study done by the Federal Reserve Bank of St.~Louis documents that the average earner is about 30\% better off in cities in the middle of the country than in cities on the coast.
+In Omaha things are different. There may be fewer amenities, and the city may now be as `'cool'\,' as Manhattan, but the house you can afford in Omaha is much bigger than what you could afford in Manhattan. In fact, one migrant stated that his apartment in NYC was as big as his living room in Minneapolis. That is a trade-off. That trade-off has been there all along. In fact, a study done by the Federal Reserve Bank of St.~Louis documents that the average earner is about 30\% better off in cities in the middle of the country than in cities on the coast.
 
 For many years there has been a net inflow of workers with a college degree into the very expensive coastal urban areas. In the past few years that inflow has been reversed. On net, workers with a college degree are leaving these expensive coastal cities for more midwestern cities.
 
@@ -5626,12 +5544,11 @@ life savings, then switched to Medicaid funding or thought of switching to Medic
 only to be told that their contracts will not be renewed, that they have to move out with a 60-
 day notice.
 
-`'Experts say moving elderly people out of familiar surroundings can induce a condition called~``transfer trauma''~that accelerates decline.''
+`'Experts say moving elderly people out of familiar surroundings can induce a condition called~``transfer trauma''~that accelerates decline.'\,'
 
 There are cases where the eviction from assisted living was followed very rapidly by death of the resident. Relatives call the forced move from assisted living a big factor in their decline.
 
-\hypertarget{glossary-of-terms-6}{%
-\section{Glossary of Terms}\label{glossary-of-terms-6}}
+\section{Glossary of Terms}\label{glossary-of-terms-6}
 
 \textbf{Competitive equilibrium:} The intersection of supply and demand. This intersection determines the market price \(P^*\) and the quantity \(Q^*\). We will refer to \((Q^*, P^*)\) as the competitive equilibrium.
 
@@ -5655,11 +5572,9 @@ There are cases where the eviction from assisted living was followed very rapidl
 
 \textbf{Unit taxation:} a tax collected by the government on each unit of production or consumption.
 
-\hypertarget{practice-questions-6}{%
-\section{Practice Questions}\label{practice-questions-6}}
+\section{Practice Questions}\label{practice-questions-6}
 
-\hypertarget{discussion-6}{%
-\subsection{Discussion}\label{discussion-6}}
+\subsection{Discussion}\label{discussion-6}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -5680,8 +5595,7 @@ There are cases where the eviction from assisted living was followed very rapidl
   In example 6 above, why is the US mostly exporting undifferentiated products and mostly importing differentiated products?
 \end{enumerate}
 
-\hypertarget{multiple-choice-6}{%
-\subsection{Multiple Choice}\label{multiple-choice-6}}
+\subsection{Multiple Choice}\label{multiple-choice-6}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -5827,8 +5741,7 @@ There are cases where the eviction from assisted living was followed very rapidl
   D. All of the above
 \end{enumerate}
 
-\hypertarget{answer-key-5}{%
-\subsection{Answer Key}\label{answer-key-5}}
+\subsection{Answer Key}\label{answer-key-6}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -5875,8 +5788,7 @@ There are cases where the eviction from assisted living was followed very rapidl
   D
 \end{enumerate}
 
-\hypertarget{externalities}{%
-\chapter{Externalities}\label{externalities}}
+\chapter{Externalities}\label{externalities}
 
 In this chapter we will learn:
 
@@ -5892,15 +5804,13 @@ In this chapter we will learn:
   How and to what extent government policies can be used to make competitive equlibria with externalities more efficient
 \end{itemize}
 
-\hypertarget{introductory-videos}{%
-\section{Introductory Videos}\label{introductory-videos}}
+\section{Introductory Videos}\label{introductory-videos}
 
 \url{https://iu.mediaspace.kaltura.com/media/t/1_00v1aqow}
 
 \url{https://iu.mediaspace.kaltura.com/media/t/1_ks8mq6vp}
 
-\hypertarget{negative-externalities}{%
-\section{Negative Externalities}\label{negative-externalities}}
+\section{Negative Externalities}\label{negative-externalities}
 
 About 10,000 people die each year in the US in alcohol related traffic accidents. Among those victims are about 200 children below age 14 \footnote{\url{https://www.cdc.gov/transportationsafety/impaired_driving/impaired-drv_factsheet.html\#}:\textasciitilde:text=Every\%20day\%2C\%2029\%20people\%20in,involve\%20an\%20alcohol\%2Dimpaired\%20driver.\&text=This\%20is\%20one\%20death\%20every\%2050\%20minutes.\&text=The\%20annual\%20cost\%20of\%20alcohol,totals\%20more\%20than\%20\%2444\%20billion}. The annual cost of alcohol related crashes amounts to about \$45 Billion. That amounts to \$140 per person in this country. And these numbers do not include any component due to the loss of life, what economists call the ``statistical value of a life''. Nor do these numbers include the emotional suffering and grief and potential follow up costs such as grief counseling or therapy.
 
@@ -6037,8 +5947,7 @@ Pigouvian tax
 
 named after Arthur Pigou\footnote{\url{https://en.wikipedia.org/wiki/Arthur_Cecil_Pigou}}, who is widely credited with introducing this particular policy.
 
-\hypertarget{pigouvian-tax}{%
-\subsection{Pigouvian Tax}\label{pigouvian-tax}}
+\subsection{Pigouvian Tax}\label{pigouvian-tax}
 
 How does the Pigouvian tax work?
 
@@ -6117,8 +6026,7 @@ And all of these examples of course go counter to the intended purpose of the Pi
 
 I guess the upshot here is: spending a ton of money can be trickier than you think.
 
-\hypertarget{positive-externalities}{%
-\section{Positive Externalities}\label{positive-externalities}}
+\section{Positive Externalities}\label{positive-externalities}
 
 Not all externalities are negative. If I plant a tree in my back yard, considering my marginal benefit from that tree and the money I spend buying it in the nursery, I only consider my private costs and benefits.
 
@@ -6167,8 +6075,7 @@ We do not call this an externality. There is no inefficiency as in the above cas
 
 With the enrollment drop, the demand for housing has dropped. If the demand has dropped, housing will be less scarce, and then we would expect, and we would want6 the price to drop.
 
-\hypertarget{example}{%
-\section{Example}\label{example}}
+\section{Example}\label{example}
 
 So far we have not specified at all how many people are influenced by the externality or what is the geographic reach of the eternal effect.
 
@@ -6221,8 +6128,7 @@ Imagine you are bargaining with someone else about how to split an amount of mon
 
 Instead of assigning property rights to the farmer, we could assign them to the fishery. The fishery would of course choose zero pollution. That is at point \(C\). In this case also, bargaining can get us to the efficient outcome. Getting from \(C\) to \(E\) is a loss to the fishery, but a gain to the farmer. The gain to the farmer is bigger than the loss to the fishery. The farmer can make an offer to the fishery and both will be at point \(E\).
 
-\hypertarget{numerical-problems}{%
-\section{Numerical Problems}\label{numerical-problems}}
+\section{Numerical Problems}\label{numerical-problems}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -6260,8 +6166,7 @@ Instead of assigning property rights to the farmer, we could assign them to the 
   C. What are the interpretations of the answers in parts a and b?
 \end{enumerate}
 
-\hypertarget{monopoly}{%
-\chapter{Monopoly}\label{monopoly}}
+\chapter{Monopoly}\label{monopoly}
 
 In this chapter we will learn:
 
@@ -6279,8 +6184,7 @@ In this chapter we will learn:
   Explain how two-part tariffs increase profit relative to uniform pricing.
 \end{itemize}
 
-\hypertarget{introduction}{%
-\section{Introduction}\label{introduction}}
+\section{Introduction}\label{introduction}
 
 In the previous chapters we have studied competitive markets. These were markets with many buyers and many sellers. I fact we have so many firms and so many households that no single individual firm and no single individual household can influence the price.
 
@@ -6389,8 +6293,7 @@ where α and β are some arbitrary parameters, then the marginal revenue functio
 
 Another way of saying this is: If the demand function is any linear function, then the marginal revenue function is also linear, and it is twice as steep.
 
-\hypertarget{monopoly-pricing}{%
-\section{Monopoly Pricing}\label{monopoly-pricing}}
+\section{Monopoly Pricing}\label{monopoly-pricing}
 
 Much of economics is actually very simple. It follows a few very simple rules. In the chapter on Rational Choice we learned:
 
@@ -6447,8 +6350,7 @@ Deadweight Loss of Monopoly
 
 This area is really a loss to society. You see, anywhere between \(Q_M\) and \(F\), some consumer is willing to pay more for the product than is required to produce it. For each unit in that region that is not sold, there is a loss to society, an opportunity for welfare/utility/pleasure foregone. Adding up all these losses over all goods between \(Q_M\) and point \(F\) generates the area of the triangle \(BFC\). This is literally a potential welfare that has been lost to the power of monopoly. We should think of this welfare loss as real resources that could have been useful to some consumers, but since we are dealing with a monopoly here, these resources will never be produced. These resources, potential as they might be, have just gone up in smoke.
 
-\hypertarget{mark-ups}{%
-\section{Mark-ups}\label{mark-ups}}
+\section{Mark-ups}\label{mark-ups}
 
 It is clear from Figure \ref{fig:monopoly03} that for a monopolist the price is above marginal cost. This is a fundamental difference to competitive markets, where prices are always equal to marginal cost.
 
@@ -6569,8 +6471,7 @@ So, the NCAA basically distributes money from relatively poor Black athletes to 
 
 You decide on the ethics of that redistribution!
 
-\hypertarget{two-corrective-policies}{%
-\section{Two Corrective Policies}\label{two-corrective-policies}}
+\section{Two Corrective Policies}\label{two-corrective-policies}
 
 Since there is good reason to believe in the inefficiency of monopoly, it is a good idea to think about whether there are any government policies that could eliminate that inefficiency. Both policies considered will have fundamentally different effects than in competitive markets.
 
@@ -6625,8 +6526,7 @@ The big rub is this: How to convince anybody of the following:
 
 Both of these seem to be tall orders.
 
-\hypertarget{price-discrimination}{%
-\section{Price Discrimination}\label{price-discrimination}}
+\section{Price Discrimination}\label{price-discrimination}
 
 Imagine that the monopolist can segment the markets into two parts, one part depicted in Figure \ref{fig:monopoly07}'s Panel a and the second market depicted in Figure \ref{fig:monopoly07}'s Panel b. In the example in Figure \ref{fig:monopoly07} we assume that marginal costs are the same in both markets.
 
@@ -6712,8 +6612,7 @@ Of course, this practice of perfect price discrimination comes at a cost. This p
 
 How might companies be able to gather information of reservation prices? Think of the Kroger shopping card, think of Amazon or Netflix or your random casino in Vegas. These companies have all kinds of information about their customers' preferences. They could almost do personalized pricing.
 
-\hypertarget{mickey-mouse-pricing}{%
-\section{Mickey Mouse Pricing}\label{mickey-mouse-pricing}}
+\section{Mickey Mouse Pricing}\label{mickey-mouse-pricing}
 
 In many situations there are very large, fixed costs and marginal costs are often close to zero. The Magic Kingdom and other amusements parks come to mind. But there are other cases that are close. In such situations firms often adopt what is called a
 
@@ -6786,8 +6685,7 @@ Two dollars per beer is slightly above marginal cost of a beer.
 
 That practice fits the theory almost to a T.
 
-\hypertarget{taylor-swift-pricing}{%
-\section{Taylor Swift Pricing}\label{taylor-swift-pricing}}
+\section{Taylor Swift Pricing}\label{taylor-swift-pricing}
 
 IU will play Michigan State in men's basketball on Feb 20, 2022. I can buy tickets for his game today, or in November, or in December, or in January, or even February 18, 2022. Whenever I buy these tickets, the price will be the same. And that price is determined now, call it \$50 per seat in the nosebleed section.
 
@@ -6889,8 +6787,7 @@ Another way to state the above conclusion is: We expect the degree of advertisin
 
 You will rarely see advertisements for strawberries, wheat, lettuce, peaches. But you will see lots of advertisements for diamonds,
 
-\hypertarget{glossary-of-terms-7}{%
-\section{Glossary of Terms}\label{glossary-of-terms-7}}
+\section{Glossary of Terms}\label{glossary-of-terms-7}
 
 \textbf{Deadweight loss of monopoly:} The area, typically of a triangle, below demand, above marginal cost, to the right of the quantity sold.
 
@@ -6912,11 +6809,9 @@ You will rarely see advertisements for strawberries, wheat, lettuce, peaches. Bu
 
 \textbf{Static Pricing:} Setting a price for a future event that does not change even in the face of changing relevant information such as changes in the number of competing products or changes in consumers' willingness to pay.
 
-\hypertarget{practice-questions-7}{%
-\section{Practice Questions}\label{practice-questions-7}}
+\section{Practice Questions}\label{practice-questions-7}
 
-\hypertarget{discussion-7}{%
-\subsection{Discussion}\label{discussion-7}}
+\subsection{Discussion}\label{discussion-7}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -6931,8 +6826,7 @@ You will rarely see advertisements for strawberries, wheat, lettuce, peaches. Bu
   List and discuss four factors that might influence the effectiveness of advertising.
 \end{enumerate}
 
-\hypertarget{multiple-choice-7}{%
-\subsection{Multiple Choice}\label{multiple-choice-7}}
+\subsection{Multiple Choice}\label{multiple-choice-7}
 
 \begin{figure}
 
@@ -7087,8 +6981,7 @@ You will rarely see advertisements for strawberries, wheat, lettuce, peaches. Bu
   D. All of the above
 \end{enumerate}
 
-\hypertarget{game-theory}{%
-\chapter{Game Theory}\label{game-theory}}
+\chapter{Game Theory}\label{game-theory}
 
 In this chapter we will learn:
 
@@ -7106,8 +6999,7 @@ In this chapter we will learn:
   Understand and explain the concept of ``backward induction''
 \end{itemize}
 
-\hypertarget{motivation}{%
-\section{Motivation}\label{motivation}}
+\section{Motivation}\label{motivation}
 
 Watch the below listed videos:
 
@@ -7122,8 +7014,7 @@ Watch the below listed videos:
   \url{https://www.youtube.com/embed/ozq0zOzsMBg}
 \end{itemize}
 
-\hypertarget{introduction-1}{%
-\section{Introduction}\label{introduction-1}}
+\section{Introduction}\label{introduction-1}
 
 Game theory is the study of
 
@@ -7185,8 +7076,7 @@ Summarizing all this we can say that a game consists of:
 - A set of specified actions for each player
 - A pay-off function for each player that generally depends on the actions of all players.
 
-\hypertarget{specific-games}{%
-\section{Specific Games}\label{specific-games}}
+\section{Specific Games}\label{specific-games}
 
 An example to play in online class: Guess a number between 1 and 100
 
@@ -7196,8 +7086,7 @@ Your objective I to make as much money as possible.
 
 Guess what my objective is?
 
-\hypertarget{prisoners-dilemma}{%
-\subsection{Prisoners Dilemma}\label{prisoners-dilemma}}
+\subsection{Prisoners Dilemma}\label{prisoners-dilemma}
 
 We will begin with what is most likely the most famous and well-known game, the
 Prisoners' Dilemma Game, PDG.
@@ -7270,8 +7159,7 @@ That is exactly the Nash equilibrium.
 
 Note: This is an awful equilibrium, an inefficient equilibrium. Both players could be made better off, getting -1 each, if they somehow could pick not cheat and not cheat as their respective strategies. But this cannot happen in a Nash equilibrium. If player I chooses cheat, the best response of Player II is to cheat as well. The outcome where each player ends up with -1 is clearly efficient, or Pareto optimal. But if one player would pick not cheat, to have shot at the outcome -1, the other player would rationally pick cheat, destroying the hope of such a favorable, efficient outcome. The punch line from this note is that the Nash equilibrium need not be efficient. In the Prisoners' Dilemma Game, it clearly is not efficient.
 
-\hypertarget{bach-or-stravinsky}{%
-\subsection{Bach or Stravinsky}\label{bach-or-stravinsky}}
+\subsection{Bach or Stravinsky}\label{bach-or-stravinsky}
 
 The next game we consider is Bach or Stravinsky. The story goes that there are two people: James and Tom. They both very much enjoy each others company, James is a big Bach fan, Tom loves Stravinsky. They are deciding whether or not to go to a performance of Bach's Brandenburg Concertos or Stravinsky's Rite of Spring. Both performances are only for one night and the same night.
 
@@ -7294,8 +7182,7 @@ To see that these are really Nash equilibria, consider the upper left-hand corne
 
 These same arguments do apply to the lower right-hand corner.
 
-\hypertarget{chicken}{%
-\subsection{Chicken}\label{chicken}}
+\subsection{Chicken}\label{chicken}
 
 The third game we consider is called Game of Chicken. You may have seen versions of this played out in some old James Dean or similar movies about growing up. The payoffs for this game are in Figure \ref{fig:gametheory03}.
 
@@ -7310,8 +7197,7 @@ The third game we consider is called Game of Chicken. You may have seen versions
 
 The lower left and the upper right are two Nash equilibria. Imagine you are in the lower left where player I gets 50 and player II gets 0. Deviation by player II would lower player I's payoff from 50 to the very low number of -100. For player II the payoff would go from 0 to the very low number -100. No player has an incentive to deviate. What we have found is one Nash equilibrium. But then, for reasons of symmetry, the upper right must be an equilibrium as well.
 
-\hypertarget{repeated-games}{%
-\section{Repeated Games}\label{repeated-games}}
+\section{Repeated Games}\label{repeated-games}
 
 Sometimes in life we face games that are played just once. The invasion of the Normandy in 1944 is one such example. The German unification is a second. How to deal with the Russian annexation of the Crimean Peninsula is another. This last example points to repeated interaction between players, after the relationship between the US and Russia is ongoing. How we dealt with (or not) with the Russian interference in the 2016 elections will surely matter for how Russia deals with the 2020 election.
 
@@ -7367,8 +7253,7 @@ So, the big tension is:
 If I want to have a chance to get rich, my strategies should tend towards 10. But then I run the risk of being undercut and I may end up with nothing. If I play it safe, I pick 1 every time, but then I stay poor.
 How to play this game?
 
-\hypertarget{tit-for-tat}{%
-\subsection{Tit for Tat}\label{tit-for-tat}}
+\subsection{Tit for Tat}\label{tit-for-tat}
 
 This follows Dixit and Nalebuff, The Art of Strategy, 2008
 
@@ -7416,8 +7301,7 @@ There are a few noteworthy things about this strategy:
   Periodically there are remarkable stories of such cooperation, sometimes seemingly despite all odds.
 \end{enumerate}
 
-\hypertarget{christmas-truce-wwi-1914}{%
-\subsection{Christmas Truce WWI 1914}\label{christmas-truce-wwi-1914}}
+\subsection{Christmas Truce WWI 1914}\label{christmas-truce-wwi-1914}
 
 \href{https://en.wikipedia.org/wiki/Christmas_truce}{The Wikipedia entry}
 
@@ -7504,8 +7388,7 @@ There were no Christmas celebrations on the front in 1915.
 
 The war dragged in till 1918. Some celebrate Armistice Day on November 11. The total number of WWI casualties, military and civilian, has been estimated at 40 million people.
 
-\hypertarget{glossary-of-terms-8}{%
-\section{Glossary of Terms}\label{glossary-of-terms-8}}
+\section{Glossary of Terms}\label{glossary-of-terms-8}
 
 \textbf{Backward Induction:} A method to solve for the equilibrium in finitely repeated games. It starts by determining the equilibrium in the last periods and then works backwards to the first period.
 
@@ -7531,11 +7414,9 @@ The war dragged in till 1918. Some celebrate Armistice Day on November 11. The t
 
 \textbf{Tit-for-Tat Strategy:} A particular strategy in a game that a player may choose in a PDF game. It involves punishment for deviating from the cooperative outcome and the punishment last only one or very few periods and then returns to cooperative behavior.
 
-\hypertarget{practice-questions-8}{%
-\section{Practice Questions}\label{practice-questions-8}}
+\section{Practice Questions}\label{practice-questions-8}
 
-\hypertarget{discussion-8}{%
-\subsection{Discussion}\label{discussion-8}}
+\subsection{Discussion}\label{discussion-8}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -7550,8 +7431,7 @@ The war dragged in till 1918. Some celebrate Armistice Day on November 11. The t
   Consider a repeated prisoners' dilemma game between you and me. If you know that I am playing ``tit-for-tat'', explain why you can do better than I. What strategy will you or can you use to get a higher payoff than I?
 \end{enumerate}
 
-\hypertarget{multiple-choice-8}{%
-\subsection{Multiple Choice}\label{multiple-choice-8}}
+\subsection{Multiple Choice}\label{multiple-choice-8}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -7662,8 +7542,44 @@ The war dragged in till 1918. Some celebrate Armistice Day on November 11. The t
   D. All of the above
 \end{enumerate}
 
-\hypertarget{oligopoly}{%
-\chapter{Oligopoly}\label{oligopoly}}
+\subsection{Answer Key}\label{answer-key-7}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  D
+\item
+  A
+\item
+  A
+\item
+  D
+\item
+  C
+\item
+  B
+\item
+  D
+\item
+  B
+\item
+  A
+\item
+  C
+\item
+  B
+\item
+  A
+\item
+  C
+\item
+  B
+\item
+  D
+\end{enumerate}
+
+\chapter{Oligopoly}\label{oligopoly}
 
 In this chapter we will learn:
 
@@ -7681,8 +7597,7 @@ In this chapter we will learn:
   Understand simple game theoretic models of product differentiation
 \end{itemize}
 
-\hypertarget{motivation-1}{%
-\section{Motivation}\label{motivation-1}}
+\section{Motivation}\label{motivation-1}
 
 American industry is highly concentrated, now more than 50 years ago. You might get the impression by walking into your favorite store that there is lots and lots of choice and tons and tons of competition. It does not matter what store you walk into to get that impression: a grocery store, a clothing store, liquor store, a home improvement store, etc. You will be blown away by the plethora of choices. The number of breakfast cereals, the varieties of cat food, the number of different kinds of bedsheet and window blinds is staggering.
 
@@ -7711,8 +7626,7 @@ We have to understand how markets with such large concentrations work.
   What are other economic repercussions of such behavior/equilibria?
 \end{itemize}
 
-\hypertarget{cournot-equilibrium}{%
-\section{Cournot Equilibrium}\label{cournot-equilibrium}}
+\section{Cournot Equilibrium}\label{cournot-equilibrium}
 
 In this section we study the simplest case of an oligopoly, a duopoly, that is an oligopoly with two firms. These two firms produce an identical product. The cases of heterogeneous products will be considered later.
 
@@ -7743,107 +7657,34 @@ So, let's assume that firm 1 produces 3 units. That leaves a residual demand for
 
 Given that residual demand we can do Firm 2's profit maximization calculations. These are contained in Table \ref{tab:oligopoly03}.
 
-\label{tab:oligopoly03}Firm 2s profit maximizing calculation if firm 1 sells 3 units
+\begin{table}
 
-Q2
-
-P
-
-TR2
-
-MR2
-
-MC
-
-1
-
-16
-
-16
-
-16
-
-9
-
-2
-
-15
-
-30
-
-14
-
-9
-
-3
-
-14
-
-42
-
-12
-
-9
-
-4
-
-13
-
-52
-
-10
-
-9
-
-5
-
-12
-
-60
-
-8
-
-9
-
-6
-
-11
-
-66
-
-6
-
-9
-
-7
-
-10
-
-70
-
-4
-
-9
-
-8
-
-9
-
-72
-
-2
-
-9
-
-9
-
-8
-
-72
-
-0
-
-9
+\caption{\label{tab:oligopoly03}Firm 2s profit maximizing calculation if firm 1 sells 3 units}
+\centering
+\begin{tabular}[t]{c|c|c|c|c}
+\hline
+Q2 & P & TR2 & MR2 & MC\\
+\hline
+1 & 16 & 16 & 16 & 9\\
+\hline
+2 & 15 & 30 & 14 & 9\\
+\hline
+3 & 14 & 42 & 12 & 9\\
+\hline
+4 & 13 & 52 & 10 & 9\\
+\hline
+5 & 12 & 60 & 8 & 9\\
+\hline
+6 & 11 & 66 & 6 & 9\\
+\hline
+7 & 10 & 70 & 4 & 9\\
+\hline
+8 & 9 & 72 & 2 & 9\\
+\hline
+9 & 8 & 72 & 0 & 9\\
+\hline
+\end{tabular}
+\end{table}
 
 Given these numbers, it is best for firm 2 to produce somewhere between 4 and 5 units.
 
@@ -7867,107 +7708,34 @@ In Table 4 we illustrate firm 2s profit maximization when firm 1 is assumed to p
 
 How firm 2 responds to firm 1 producing 5 units is illustrated in Table \ref{tab:oligopoly04} below.
 
-\label{tab:oligopoly04}Firm 2s profit maximization calculation when firm 1 sells 5 units
+\begin{table}
 
-Q2
-
-P
-
-TR2
-
-MR2
-
-MC
-
-1
-
-14
-
-14
-
-14
-
-9
-
-2
-
-13
-
-26
-
-12
-
-9
-
-3
-
-12
-
-36
-
-10
-
-9
-
-4
-
-11
-
-44
-
-8
-
-9
-
-5
-
-10
-
-50
-
-6
-
-9
-
-6
-
-9
-
-54
-
-4
-
-9
-
-7
-
-8
-
-56
-
-2
-
-9
-
-8
-
-7
-
-56
-
-0
-
-9
-
-9
-
-6
-
-54
-
--2
-
-9
+\caption{\label{tab:oligopoly04}Firm 2s profit maximization calculation when firm 1 sells 5 units}
+\centering
+\begin{tabular}[t]{c|c|c|c|c}
+\hline
+Q2 & P & TR2 & MR2 & MC\\
+\hline
+1 & 14 & 14 & 14 & 9\\
+\hline
+2 & 13 & 26 & 12 & 9\\
+\hline
+3 & 12 & 36 & 10 & 9\\
+\hline
+4 & 11 & 44 & 8 & 9\\
+\hline
+5 & 10 & 50 & 6 & 9\\
+\hline
+6 & 9 & 54 & 4 & 9\\
+\hline
+7 & 8 & 56 & 2 & 9\\
+\hline
+8 & 7 & 56 & 0 & 9\\
+\hline
+9 & 6 & 54 & -2 & 9\\
+\hline
+\end{tabular}
+\end{table}
 
 It is apparent from Table \ref{tab:oligopoly04} that firm 2 will produce between 3 and 4 units if firm 1 produces 5 units. That means as firm 1 produces more, firm 2 responds by producing less. But we still have not found the Nash equilibrium?
 
@@ -7981,107 +7749,34 @@ Shangri La!
 
 We have arrived at Nash equilibrium! Each firm's action is a best response to the other firm's actions. That is the definition of Nash equilibrium.
 
-\label{tab:oligopoly05}Nash Equilibrium
+\begin{table}
 
-Q2
-
-P
-
-TR2
-
-MR2
-
-MC
-
-1
-
-15
-
-15
-
-13
-
-9
-
-2
-
-14
-
-28
-
-11
-
-9
-
-3
-
-13
-
-39
-
-9
-
-9
-
-4
-
-12
-
-48
-
-7
-
-9
-
-5
-
-11
-
-55
-
-5
-
-9
-
-6
-
-10
-
-60
-
-3
-
-9
-
-7
-
-9
-
-63
-
-1
-
-9
-
-8
-
-8
-
-64
-
--1
-
-9
-
-9
-
-7
-
-63
-
--3
-
-9
+\caption{\label{tab:oligopoly05}Nash Equilibrium}
+\centering
+\begin{tabular}[t]{c|c|c|c|c}
+\hline
+Q2 & P & TR2 & MR2 & MC\\
+\hline
+1 & 15 & 15 & 13 & 9\\
+\hline
+2 & 14 & 28 & 11 & 9\\
+\hline
+3 & 13 & 39 & 9 & 9\\
+\hline
+4 & 12 & 48 & 7 & 9\\
+\hline
+5 & 11 & 55 & 5 & 9\\
+\hline
+6 & 10 & 60 & 3 & 9\\
+\hline
+7 & 9 & 63 & 1 & 9\\
+\hline
+8 & 8 & 64 & -1 & 9\\
+\hline
+9 & 7 & 63 & -3 & 9\\
+\hline
+\end{tabular}
+\end{table}
 
 When each firm produces 4 units, total industry output is 8.
 
@@ -8139,8 +7834,7 @@ This kind of Nash equilibrium is named after Antoine Augustin Cournot and is com
 
 Monsieur Cournot!
 
-\hypertarget{bertrand-equilibrium}{%
-\section{Bertrand Equilibrium}\label{bertrand-equilibrium}}
+\section{Bertrand Equilibrium}\label{bertrand-equilibrium}
 
 In the Cournot equilibrium each firm chooses the quantity to maximize its profit, assuming that the other firms do the same. We say that
 
@@ -8221,10 +7915,9 @@ When my product is different from yours, my cereal may have more fiber than your
 
 One of the lessons that might emerge from the above analysis is that it pays to be different. Offering a differentiated product will give your customers another reason, besides price, to purchase your product.
 
-\hypertarget{mergers-intro-and-some-theory}{%
-\section{Mergers: Intro and Some Theory}\label{mergers-intro-and-some-theory}}
+\section{Mergers: Intro and Some Theory}\label{mergers-intro-and-some-theory}
 
-We often see two independent firms combining to form one firm. These combinations of independent firms are called mergers. Two or more firms merging, of course, reduces the number of firms. \href{https://www.statista.com/statistics/245977/number-of-munda-deals-in-the-united-states/\#:~:text=The\%20overall\%20number\%20of\%20M\%26A,23\%2C161\%20in\%20the\%20previous\%20year.\&text=Merger\%20and\%20acquisition\%20(M\%26A)\%20refers,the\%20consolidation\%20of\%20two\%20companies}{In 2021 and 2022 there were about 20,000 mergers per year.}
+We often see two independent firms combining to form one firm. These combinations of independent firms are called mergers. Two or more firms merging, of course, reduces the number of firms. \href{https://www.statista.com/statistics/245977/number-of-munda-deals-in-the-united-states/\#:~:text=The\%20overall\%20number\%20of\%20M\%26A,23\%2C161\%20in\%20the\%20previous\%20year.&text=Merger\%20and\%20acquisition\%20(M\%26A)\%20refers,the\%20consolidation\%20of\%20two\%20companies}{In 2021 and 2022 there were about 20,000 mergers per year.}
 
 Sometime these mergers occur in waves, in periods when the number of mergers rises, to be followed by periods where fewer mergers occur. In the United States the merger waves over the last century occurred in
 
@@ -8277,8 +7970,7 @@ Which of these effects will be realized by mergers in general or by a specific m
 
 In order to answer that question, we have to look at data.
 
-\hypertarget{a-look-at-general-data}{%
-\subsection{A Look at General Data}\label{a-look-at-general-data}}
+\subsection{A Look at General Data}\label{a-look-at-general-data}
 
 This is exactly what \href{https://www.nber.org/system/files/working_papers/w22750/w22750.pdf}{Blonigen and Pierce (2016)} do with a comprehensive data set covering the entire US manufacturing sector from 1997 to 2007. They estimate efficiency gains, i.e., decreases in marginal costs and increases in the mark-up separately. In order to identify these effects, they use:
 
@@ -8314,8 +8006,7 @@ Here is the authors' conclusion:
 ``We find that evidence for increased average markups from M\&A activity is significant and robust across a variety of specifications and strategies for constructing control groups that mitigate endogeneity concerns. In contrast, we find little evidence for plant- or firm-level productivity effects from M\&A activity on average, nor for other efficiency gains often cited as possible from M\&A activity, including reallocation of activity across plants or scale efficiencies in non-productive units of the firm.''
 \end{quote}
 
-\hypertarget{a-particular-merger}{%
-\subsection{A Particular Merger}\label{a-particular-merger}}
+\subsection{A Particular Merger}\label{a-particular-merger}
 
 In 2007 a mega merger occurred in the health care sector. It involved two large hospital chains consisting of over 100 hospitals. There is a lot of data that allows extensive evaluation of the effects of this merger.
 
@@ -8393,8 +8084,7 @@ Should such mergers be allowed, if we had reasonably reliable information on mer
 
 What kinds of information regarding merger outcomes can we reasonably expect to have BEFORE the merger?
 
-\hypertarget{more-general-mergers-in-health-care-sector}{%
-\subsection{More General: Mergers in Health Care Sector}\label{more-general-mergers-in-health-care-sector}}
+\subsection{More General: Mergers in Health Care Sector}\label{more-general-mergers-in-health-care-sector}
 
 \url{https://www.nber.org/system/files/working_papers/w17208/w17208.pdf}
 
@@ -8447,8 +8137,7 @@ That does not look like allowing higher concentrations through mergers is in the
 
 \url{https://www.jstor.org/stable/258700}
 
-\hypertarget{product-differentiation}{%
-\section{Product Differentiation}\label{product-differentiation}}
+\section{Product Differentiation}\label{product-differentiation}
 
 In this section we will focus on product differentiation. We will completely abstract from price considerations. This does of course not mean that price considerations do not matter. We will abstract from these considerations in order to get a better understanding of strategic product differentiation aspects.
 
@@ -8520,8 +8209,7 @@ Bingo!
 Shangri La!
 Nash equilibrium!
 
-\hypertarget{political-interpretation}{%
-\subsection{Political Interpretation}\label{political-interpretation}}
+\subsection{Political Interpretation}\label{political-interpretation}
 
 Consider now two political parties or candidates that are running for elected office in the US. The election system in the US is a first past the post system; you got to get 50\% plus one vote to be elected. The objective of the candidates might be to maximize the probability of getting elected or it might be to maximize the vote share. In either case the candidate chooses a position on the left-right political spectrum. What is the equilibrium in this political game?
 
@@ -8592,8 +8280,7 @@ If those labels stick, bingo I have won.
 
 (But, parenthetically, and my personal opinion, the country has lost.)
 
-\hypertarget{more-firms}{%
-\section{More Firms!}\label{more-firms}}
+\section{More Firms!}\label{more-firms}
 
 Back from Political Science, to Economics, same game, but now with three firms. We see, in Figure 9 below, that things get just a tad more complicated. In the figure below, the three firms are located apart, roughly equally spread out.
 
@@ -8695,8 +8382,7 @@ How about:
 \caption{oligopoly15}\label{fig:oligopoly15}
 \end{figure}
 
-\hypertarget{glossary-of-terms-9}{%
-\section{Glossary of Terms}\label{glossary-of-terms-9}}
+\section{Glossary of Terms}\label{glossary-of-terms-9}
 
 \textbf{Bertrand equilibrium:} The equilibrium in an oligopoly when all firms have price as the strategic variable.
 
@@ -8716,11 +8402,9 @@ How about:
 
 \textbf{Vertical differentiation:} This refers to different levels of quality, where most consumers agree that some goods are better than others, such a durability of a pair of jeans, or the gas mileage of a car, internet speed,etc.
 
-\hypertarget{practice-questions-9}{%
-\section{Practice Questions}\label{practice-questions-9}}
+\section{Practice Questions}\label{practice-questions-9}
 
-\hypertarget{discussion-9}{%
-\subsection{Discussion}\label{discussion-9}}
+\subsection{Discussion}\label{discussion-9}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -8735,8 +8419,7 @@ How about:
   In the 4 firm location game, what is the efficient location? Explain.
 \end{enumerate}
 
-\hypertarget{multiple-choice-9}{%
-\subsection{Multiple Choice}\label{multiple-choice-9}}
+\subsection{Multiple Choice}\label{multiple-choice-9}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -8812,8 +8495,34 @@ How about:
   D. Profits to rise
 \end{enumerate}
 
-\hypertarget{appendix}{%
-\chapter{Appendix}\label{appendix}}
+\subsection{Answer Key}\label{answer-key-8}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  B
+\item
+  B
+\item
+  C
+\item
+  A
+\item
+  C
+\item
+  C
+\item
+  D
+\item
+  D
+\item
+  D
+\item
+  B
+\end{enumerate}
+
+\chapter{Appendix}\label{appendix}
 
 In the appendix we dig more into concepts we gloss over in the text, however you may not be familiar with:
 
@@ -8833,11 +8542,9 @@ In the appendix we dig more into concepts we gloss over in the text, however you
   \end{enumerate}
 \end{enumerate}
 
-\hypertarget{statistical-fundamentals}{%
-\section{Statistical Fundamentals}\label{statistical-fundamentals}}
+\section{Statistical Fundamentals}\label{statistical-fundamentals}
 
-\hypertarget{centrality-measures}{%
-\subsection{Centrality Measures}\label{centrality-measures}}
+\subsection{Centrality Measures}\label{centrality-measures}
 
 In Chapter 2 we discussed a bit about GDP per Capita calculated from the Penn World Tables. Here we will be revisiting that data and describing some measures of centrality. First though, in the context of data, what is centrality?
 
@@ -8875,8 +8582,7 @@ We want to know what the ``center'' of these scores are. But how can we do that?
 
 These are all considered measures of centrality. In the context of data centrality is some estimate of the middle of the observations. Which measure we want to use often comes down to the question we are trying to address.
 
-\hypertarget{mean}{%
-\subsubsection{Mean}\label{mean}}
+\subsubsection{Mean}\label{mean}
 
 The mean (or average) of a group is simply the sum of all numbers, divided by the number of observations.
 
@@ -8886,15 +8592,13 @@ That is given the above test score example, we would have:
 
 While the mean is a great tool to calculate centrality, it is not always ideal. One of the weaknesses of it is that its susceptible to outliers.
 
-\hypertarget{median}{%
-\subsubsection{Median}\label{median}}
+\subsubsection{Median}\label{median}
 
 The median of a group is the middle number in the ordered list of observations. In the above table of student's test scores, we have already listed them from lowest to highest (this is what we mean by ordered list).
 
 If we then look at student 5, why do we care about student 5? Because we have 9 students scores, hence compared to student 5, there will be 4 test scores lower and 4 test scores higher. This is the median student. Hence the median test score would be this student's score: 84.
 
-\hypertarget{percentiles}{%
-\subsection{Percentiles}\label{percentiles}}
+\subsection{Percentiles}\label{percentiles}
 
 If you are not familiar with the concept of median please read the above section on them. As median is just a very specific case of a percentile, the 50th percentile.
 
@@ -8902,8 +8606,7 @@ Noticed how when we looked for the median we wanted equal number of observations
 
 For example if we had the 25th percentile of a group of observations, it would mean that 25\% of observations were of equal value or lower than this number. For the 75th percentile, 75\% of observations are of equal value or lower than this number.
 
-\hypertarget{example-1}{%
-\subsection{Example}\label{example-1}}
+\subsection{Example}\label{example-1}
 
 Let's consider the following scenario, you are an advisor for a small organic foods grocery store. They currently have about a dozen shops and have found that 80\% of their profits come from customers within a 2 mile radius of their store. They also know that since their products are organic and free trade whenever possible, they need customers of higher wealth to be able to afford their products.
 

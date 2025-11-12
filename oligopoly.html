@@ -7,7 +7,7 @@
 <title>Chapter 11 Oligopoly | An Introductory Course in Economics</title>
 <meta name="author" content="Gerhard Glomm, Joseph Westenberg">
 <meta name="description" content="In this chapter we will learn: Understand the basic application of game theory to markets with large firms Understand how the Cournot equilibrium is constructed Describe the properties of the...">
-<meta name="generator" content="bookdown 0.35 with bs4_book()">
+<meta name="generator" content="bookdown 0.45 with bs4_book()">
 <meta property="og:title" content="Chapter 11 Oligopoly | An Introductory Course in Economics">
 <meta property="og:type" content="book">
 <meta property="og:description" content="In this chapter we will learn: Understand the basic application of game theory to markets with large firms Understand how the Cournot equilibrium is constructed Describe the properties of the...">
@@ -16,11 +16,12 @@
 <meta name="twitter:description" content="In this chapter we will learn: Understand the basic application of game theory to markets with large firms Understand how the Cournot equilibrium is constructed Describe the properties of the...">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.5.1/transition.js"></script><script src="libs/bs3compat-0.5.1/tabs.js"></script><script src="libs/bs3compat-0.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
-<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.9.0/transition.js"></script><script src="libs/bs3compat-0.9.0/tabs.js"></script><script src="libs/bs3compat-0.9.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><link href="libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+<script src="libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><link href="libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
 <script src="libs/leaflet-1.3.1/leaflet.js"></script><link href="libs/leafletfix-1.0.0/leafletfix.css" rel="stylesheet">
 <script src="libs/proj4-2.6.2/proj4.min.js"></script><script src="libs/Proj4Leaflet-1.0.1/proj4leaflet.js"></script><link href="libs/rstudio_leaflet-1.3.1/rstudio_leaflet.css" rel="stylesheet">
-<script src="libs/leaflet-binding-2.2.0/leaflet.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+<script src="libs/leaflet-binding-2.2.3/leaflet.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
   </style>
@@ -119,178 +120,77 @@ Figure 11.2: Monopoly pricing calculation
 <p>Given that residual demand we can do Firm 2’s profit maximization calculations. These are contained in Table <a href="oligopoly.html#tab:oligopoly03">11.1</a>.</p>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:oligopoly03">Table 11.1: </span>Firm 2s profit maximizing calculation if firm 1 sells 3 units
-</caption>
-<thead><tr>
-<th style="text-align:center;">
-Q2
-</th>
-<th style="text-align:center;">
-P
-</th>
-<th style="text-align:center;">
-TR2
-</th>
-<th style="text-align:center;">
-MR2
-</th>
-<th style="text-align:center;">
-MC
-</th>
+<span id="tab:oligopoly03">Table 11.1: </span>Firm 2s profit maximizing calculation if firm 1 sells 3 units</caption>
+<thead><tr class="header">
+<th align="center">Q2</th>
+<th align="center">P</th>
+<th align="center">TR2</th>
+<th align="center">MR2</th>
+<th align="center">MC</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:center;">
-1
-</td>
-<td style="text-align:center;">
-16
-</td>
-<td style="text-align:center;">
-16
-</td>
-<td style="text-align:center;">
-16
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">16</td>
+<td align="center">16</td>
+<td align="center">16</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-2
-</td>
-<td style="text-align:center;">
-15
-</td>
-<td style="text-align:center;">
-30
-</td>
-<td style="text-align:center;">
-14
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">15</td>
+<td align="center">30</td>
+<td align="center">14</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-3
-</td>
-<td style="text-align:center;">
-14
-</td>
-<td style="text-align:center;">
-42
-</td>
-<td style="text-align:center;">
-12
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">14</td>
+<td align="center">42</td>
+<td align="center">12</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-4
-</td>
-<td style="text-align:center;">
-13
-</td>
-<td style="text-align:center;">
-52
-</td>
-<td style="text-align:center;">
-10
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">13</td>
+<td align="center">52</td>
+<td align="center">10</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-5
-</td>
-<td style="text-align:center;">
-12
-</td>
-<td style="text-align:center;">
-60
-</td>
-<td style="text-align:center;">
-8
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">12</td>
+<td align="center">60</td>
+<td align="center">8</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-6
-</td>
-<td style="text-align:center;">
-11
-</td>
-<td style="text-align:center;">
-66
-</td>
-<td style="text-align:center;">
-6
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">11</td>
+<td align="center">66</td>
+<td align="center">6</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-7
-</td>
-<td style="text-align:center;">
-10
-</td>
-<td style="text-align:center;">
-70
-</td>
-<td style="text-align:center;">
-4
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">10</td>
+<td align="center">70</td>
+<td align="center">4</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-8
-</td>
-<td style="text-align:center;">
-9
-</td>
-<td style="text-align:center;">
-72
-</td>
-<td style="text-align:center;">
-2
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">9</td>
+<td align="center">72</td>
+<td align="center">2</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-9
-</td>
-<td style="text-align:center;">
-8
-</td>
-<td style="text-align:center;">
-72
-</td>
-<td style="text-align:center;">
-0
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="odd">
+<td align="center">9</td>
+<td align="center">8</td>
+<td align="center">72</td>
+<td align="center">0</td>
+<td align="center">9</td>
 </tr>
 </tbody>
 </table></div>
@@ -308,178 +208,77 @@ MC
 <p>How firm 2 responds to firm 1 producing 5 units is illustrated in Table <a href="oligopoly.html#tab:oligopoly04">11.2</a> below.</p>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:oligopoly04">Table 11.2: </span>Firm 2s profit maximization calculation when firm 1 sells 5 units
-</caption>
-<thead><tr>
-<th style="text-align:center;">
-Q2
-</th>
-<th style="text-align:center;">
-P
-</th>
-<th style="text-align:center;">
-TR2
-</th>
-<th style="text-align:center;">
-MR2
-</th>
-<th style="text-align:center;">
-MC
-</th>
+<span id="tab:oligopoly04">Table 11.2: </span>Firm 2s profit maximization calculation when firm 1 sells 5 units</caption>
+<thead><tr class="header">
+<th align="center">Q2</th>
+<th align="center">P</th>
+<th align="center">TR2</th>
+<th align="center">MR2</th>
+<th align="center">MC</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:center;">
-1
-</td>
-<td style="text-align:center;">
-14
-</td>
-<td style="text-align:center;">
-14
-</td>
-<td style="text-align:center;">
-14
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">14</td>
+<td align="center">14</td>
+<td align="center">14</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-2
-</td>
-<td style="text-align:center;">
-13
-</td>
-<td style="text-align:center;">
-26
-</td>
-<td style="text-align:center;">
-12
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">13</td>
+<td align="center">26</td>
+<td align="center">12</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-3
-</td>
-<td style="text-align:center;">
-12
-</td>
-<td style="text-align:center;">
-36
-</td>
-<td style="text-align:center;">
-10
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">12</td>
+<td align="center">36</td>
+<td align="center">10</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-4
-</td>
-<td style="text-align:center;">
-11
-</td>
-<td style="text-align:center;">
-44
-</td>
-<td style="text-align:center;">
-8
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">11</td>
+<td align="center">44</td>
+<td align="center">8</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-5
-</td>
-<td style="text-align:center;">
-10
-</td>
-<td style="text-align:center;">
-50
-</td>
-<td style="text-align:center;">
-6
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">10</td>
+<td align="center">50</td>
+<td align="center">6</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-6
-</td>
-<td style="text-align:center;">
-9
-</td>
-<td style="text-align:center;">
-54
-</td>
-<td style="text-align:center;">
-4
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">9</td>
+<td align="center">54</td>
+<td align="center">4</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-7
-</td>
-<td style="text-align:center;">
-8
-</td>
-<td style="text-align:center;">
-56
-</td>
-<td style="text-align:center;">
-2
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">8</td>
+<td align="center">56</td>
+<td align="center">2</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-8
-</td>
-<td style="text-align:center;">
-7
-</td>
-<td style="text-align:center;">
-56
-</td>
-<td style="text-align:center;">
-0
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">7</td>
+<td align="center">56</td>
+<td align="center">0</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-9
-</td>
-<td style="text-align:center;">
-6
-</td>
-<td style="text-align:center;">
-54
-</td>
-<td style="text-align:center;">
--2
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="odd">
+<td align="center">9</td>
+<td align="center">6</td>
+<td align="center">54</td>
+<td align="center">-2</td>
+<td align="center">9</td>
 </tr>
 </tbody>
 </table></div>
@@ -491,178 +290,77 @@ MC
 <p>We have arrived at Nash equilibrium! Each firm’s action is a best response to the other firm’s actions. That is the definition of Nash equilibrium.</p>
 <div class="inline-table"><table class="table table-sm">
 <caption>
-<span id="tab:oligopoly05">Table 11.3: </span>Nash Equilibrium
-</caption>
-<thead><tr>
-<th style="text-align:center;">
-Q2
-</th>
-<th style="text-align:center;">
-P
-</th>
-<th style="text-align:center;">
-TR2
-</th>
-<th style="text-align:center;">
-MR2
-</th>
-<th style="text-align:center;">
-MC
-</th>
+<span id="tab:oligopoly05">Table 11.3: </span>Nash Equilibrium</caption>
+<thead><tr class="header">
+<th align="center">Q2</th>
+<th align="center">P</th>
+<th align="center">TR2</th>
+<th align="center">MR2</th>
+<th align="center">MC</th>
 </tr></thead>
 <tbody>
-<tr>
-<td style="text-align:center;">
-1
-</td>
-<td style="text-align:center;">
-15
-</td>
-<td style="text-align:center;">
-15
-</td>
-<td style="text-align:center;">
-13
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="odd">
+<td align="center">1</td>
+<td align="center">15</td>
+<td align="center">15</td>
+<td align="center">13</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-2
-</td>
-<td style="text-align:center;">
-14
-</td>
-<td style="text-align:center;">
-28
-</td>
-<td style="text-align:center;">
-11
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="even">
+<td align="center">2</td>
+<td align="center">14</td>
+<td align="center">28</td>
+<td align="center">11</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-3
-</td>
-<td style="text-align:center;">
-13
-</td>
-<td style="text-align:center;">
-39
-</td>
-<td style="text-align:center;">
-9
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="odd">
+<td align="center">3</td>
+<td align="center">13</td>
+<td align="center">39</td>
+<td align="center">9</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-4
-</td>
-<td style="text-align:center;">
-12
-</td>
-<td style="text-align:center;">
-48
-</td>
-<td style="text-align:center;">
-7
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="even">
+<td align="center">4</td>
+<td align="center">12</td>
+<td align="center">48</td>
+<td align="center">7</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-5
-</td>
-<td style="text-align:center;">
-11
-</td>
-<td style="text-align:center;">
-55
-</td>
-<td style="text-align:center;">
-5
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="odd">
+<td align="center">5</td>
+<td align="center">11</td>
+<td align="center">55</td>
+<td align="center">5</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-6
-</td>
-<td style="text-align:center;">
-10
-</td>
-<td style="text-align:center;">
-60
-</td>
-<td style="text-align:center;">
-3
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="even">
+<td align="center">6</td>
+<td align="center">10</td>
+<td align="center">60</td>
+<td align="center">3</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-7
-</td>
-<td style="text-align:center;">
-9
-</td>
-<td style="text-align:center;">
-63
-</td>
-<td style="text-align:center;">
-1
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="odd">
+<td align="center">7</td>
+<td align="center">9</td>
+<td align="center">63</td>
+<td align="center">1</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-8
-</td>
-<td style="text-align:center;">
-8
-</td>
-<td style="text-align:center;">
-64
-</td>
-<td style="text-align:center;">
--1
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="even">
+<td align="center">8</td>
+<td align="center">8</td>
+<td align="center">64</td>
+<td align="center">-1</td>
+<td align="center">9</td>
 </tr>
-<tr>
-<td style="text-align:center;">
-9
-</td>
-<td style="text-align:center;">
-7
-</td>
-<td style="text-align:center;">
-63
-</td>
-<td style="text-align:center;">
--3
-</td>
-<td style="text-align:center;">
-9
-</td>
+<tr class="odd">
+<td align="center">9</td>
+<td align="center">7</td>
+<td align="center">63</td>
+<td align="center">-3</td>
+<td align="center">9</td>
 </tr>
 </tbody>
 </table></div>
@@ -1143,6 +841,23 @@ D. Profits to rise</p>
 </li>
 </ol>
 </div>
+<div id="answer-key-8" class="section level3" number="11.8.3">
+<h3>
+<span class="header-section-number">11.8.3</span> Answer Key<a class="anchor" aria-label="anchor" href="#answer-key-8"><i class="fas fa-link"></i></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>B</li>
+<li>B</li>
+<li>C</li>
+<li>A</li>
+<li>C</li>
+<li>C</li>
+<li>D</li>
+<li>D</li>
+<li>D</li>
+<li>B</li>
+</ol>
+</div>
 </div>
 </div>
   <div class="chapter-nav">
@@ -1171,6 +886,7 @@ D. Profits to rise</p>
 <a class="nav-link" href="#practice-questions-9"><span class="header-section-number">11.8</span> Practice Questions</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#discussion-9"><span class="header-section-number">11.8.1</span> Discussion</a></li>
 <li><a class="nav-link" href="#multiple-choice-9"><span class="header-section-number">11.8.2</span> Multiple Choice</a></li>
+<li><a class="nav-link" href="#answer-key-8"><span class="header-section-number">11.8.3</span> Answer Key</a></li>
 </ul>
 </li>
 </ul>
@@ -1190,7 +906,7 @@ D. Profits to rise</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>An Introductory Course in Economics</strong>" was written by Gerhard Glomm, Joseph Westenberg. It was last built on 2023-09-11.</p>
+    <p>"<strong>An Introductory Course in Economics</strong>" was written by Gerhard Glomm, Joseph Westenberg. It was last built on 2025-11-11.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
